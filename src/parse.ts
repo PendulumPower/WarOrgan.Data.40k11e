@@ -50,6 +50,11 @@ interface Roster { Name: string; Units: WoUnit[]; Detachments: any[]; ArmyRules:
 
 const argv = process.argv.slice(2);
 
+// The builder requires every weapon keyword ("Rapid Fire 2", "Assault", ...) to have a weapon-ability
+// definition somewhere in the dataset. Until those definitions are generated, weapon keywords are left out.
+// Set WEAPON_KEYWORDS=1 to emit them.
+const KEEP_WEAPON_KEYWORDS = process.env.WEAPON_KEYWORDS === '1';
+
 // ---------- tolerant JSON accessors (BSData JSON key names not yet fully verified) ----------
 const get = (n: any, k: string): any => n?.[k] ?? n?.[`@_${k}`] ?? n?.[`@${k}`] ?? n?.[`$${k}`];
 const asArray = <T>(v: T | T[] | undefined | null): T[] =>
@@ -266,7 +271,7 @@ function extractUnits(cat: any, index: Map<string, any>, keyword: string, warn: 
         const kw = kids(p, 'characteristics', 'characteristic')
           .filter(c => String(get(c, 'name')) === 'Keywords').map(charValue).find(v => v && v !== '-');
         const wp: WeaponProfile = { Id: key, DisplayName: wName, Flags: 'None', Stats: stats };
-        if (kw) wp.Keywords = kw;
+        if (kw && KEEP_WEAPON_KEYWORDS) wp.Keywords = kw;
         weaponSets.get(setId)!.Weapons.push(wp);
       }
       return key;
@@ -312,9 +317,32 @@ function extractUnits(cat: any, index: Map<string, any>, keyword: string, warn: 
         owners.set(f.owner, keys);
       }
       // Each selection group becomes one additive option block; each owner entry is one choice within it.
-      const options = [...groups.values()].map(owners => ({
-        Options: [...owners].map(([owner, keys]) => ({ Items: [defFor(owner, keys)] })),
-      }));
+      // The builder rejects duplicate choices on one model, so a repeat gets an alias ("x 2") that grants the
+      // same weapons (the convention Fracture uses for second weapon slots).
+      const used = new Set<string>(initial);
+      const options: { Options: { Items: string[] }[] }[] = [];
+      for (const owners of groups.values()) {
+        const block: { Items: string[] }[] = [];
+        const inBlock = new Set<string>();
+        for (const [owner, keys] of owners) {
+          let key = defFor(owner, keys);
+          if (inBlock.has(key)) continue;
+          if (used.has(key)) {
+            const base = defs.get(key);
+            const grants: string[] = base.GrantsWeapons ?? [key];
+            let n = 2;
+            let alias = `${key} ${n}`;
+            while (used.has(alias) || (defs.has(alias) && JSON.stringify(defs.get(alias).GrantsWeapons) !== JSON.stringify(grants)))
+              alias = `${key} ${++n}`;
+            if (!defs.has(alias)) defs.set(alias, { Key: alias, DisplayName: base.DisplayName, Cost: base.Cost, GrantsWeapons: grants });
+            key = alias;
+          }
+          inBlock.add(key);
+          used.add(key);
+          block.push({ Items: [key] });
+        }
+        if (block.length) options.push({ Options: block });
+      }
 
       const { min, max } = isUnit ? { min: 1, max: 1 } : minMax(src);
       compositions.push({
