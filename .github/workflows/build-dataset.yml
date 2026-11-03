@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to create GitHub releases
 
     steps:
       - name: Checkout Repository
@@ -35,11 +37,15 @@ jobs:
 
       - name: Package Dataset Zip
         run: |
-          cd Assets
-          zip -r ../MyGame.zip MyGame/
+          cd Assets/MyGame
+          zip -r ../../MyGame.zip .
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+      - name: Create Release and Upload Asset
+        uses: softprops/action-gh-release@v2
         with:
-          name: MyGame-Dataset
-          path: MyGame.zip
+          files: MyGame.zip
+          tag_name: v1.${{ github.run_number }}.0
+          name: Dataset Release v1.${{ github.run_number }}.0
+          body: Automated dataset update compiled from upstream BSData.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
