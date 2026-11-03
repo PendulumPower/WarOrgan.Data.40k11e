@@ -15,21 +15,31 @@ const xmlParser = new XMLParser({
 async function runParser() {
   console.log('⚡ Starting dataset build from upstream XML...');
 
-  if (!fs.existsSync(INPUT_DIR) || fs.readdirSync(INPUT_DIR).length === 0) {
-    console.warn('⚠️ Warning: upstream/bsdata directory is empty or missing. Skipping parse until submodule is initialized.');
-    // Create a dummy output file so the build step doesn't fail on first run
-    if (!fs.existsSync(OUTPUT_DIR)) {
-      fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-    }
-    fs.writeFileSync(path.join(OUTPUT_DIR, 'placeholder.json'), JSON.stringify({ id: 'placeholder', name: 'Placeholder', units: [] }, null, 2));
-    return;
-  }
-
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   }
 
+  // Safety check if upstream directory is missing or empty
+  if (!fs.existsSync(INPUT_DIR) || fs.readdirSync(INPUT_DIR).length === 0) {
+    console.warn('⚠️ Warning: upstream/bsdata directory is empty or missing.');
+    console.log('Generating fallback dataset file...');
+    fs.writeFileSync(
+      path.join(OUTPUT_DIR, 'placeholder.json'),
+      JSON.stringify({ id: 'placeholder', name: 'Placeholder Dataset', units: [] }, null, 2)
+    );
+    return;
+  }
+
   const catFiles = await glob('**/*.cat', { cwd: INPUT_DIR });
+
+  if (catFiles.length === 0) {
+    console.warn('⚠️ No .cat files found in upstream/bsdata. Creating fallback dataset...');
+    fs.writeFileSync(
+      path.join(OUTPUT_DIR, 'placeholder.json'),
+      JSON.stringify({ id: 'placeholder', name: 'Placeholder Dataset', units: [] }, null, 2)
+    );
+    return;
+  }
 
   for (const file of catFiles) {
     const fullPath = path.join(INPUT_DIR, file);
@@ -56,7 +66,7 @@ async function runParser() {
     );
   }
 
-  console.log('✅ Parsing complete! Files saved to output/');
+  console.log('✅ Parsing complete! Output written to output/');
 }
 
 function extractUnits(catalogue: any) {
@@ -64,10 +74,13 @@ function extractUnits(catalogue: any) {
   const entriesArray = Array.isArray(entries) ? entries : [entries];
 
   return entriesArray.map((entry: any) => ({
-    id: entry.id,
-    name: entry.name,
+    id: entry.id || 'unknown',
+    name: entry.name || 'Unnamed Unit',
     targetId: entry.targetId,
   }));
 }
 
-runParser().catch(console.error);
+runParser().catch((err) => {
+  console.error('❌ Parser Error:', err);
+  process.exit(1);
+});
