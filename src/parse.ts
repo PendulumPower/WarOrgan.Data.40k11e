@@ -39,7 +39,6 @@ interface FactionDefinition {
 const inputDir = process.env.INPUT_DIR || './upstream-data';
 const outputDir = process.env.OUTPUT_DIR || './Assets/MyGame';
 
-// Color palette generator for factions
 const COLORS = [
   { MainColor: '#315C91', DarkColor: '#6FA4D9' },
   { MainColor: '#913131', DarkColor: '#D96F6F' },
@@ -78,13 +77,13 @@ function parseCatalogue(filePath: string): { factionName: string; units: Unit[] 
   const selectionEntries = catalogue.sharedSelectionEntries?.selectionEntry || [];
   const entriesArray = Array.isArray(selectionEntries) ? selectionEntries : [selectionEntries];
 
-  // Standard stat mapping to avoid duplicate conflicting keys
+  // Clean mapping to standard keys only (preventing duplicates)
   const standardStatMap: { [key: string]: string } = {
     'M': 'M', 'Move': 'M',
     'T': 'T', 'Toughness': 'T',
     'SV': 'SV', 'Save': 'SV',
     'W': 'W', 'Wounds': 'W',
-    'LD': 'LD', 'Leadership': 'LD',
+    'LD': 'LD', 'Leadership': 'LD', 'Ld': 'LD',
     'OC': 'OC'
   };
 
@@ -105,7 +104,7 @@ function parseCatalogue(filePath: string): { factionName: string; units: Unit[] 
           const charArray = Array.isArray(characteristics) ? characteristics : [characteristics];
           for (const char of charArray) {
             const charName = char['@_name'];
-            const charVal = char['#text']?.toString() || '';
+            const charVal = char['#text']?.toString() || '-';
             if (standardStatMap[charName]) {
               statMap[standardStatMap[charName]] = charVal;
             }
@@ -113,7 +112,7 @@ function parseCatalogue(filePath: string): { factionName: string; units: Unit[] 
         }
       }
 
-      // Ensure mandatory base stats exist
+      // Ensure mandatory stats are present
       const mandatoryStats = ['M', 'T', 'SV', 'W', 'LD', 'OC'];
       for (const mStat of mandatoryStats) {
         if (!statMap[mStat]) {
@@ -156,7 +155,6 @@ function parseCatalogue(filePath: string): { factionName: string; units: Unit[] 
 }
 
 function main() {
-  console.log(`Scanning input directory: ${inputDir}`);
   const rostersDir = path.join(outputDir, 'Rosters');
   if (!fs.existsSync(rostersDir)) {
     fs.mkdirSync(rostersDir, { recursive: true });
@@ -177,8 +175,6 @@ function main() {
   };
 
   const catFiles = [...findFiles(inputDir, '.cat'), ...findFiles(inputDir, '.json')];
-  console.log(`Found ${catFiles.length} catalog files to process.`);
-
   const factionsMap: { [key: string]: Unit[] } = {};
   const factionList: FactionDefinition[] = [];
 
@@ -204,18 +200,11 @@ function main() {
     }
   }
 
-  // 1. Write DataSetDefinition.json with required Version field
+  // 1. Write DataSetDefinition.json with mandatory Version property
   const datasetDef = {
     Version: 1,
     Features: "None",
-    Factions: factionList.length > 0 ? factionList : [
-      {
-        Name: "Aeldari",
-        FactionKeyword: "Aeldari",
-        MainColor: "#315C91",
-        DarkColor: "#6FA4D9"
-      }
-    ],
+    Factions: factionList,
     BattleSizeDefinitions: [
       { Name: "Incursion", PointsTotal: 1000, DetachmentPoints: 0, EnhancementLimit: 0, UnitLimit: 0 },
       { Name: "Strike Force", PointsTotal: 2000, DetachmentPoints: 0, EnhancementLimit: 0, UnitLimit: 0 },
@@ -227,7 +216,6 @@ function main() {
     path.join(outputDir, 'DataSetDefinition.json'),
     JSON.stringify(datasetDef, null, 2)
   );
-  console.log('Successfully wrote DataSetDefinition.json');
 
   // 2. Write individual faction JSON files in Rosters/
   for (const [factionName, units] of Object.entries(factionsMap)) {
@@ -242,8 +230,6 @@ function main() {
       JSON.stringify(rosterData, null, 2)
     );
   }
-
-  console.log(`Successfully generated rosters for ${Object.keys(factionsMap).length} factions.`);
 }
 
 main();
