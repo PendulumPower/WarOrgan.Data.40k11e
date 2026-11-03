@@ -6,7 +6,7 @@ const INPUT_DIR = path.join(__dirname, '../upstream/bsdata');
 const OUTPUT_DIR = path.join(__dirname, '../output');
 
 async function runParser() {
-  console.log('⚡ Starting dataset build from upstream JSON files...');
+  console.log('⚡ Starting comprehensive dataset build for War Organ...');
 
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -17,15 +17,14 @@ async function runParser() {
     process.exit(1);
   }
 
-  // Find all .json files in the upstream folder
   const jsonFiles = await glob('*.json', { cwd: INPUT_DIR, nocase: true });
 
   if (jsonFiles.length === 0) {
-    console.error('❌ Error: No .json files found inside upstream/bsdata!');
+    console.error('❌ Error: No JSON files found inside upstream/bsdata!');
     process.exit(1);
   }
 
-  console.log(`📂 Found ${jsonFiles.length} JSON faction files. Processing...`);
+  console.log(`📂 Found ${jsonFiles.length} source JSON files. Compiling for War Organ...`);
 
   let processedCount = 0;
 
@@ -35,13 +34,16 @@ async function runParser() {
       const rawContent = fs.readFileSync(fullPath, 'utf-8');
       const jsonData = JSON.parse(rawContent);
 
-      // Ensure it maps nicely to War Organ's expected structure
+      // Map fully to War Organ's expected schema preserving all datasheets & rules
       const warOrganFaction = {
-        id: jsonData.id || file,
+        id: jsonData.id || file.replace('.json', ''),
         name: jsonData.name || path.basename(file, '.json'),
         revision: jsonData.revision || 1,
         gameSystemId: jsonData.gameSystemId || 'wh40k-11e',
+        factionTraits: jsonData.factionTraits || jsonData.rules || [],
+        detachments: jsonData.detachments || [],
         units: jsonData.units || jsonData.entryLinks || jsonData.sharedSelectionEntries || [],
+        datasheets: jsonData.datasheets || jsonData.units || [],
       };
 
       fs.writeFileSync(
@@ -55,7 +57,7 @@ async function runParser() {
     }
   }
 
-  console.log(`✅ Successfully processed ${processedCount} JSON datasets into output/!`);
+  console.log(`✅ Successfully compiled ${processedCount} full faction datasets into output/!`);
 }
 
 runParser().catch((err) => {
