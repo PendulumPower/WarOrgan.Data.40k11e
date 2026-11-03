@@ -1,78 +1,46 @@
-name: Auto-Build 40k 11e War Organ Dataset
+name: Build War Organ Dataset
 
 on:
-  schedule:
-    - cron: '0 4 * * *'  # Runs daily at 04:00 UTC
-  workflow_dispatch:      # Allows manual trigger from GitHub UI
   push:
-    branches:
-      - main
+    branches: [ main, master ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0' # Weekly update check
 
 jobs:
-  build-dataset:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Ensure Upstream Data Repository Exists
-        run: |
-          mkdir -p upstream
-          if [ ! -d "upstream/bsdata/.git" ]; then
-            echo "Cloning upstream BSData 11e repository..."
-            rm -rf upstream/bsdata
-            git clone --depth 1 https://github.com/BSData/wh40k-11e.git upstream/bsdata
-          else
-            echo "Updating upstream BSData 11e repository..."
-            cd upstream/bsdata && git pull origin main && cd ../..
-          fi
-
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Run Build Parser & Schema Validator
+      - name: Clone Upstream BSData Repository
         run: |
-          npm run build
-          npm run validate
+          git clone --depth 1 https://github.com/BSData/wh40k-10ed.git upstream-data
 
-      - name: Package Output Folder into Zip Archive
-        run: |
-          cd output
-          zip -r ../war-organ-dataset-11e.zip .
-          cd ..
-
-      - name: Check for Data Changes
-        id: git-check
-        run: |
-          git status --porcelain
-          if [ -z "$(git status --porcelain output/)" ]; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Commit and Push Updated Dataset Files Back to Repo
-        if: steps.git-check.outputs.changed == 'true'
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/ || true
-          git commit -m "chore(dataset): sync latest 11e BSData updates [skip ci]" || true
-          git push || true
-
-      - name: Create GitHub Release & Upload Zip Asset
-        if: steps.git-check.outputs.changed == 'true'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: dataset-v.${{ github.run_number }}
-          name: "War Organ 11e Dataset (Build ${{ github.run_number }})"
-          files: war-organ-dataset-11e.zip
-          body: "Automated daily synchronization and compilation of 11th Edition BSData for War Organ."
+      - name: Run Dataset Parser Pipeline
+        run: npm run build-data
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_DIR: ./upstream-data
+          OUTPUT_DIR: ./Assets/MyGame
+
+      - name: Package Dataset Zip
+        run: |
+          cd Assets
+          zip -r ../MyGame.zip MyGame/
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MyGame-Dataset
+          path: MyGame.zip
