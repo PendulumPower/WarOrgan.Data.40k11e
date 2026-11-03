@@ -150,27 +150,38 @@ function ownProfiles(n: any, index: Map<string, any>): any[] {
   return out;
 }
 
-interface Found { profile: any; optional: boolean }
+interface Ctx { optional: boolean; group: any | null; inModel: boolean }
+interface Found { profile: any; optional: boolean; group: any | null; owner: any; inModel: boolean }
 interface Collected { profiles: Found[]; models: any[] }
+const ROOT_CTX: Ctx = { optional: false, group: null, inModel: false };
 
-/** Every profile and model entry under `n`. `optional` = reached through a selection group (a choice). */
-function collect(n: any, index: Map<string, any>, optional = false, depth = 0, seen = new Set<any>()): Collected {
-  const res: Collected = { profiles: ownProfiles(n, index).map(profile => ({ profile, optional })), models: [] };
+/**
+ * Every profile and model entry under `n`. `optional` = reached through a selection group (a choice);
+ * `group` = the nearest such group; `owner` = the entry that carries the profile; `inModel` = under a model entry.
+ */
+function collect(n: any, index: Map<string, any>, ctx: Ctx = ROOT_CTX, depth = 0, seen = new Set<any>()): Collected {
+  const res: Collected = {
+    profiles: ownProfiles(n, index).map(profile => ({ profile, optional: ctx.optional, group: ctx.group, owner: n, inModel: ctx.inModel })),
+    models: [],
+  };
   if (depth > 6) return res;
 
-  const children: { node: any; opt: boolean }[] = [];
-  for (const [p, s] of ENTRY_KEYS) for (const c of kids(n, p, s)) children.push({ node: c, opt: optional });
-  for (const [p, s] of GROUP_KEYS) for (const c of kids(n, p, s)) children.push({ node: c, opt: true });
+  const children: { node: any; ctx: Ctx }[] = [];
+  for (const [p, s] of ENTRY_KEYS) for (const c of kids(n, p, s)) children.push({ node: c, ctx });
+  for (const [p, s] of GROUP_KEYS) for (const c of kids(n, p, s)) children.push({ node: c, ctx: { ...ctx, optional: true, group: c } });
   for (const l of kids(n, 'entryLinks', 'entryLink')) {
     const t = index.get(String(get(l, 'targetId')));
-    if (t) children.push({ node: t, opt: optional || get(l, 'type') === 'selectionEntryGroup' });
+    if (!t) continue;
+    const isGroup = get(l, 'type') === 'selectionEntryGroup';
+    children.push({ node: t, ctx: isGroup ? { ...ctx, optional: true, group: t } : ctx });
   }
 
-  for (const { node, opt } of children) {
+  for (const { node, ctx: c } of children) {
     if (seen.has(node)) continue;
     seen.add(node);
-    if (get(node, 'type') === 'model') res.models.push(node);
-    const sub = collect(node, index, opt, depth + 1, seen);
+    const isModel = get(node, 'type') === 'model';
+    if (isModel) res.models.push(node);
+    const sub = collect(node, index, { ...c, inModel: c.inModel || isModel }, depth + 1, seen);
     res.profiles.push(...sub.profiles);
     res.models.push(...sub.models);
   }
@@ -181,10 +192,17 @@ const isStat = (p: any) => /unit|model/i.test(String(get(p, 'typeName'))) && !/w
 const isWeapon = (p: any) => /weapon/i.test(String(get(p, 'typeName')));
 const isAbility = (p: any) => /abilit/i.test(String(get(p, 'typeName')));
 
+const emptyChars = new Map<string, number>();
 function toStats(profile: any, skip: string[] = []): StatEntry[] {
+  const type = String(get(profile, 'typeName') ?? '?');
   return kids(profile, 'characteristics', 'characteristic')
     .filter(c => !skip.includes(String(get(c, 'name'))))
-    .map(c => ({ Id: String(get(c, 'name')), Value: charValue(c) }));
+    .map(c => {
+      const id = String(get(c, 'name'));
+      let value = charValue(c);
+      if (!value) { emptyChars.set(`${type}.${id}`, (emptyChars.get(`${type}.${id}`) ?? 0) + 1); value = '-'; }
+      return { Id: id, Value: value };
+    });
 }
 
 function ptsOf(n: any): number {
@@ -226,7 +244,9 @@ function extractUnits(cat: any, index: Map<string, any>, keyword: string, warn: 
 
     const statLines = new Map<string, StatLine>();
     const weaponSets = new Map<string, WeaponSet>();
-    const weaponKeys = new Map<string, string>();   // weapon key -> stat signature (to detect clashes)
+    const weaponKeys = new Map<string, string>();    // weapon key -> stat signature (clash detection)
+    const weaponNames = new Map<string, string>();   // weapon key -> display name
+    const defs = new Map<string, any>();             // WargearDefinitions by key
     const compositions: ModelComposition[] = [];
     const abilities = new Map<string, TitledText>();
 
@@ -239,6 +259,7 @@ function extractUnits(cat: any, index: Map<string, any>, keyword: string, warn: 
       while (weaponKeys.has(key) && weaponKeys.get(key) !== sig) key = `${wName.toLowerCase()} ${++n}`;
       if (!weaponKeys.has(key)) {
         weaponKeys.set(key, sig);
+        weaponNames.set(key, wName);
         const setName = String(get(p, 'typeName')).trim();
         const setId = setName.toUpperCase();
         if (!weaponSets.has(setId)) weaponSets.set(setId, { Id: setId, DisplayName: setName, Weapons: [] });
@@ -251,34 +272,72 @@ function extractUnits(cat: any, index: Map<string, any>, keyword: string, warn: 
       return key;
     };
 
+    // A wargear choice: one weapon uses its own key; several weapons in one entry get a definition granting them all.
+    const defFor = (owner: any, keys: string[]): string => {
+      const c = ptsOf(owner);
+      const cost = Number.isFinite(c) ? c : 0;
+      if (keys.length === 1) {
+        if (!defs.has(keys[0])) defs.set(keys[0], { Key: keys[0], DisplayName: weaponNames.get(keys[0]) ?? keys[0], Cost: cost });
+        return keys[0];
+      }
+      let k = (nameOf(owner) || keys.join(' + ')).toLowerCase();
+      while (weaponKeys.has(k) || (defs.has(k) && JSON.stringify(defs.get(k).GrantsWeapons) !== JSON.stringify(keys))) k += ' set';
+      if (!defs.has(k)) defs.set(k, { Key: k, DisplayName: nameOf(owner) || k, Cost: cost, GrantsWeapons: keys });
+      return k;
+    };
+
+    const unitLevel = all.profiles.filter(f => !f.inModel);
     for (const src of sources) {
-      const sub = src === entry ? all : collect(src, index);
+      const isUnit = src === entry;
+      const sub = isUnit ? all : collect(src, index, { optional: false, group: null, inModel: true });
       const stat = sub.profiles.map(f => f.profile).find(isStat) ?? unitStat;
       if (!stat) { warn(`skip model in "${name}": no stat profile (searched entry, models, links)`); continue; }
 
       const statName = nameOf(stat) || nameOf(src) || name;
       if (!statLines.has(statName)) statLines.set(statName, { StatName: statName, Stats: toStats(stat), Features: 'None' });
 
-      // Weapons: this model's own, falling back to unit-level ones. Only non-optional ones start equipped.
-      const found = sub.profiles.filter(f => isWeapon(f.profile));
-      const pool = found.length ? found : all.profiles.filter(f => isWeapon(f.profile));
+      // Weapons available to this model: its own subtree plus unit-level ones.
+      const pool = isUnit ? all.profiles
+        : [...sub.profiles, ...unitLevel.filter(u => !sub.profiles.some(x => x.profile === u.profile))];
       const initial: string[] = [];
-      for (const f of pool) {
+      const groups = new Map<any, Map<any, string[]>>();
+      for (const f of pool.filter(f => isWeapon(f.profile))) {
         const key = addWeapon(f.profile);
-        if (!f.optional && !initial.includes(key)) initial.push(key);
+        if (!f.optional) { if (!initial.includes(key)) initial.push(key); continue; }
+        const g = f.group ?? 'root';
+        if (!groups.has(g)) groups.set(g, new Map());
+        const owners = groups.get(g)!;
+        const keys = owners.get(f.owner) ?? [];
+        if (!keys.includes(key)) keys.push(key);
+        owners.set(f.owner, keys);
       }
-      for (const f of all.profiles.filter(f => isWeapon(f.profile))) addWeapon(f.profile);
+      // Each selection group becomes one additive option block; each owner entry is one choice within it.
+      const options = [...groups.values()].map(owners => ({
+        Options: [...owners].map(([owner, keys]) => ({ Items: [defFor(owner, keys)] })),
+      }));
 
-      const { min, max } = src === entry ? { min: 1, max: 1 } : minMax(src);
+      const { min, max } = isUnit ? { min: 1, max: 1 } : minMax(src);
       compositions.push({
         Limit: { Min: min, Max: max },
         ModelName: nameOf(src) || name,
         StatlineRef: statName,
         Keywords: [],
-        Wargear: [{ InitialWargear: initial, Options: [] }],
+        Wargear: [{ InitialWargear: initial, Options: options }],
       });
     }
     if (!compositions.length) continue;
+
+    // The builder rejects weapons nothing can select, so drop any that are unreachable.
+    const reach = new Set<string>();
+    for (const c of compositions) for (const wg of c.Wargear) {
+      wg.InitialWargear.forEach(k => reach.add(k));
+      for (const o of wg.Options) for (const ch of o.Options) for (const it of ch.Items) {
+        const d = defs.get(it);
+        if (d?.GrantsWeapons) d.GrantsWeapons.forEach((k: string) => reach.add(k)); else reach.add(it);
+      }
+    }
+    for (const set of weaponSets.values()) set.Weapons = set.Weapons.filter(w => reach.has(w.Id));
+    for (const [id, set] of weaponSets) if (!set.Weapons.length) weaponSets.delete(id);
 
     // Abilities from anywhere in the unit's subtree (unit-level and per-model), de-duplicated by title.
     for (const f of all.profiles.filter(f => isAbility(f.profile))) {
@@ -302,7 +361,7 @@ function extractUnits(cat: any, index: Map<string, any>, keyword: string, warn: 
       Id: id,
       DisplayName: name,
       Flags: 0,
-      UnitComposition: { ModelCompositions: compositions, WargearDefinitions: [] },
+      UnitComposition: { ModelCompositions: compositions, WargearDefinitions: [...defs.values()] },
       UnitAbilities: [...abilities.values()],
       Infos: [],
       Keywords: keywords,
@@ -322,11 +381,18 @@ function validateUnit(u: WoUnit, keyword: string): string | null {
   if (!u.FactionKeywords.includes(keyword)) return 'missing faction keyword';
   const statNames = new Set(u.StatLines.map(s => s.StatName));
   const weaponIds = new Set(u.Weapons.flatMap(w => w.Weapons.map(x => x.Id)));
+  const defKeys = new Set(u.UnitComposition.WargearDefinitions.map((d: any) => d.Key));
+  const known = (k: string) => weaponIds.has(k) || defKeys.has(k);
   for (const m of u.UnitComposition.ModelCompositions) {
     if (!statNames.has(m.StatlineRef)) return `StatlineRef "${m.StatlineRef}" has no StatLine`;
-    for (const wg of m.Wargear)
-      for (const g of wg.InitialWargear) if (!weaponIds.has(g)) return `InitialWargear "${g}" has no weapon`;
+    for (const wg of m.Wargear) {
+      for (const g of wg.InitialWargear) if (!known(g)) return `InitialWargear "${g}" has no weapon`;
+      for (const o of wg.Options) for (const ch of o.Options) for (const it of ch.Items)
+        if (!known(it)) return `option item "${it}" has no weapon or definition`;
+    }
   }
+  for (const sl of [...u.StatLines, ...u.Weapons.flatMap(w => w.Weapons)])
+    for (const st of sl.Stats) if (!st.Value) return 'empty stat value';
   if (!u.Points.length) return 'no points';
   return null;
 }
@@ -400,6 +466,10 @@ function main() {
   }
   console.log('\nWarning summary:');
   for (const [r, n] of [...reasonTotals].sort((a, b) => b[1] - a[1])) console.log(`  ${n} x ${r}`);
+  if (emptyChars.size) {
+    console.log('\nEmpty characteristics (written as "-"):');
+    for (const [k, n] of [...emptyChars].sort((a, b) => b[1] - a[1]).slice(0, 15)) console.log(`  ${n} x ${k}`);
+  }
   if (!rosters.length) throw new Error('No rosters produced; run --find on a failing unit and adjust extractUnits.');
 
   fs.mkdirSync(path.join(outputDir, 'Rosters'), { recursive: true });
