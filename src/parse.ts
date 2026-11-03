@@ -78,6 +78,16 @@ function parseCatalogue(filePath: string): { factionName: string; units: Unit[] 
   const selectionEntries = catalogue.sharedSelectionEntries?.selectionEntry || [];
   const entriesArray = Array.isArray(selectionEntries) ? selectionEntries : [selectionEntries];
 
+  // Standard stat mapping to avoid duplicate conflicting keys
+  const standardStatMap: { [key: string]: string } = {
+    'M': 'M', 'Move': 'M',
+    'T': 'T', 'Toughness': 'T',
+    'SV': 'SV', 'Save': 'SV',
+    'W': 'W', 'Wounds': 'W',
+    'LD': 'LD', 'Leadership': 'LD',
+    'OC': 'OC'
+  };
+
   for (const entry of entriesArray) {
     if (entry['@_type'] === 'model' || entry['@_type'] === 'unit') {
       const unitName = entry['@_name'];
@@ -88,27 +98,33 @@ function parseCatalogue(filePath: string): { factionName: string; units: Unit[] 
       const profiles = entry.profiles?.profile || [];
       const profilesArray = Array.isArray(profiles) ? profiles : [profiles];
       
-      const stats: Stat[] = [];
+      const statMap: { [key: string]: string } = {};
       for (const profile of profilesArray) {
         if (profile['@_typeName'] === 'Unit' || profile['@_typeName'] === 'Model') {
           const characteristics = profile.characteristics?.characteristic || [];
           const charArray = Array.isArray(characteristics) ? characteristics : [characteristics];
           for (const char of charArray) {
-            stats.push({
-              Id: char['@_name'] || 'Unknown',
-              Value: char['#text']?.toString() || ''
-            });
+            const charName = char['@_name'];
+            const charVal = char['#text']?.toString() || '';
+            if (standardStatMap[charName]) {
+              statMap[standardStatMap[charName]] = charVal;
+            }
           }
         }
       }
 
-      // Ensure default stats exist if missing
-      const standardStatNames = ['Move', 'Toughness', 'Save', 'Wounds', 'Leadership', 'OC'];
-      for (const stdName of standardStatNames) {
-        if (!stats.some(s => s.Id.toLowerCase() === stdName.toLowerCase())) {
-          stats.push({ Id: stdName, Value: '-' });
+      // Ensure mandatory base stats exist
+      const mandatoryStats = ['M', 'T', 'SV', 'W', 'LD', 'OC'];
+      for (const mStat of mandatoryStats) {
+        if (!statMap[mStat]) {
+          statMap[mStat] = '-';
         }
       }
+
+      const finalStats: Stat[] = Object.keys(statMap).map(id => ({
+        Id: id,
+        Value: statMap[id]
+      }));
 
       units.push({
         Id: unitId,
@@ -128,7 +144,7 @@ function parseCatalogue(filePath: string): { factionName: string; units: Unit[] 
         StatLines: [
           {
             StatName: unitName,
-            Stats: stats
+            Stats: finalStats
           }
         ],
         Weapons: []
@@ -188,8 +204,9 @@ function main() {
     }
   }
 
-  // 1. Write DataSetDefinition.json with ALL discovered factions registered
+  // 1. Write DataSetDefinition.json with required Version field
   const datasetDef = {
+    Version: 1,
     Features: "None",
     Factions: factionList.length > 0 ? factionList : [
       {
