@@ -3,17 +3,15 @@
   "name": "Imperium - Agents of the Imperium",
   "revision": 23,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [
+  "factionTraits": [],
+  "detachments": [
     {
-      "name": "Assigned Agents",
-      "description": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below.\n\nIncursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED\nStrike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED\nOnslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED\n\n\nNote that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
-    },
-    {
-      "name": "Kill Team",
-      "description": "Each time an attack targets this unit, if it contains models with different Toughness characteristics, until the attacking unit has finished making its attacks, use the Toughness characteristic of the majority of the models in that unit when determining what roll is required for that attack to successfully wound. If two or more Toughness characteristics are tied for majority, use the highest value. \nFor the purposes of determining which models in this unit can embark within a TRANSPORT, Kill Team Terminator models, Kill Team Outrider models, Kill Team Biker models and models equipped with a jump pack each take up the space of 2 models, but can otherwise embark within any TRANSPORT their unit can embark within, even though similar models in other units have the TERMINATOR, MOUNTED or JUMP PACK keywords. \nFor the purposes of interacting with terrain features, all models in units with this ability are considered Infantry models, even though similar models in other units may have the Mounted or Jump Pack keywords. \n**Designer’s Note**: *While the abstractions in the above rule cause some models to behave differently to similar models in other units, they are designed to minimise complicated movement, Transport and Benefit of Cover rules.*"
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
     }
   ],
-  "detachments": [],
   "units": [
     {
       "id": "f6bb-3928-c6a3-b6d3",

@@ -3,29 +3,15 @@
   "name": "Library - Astartes Heresy Legends",
   "revision": 4,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [
+  "factionTraits": [],
+  "detachments": [
     {
-      "name": "Conversion",
-      "description": "Each time an attack made with this weapon targets a unit more than 12\" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit."
-    },
-    {
-      "name": "Combat Doctrines",
-      "description": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase\n\n\nAssault Doctrine\nWhen this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. \n\n\nDevastator Doctrine\nThis unit's ranged attacks have [ASSAULT]\n\n\nTactical Doctrine\nWhen this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. \n\n\nUnless otherwise stated. \n- You can only select each Combat Doctrine once per battle\n- Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit. \n\n"
-    },
-    {
-      "name": "Librarius",
-      "description": "Adeptus Astartes Psyker units with this ability have a psyker level of 1 of higher, specified in that unit's abilities. Each Psychic ability has a psychic level of 1 or higher, specified in that ability's name. \n\n\nIn a battle round, a friendly ADEPTUS ASTARTES PSYKER unit can use a number of psychic abilities whose total psychic level does not exceed that PSYKER unit's psyker level"
-    },
-    {
-      "name": "Templar Vows",
-      "description": "If your Army Faction is **^^Adeptus Astartes^^**, at the start of the first battle round, select one of the following Vows to be active for **^^Adeptus Astartes^^** units from your army. While a Vow is active for your army, that unit has the associated ability below. \n\n**Abhor the Witch, Destroy the Witch**\n■ Each time this unit declares a charge, if one or more targets of that charge have the **^^Psyker^^** keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the **[PRECISION]** ability while targeting **^^Psyker^^** units. \n\n**Accept Any Challenge, No Matter the Odds**\n■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll\n\n**Suffer Not the Unclean to Live**\n■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. \n\n**Uphold the Honour of the Emperor**\nIf this unit has the **^^Infantry^^** keyword:\n■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. \n■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced."
-    },
-    {
-      "name": "Transhuman Strategist",
-      "description": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1 CP"
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
     }
   ],
-  "detachments": [],
   "units": [
     {
       "id": "78aa-3f99-5fb7-7f83",

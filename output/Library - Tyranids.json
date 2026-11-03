@@ -3,25 +3,15 @@
   "name": "Library - Tyranids",
   "revision": 5,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [
+  "factionTraits": [],
+  "detachments": [
     {
-      "name": "Synapse",
-      "description": "If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6\" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle‑shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
-    },
-    {
-      "name": "Shadow in the Warp",
-      "description": "If your Army Faction is **TYRANIDS**, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle‑shock test. Each time an enemy unit takes such a Battle‑shock test, if it is within 6\" of one or more **SYNAPSE** units from your army, subtract 1 from that test."
-    },
-    {
-      "name": "Synaptic Web",
-      "description": "Units from your army with the Shadow in the Warp ability retain that ability.\n\nUnits from your army with the Synapse ability retain that ability and gain this one.\n\nWhen measuring whether a unit from your army is within Synapse Range of a friendly **^^Synapse^^** model, Walls and closed Hatchways are ignored."
-    },
-    {
-      "name": "Insidious Ambushers",
-      "description": "Units from your army with the Cult Ambush ability lose that ability and **^^Genestealer Cults^^** units from your army gain this one.\n\n\nIn the Deploy Armies step, your opponent must set up their entire army before you set up any of your units. If both players have a rule that allows them to do this, both players set up their units normally."
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
     }
   ],
-  "detachments": [],
   "units": [
     {
       "id": "fa68-fcb9-38c-cd0f",

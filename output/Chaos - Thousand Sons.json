@@ -3,13 +3,15 @@
   "name": "Chaos - Thousand Sons",
   "revision": 17,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [
+  "factionTraits": [],
+  "detachments": [
     {
-      "name": "Cabal of Sorcerers",
-      "description": "If your army Faction is ^^**Thousand Sons^^**, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below:\n\n1. Roll 2D6\n2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds.\n3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
     }
   ],
-  "detachments": [],
   "units": [
     {
       "id": "87f0-0a14-9b6b-f367",

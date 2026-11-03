@@ -3,49 +3,15 @@
   "name": "Xenos - Necrons",
   "revision": 28,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [
+  "factionTraits": [],
+  "detachments": [
     {
-      "name": "Reanimation Protocols",
-      "description": "If your Army Faction is NECRONS, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its Reanimation Protocols: \n- When a unit’s Reanimation Protocols activate, that unit heals D3 wounds."
-    },
-    {
-      "name": "Annihilation Protocol",
-      "description": "Each time a DESTROYER CULT or FLAYED ONES unit from your army declares a charge, you can re-roll the Charge roll. If one or more targets of that charge are Below Half-strength, add 1 to the charge roll as well.\nEach time a DESTROYER CULT unit from your army makes a ranged attack that targets the closest eligible target, add 1 to the Armour Penetration characteristic of that attack."
-    },
-    {
-      "name": "Command Protocols",
-      "description": "While a NECRONS CHARACTER model is leading this unit, each time a model in this unit makes an attack, add 1 to the Hit roll."
-    },
-    {
-      "name": "Hyperphasing",
-      "description": "At the end of your opponent's turn, you can select a number of NECRONS units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:\nIncursion - Up to 1 unit.\nStrike Force - Up to 2 units\nOnslaught - Up to 3 units\nOnce you have made your selection, remove those units from the battlefield and place them into Strategic Reserves."
-    },
-    {
-      "name": "Power Matrix",
-      "description": "Certain areas of the battlefield are considered to be within your army's Power Matrix, as follows:\n- Your deployment zone is always within your army's Power Matrix.\n- At the start of any phase, if you control at least half of the objective markers within No Man's Land, until the end of that phase, No Man's Land is within your army's Power Matrix.\n- At the start of any phase, if you control at least half of the objective markers within your opponent's deployment zone, until the end of that phase, your opponent's deployment zone is within your army's Power Matrix.\nEach time a model in a CRYPTEK or CANOPTEK unit from your army makes an attack, re-roll a Hit roll of 1. If such a unit is wholly within your Power Matrix, you can re-roll the Hit roll instead."
-    },
-    {
-      "name": "Worthy Foes",
-      "description": "In your Command phase, select one enemy unit. Until the start of your next Command phase, each time an NOBLE, LYCHGUARD or TRIARCH unit from your army makes an attack against that unit, add 1 to the Wound roll."
-    },
-    {
-      "name": "Relentless Onslaught",
-      "description": "Each time a NECRONS model (excluding MONSTER models) from your army makes an attack that targets a unit within range of one or more objective markers, add 1 to the Hit roll. In addition, ranged weapons equipped by NECRONS VEHICLE and NECRONS MOUNTED models (excluding TITANIC models) from your army have the [ASSAULT] ability."
-    },
-    {
-      "name": "Technosorcerous Augmentations",
-      "description": "- Ranged weapons equipped by ^^**Cryptek^^** models from your army have the [ASSAULT] ability.\n- In your Shooting phase, each time a ^^**Cryptek^^** unit from your army is selected to shoot, select one of the following abilities: [ANTI‑INFANTRY 3+], [ANTI‑MOUNTED 4+], [ASSAULT], [HEAVY], [IGNORES COVER]. Until the end of the phase, ranged weapons equipped by models in that unit have that ability"
-    },
-    {
-      "name": "Cold Fervour",
-      "description": "- Add 2 to the Strength characteristic of weapons equipped by ^^**Destroyer Cult^^** models from your army. \n- The first time each turn that a ^^**Destroyer Cult^^** unit from your army makes attacks that destroy a unit or cause it to become Below Half‑strength, after that unit has finished resolving its attacks, until the end of the turn, add 2 to the Strength characteristic of weapons equipped by friendly ^^**Necrons^^** models (excluding ^^**Destroyer Cult, Monster^^** and ^^**Titanic^^** models)."
-    },
-    {
-      "name": "Cosmic Distortion",
-      "description": "^^**Necrons Monster^^** units from your army have the following ability: \n\nDistortion Fields (Aura): While an enemy unit is within 6\" of this unit, it is unravelling. While an enemy unit is unravelling, each time an attack targets that unit, improve the Armour Penetration characteristic of that attack by 1. \nAt the start of each phase, for each ^^**Necrons Monster^^** unit from your army, that unit can suffer 3 mortal wounds. If it does, until the end of the phase, the range of that unit’s Distortion Fields Aura ability is increased to 9\".\n\nRestrictions\n\nWhen mustering your army, each ^^**Necrons Monster^^** unit from your army has the relevant Necrodermal Binding ability shown on the right, and you must increase the points cost of each of those units by the amount shown in the Munitorum Field Manual. If this causes your army to exceed the points limit for the battle you are playing, you cannot include that unit in your army."
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
     }
   ],
-  "detachments": [],
   "units": [
     {
       "id": "82f1-b597-7b06-8ba2",

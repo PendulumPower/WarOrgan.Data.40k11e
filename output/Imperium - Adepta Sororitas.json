@@ -3,37 +3,15 @@
   "name": "Imperium - Adepta Sororitas",
   "revision": 24,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [
+  "factionTraits": [],
+  "detachments": [
     {
-      "name": "Acts of Faith",
-      "description": "If your Army Faction is ^^**Adepta Sororitas**^^, each unit from your army with this ability can perform one Act of Faith per phase. This is done using Miracle dice.\n\nGAINING MIRACLE DICE\nIf your Army Faction is ^^**Adepta Sororitas**^^, you gain 1 Miracle dice:\n- At the start of each turn.\n- Each time an ^^**Adepta Sororitas**^^ unit from your army is destroyed.\n\nEach time you gain a Miracle dice, roll one D6. The number you roll is the value of that Miracle dice. This value cannot be changed or re-rolled, unless a rule specifically states otherwise. Keep your Miracle dice to one side – this is your Miracle dice pool.\n\nPERFORMING AN ACT OF FAITH\nBefore making a dice roll for a model or unit from your army with the Acts of Faith ability, if you have one or more dice in your Miracle dice pool, that unit can perform an Act of Faith. If it does, select one of the dice from your Miracle dice pool to substitute that dice roll (if a roll involves more than one dice, e.g. a Charge roll or Battle-shock test, only a single dice can\nbe substituted). The dice that is being substituted is not rolled; instead the value of the selected Miracle dice is used as if it had been rolled (this counts as an unmodified dice roll of that value for all rules purposes). Each Miracle dice can only be selected for substitution once. Once all Miracle dice substitutions have been made, remove the chosen Miracle dice from your Miracle dice pool, and roll all remaining, unsubstituted dice that are a part of the dice roll. You can use Miracle dice when a unit performs an Act of Faith for any of the following types of dice roll:\n■ Advance roll\n■ Battle-shock test\n■ Charge roll\n■ Damage roll\n■ Hit roll\n■ Saving throw\n■ Wound roll"
-    },
-    {
-      "name": "The Blood of Martyrs",
-      "description": "Each time an ADEPTA SORORITAS model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll, as well, if that model’s unit is Below Half-strength."
-    },
-    {
-      "name": "Desperate for Redemption",
-      "description": "At the start of your Command phase, you can select one of the following Vows of Atonement to be active for your army until the start of the your next Command phase. You can only select each Vow of Atonement once per battle.\n\n\nThe Path of the Penitent: Add 3\" to the Move characteristic of PENITENT model from your army.\n\n\nAbsolution in Battle: Each time a unit from your army is selected to fight, if that units made a Charge move this turn, until the end of the phase, add 1 to the Attacks and Strength characteristics of melee weapons equipped by PENITENT models in that unit.\n\n\nDeath Before Disgrace: Each time a PENITENT model from your army is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
-    },
-    {
-      "name": "Fervent Purgation",
-      "description": "Ranged weapons equipped by ADEPTA SORORITAS models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 6\", add 1 to the Strength characteristic of that attack."
-    },
-    {
-      "name": "Sacred Rites",
-      "description": "Each Adepta Sororitas unit from your army can perform up to two Acts of Faith per phase, instead of just one."
-    },
-    {
-      "name": "Righteous Purpose",
-      "description": "In your Command phase, you can select up to 3 ^^**Adepta Sororitas^^** units from your army (including units that are embarked within ^^**Transports^^**), until the start of your next Command phase, those units are Righteous. While a unit is Righteous:\n■ Add 1\" to the Move characteristic of models in that unit.\n■ Improve the Leadership characteristic of models in that unit by 1.\n■ Improve the Weapon Skill and Ballistic Skill characteristics of weapons equipped by ^^**Battle Sisters Squad^^**, ^^**Celestian Insidiants^^**, ^^**Celestian Sacresants^^** and ^^**Paragon Warsuits^^** models in that unit by 1."
-    },
-    {
-      "name": "Keywords",
-      "description": "While a ^^**Celestian Sacresants^^** unit from your army is not Battle‑shocked, add 1 to the Objective Control characteristic of ^^**Celestian Sacresants^^** models in that unit."
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
     }
   ],
-  "detachments": [],
   "units": [
     {
       "id": "4b94-c22e-84f9-8d32",

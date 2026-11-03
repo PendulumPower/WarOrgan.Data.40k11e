@@ -3,17 +3,15 @@
   "name": "Imperium - Grey Knights",
   "revision": 6,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [
+  "factionTraits": [],
+  "detachments": [
     {
-      "name": "Gate of Infinity",
-      "description": "If your Army Faction is **^^Grey Knights^^**, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows:\n\nIncursion - Up to 2 units\nStrike Force - Up to 3 units\nOnslaught - Up to 4 units\n\n- Place those units in **strategic reserves**.\n- Those units can make an **ingress move** in your next Movement phase (including in your first turn)"
-    },
-    {
-      "name": "Eye of the Prognosticars",
-      "description": "Units from your army with the Teleport Assault ability replace that ability with this one.\n\nEach time you target this unit with a Stratagem, roll one D6, adding 1 to the result if this unit is within range of an objective marker you control: on a 5+, you gain 1CP."
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
     }
   ],
-  "detachments": [],
   "units": [
     {
       "id": "dce9-6eb4-fa33-e869",

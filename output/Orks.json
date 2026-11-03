@@ -5,19 +5,22 @@
   "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [
     {
-      "name": "Void Waaagh!",
-      "description": "Units from your army with the Waaagh! ability retain that ability and gain this one.\n\nOnce per battle, at the start of the battle round, you can call a Void Waaagh!. If you do, until the start of the next battle round, the Void Waaagh! is active for your army and:\n- Add 1 to the Strength and Attacks characteristics of melee weapons equipped by models from your army with this ability.\n- Models from your army with this ability have a 5+ invulnerable save.\n\nA Void Waaagh! counts as a Waaagh! for any datasheet abilities."
+      "name": "Waaagh!",
+      "description": "Friendly **ORKS** with this ability can:\n- Re-roll **advance rolls**.\n- Become **riled up**, as stated in other rules.\nWhile a unit is **riled up**:\n    - That unit has 5+ **InSv**.\n    - That unit's ranged attacks have **[ASSAULT]**.\n    - When that unit is selected to make an **advance move**, that **advance move** does not prevent that unit from being **eligible to declare a charge**."
     },
     {
-      "name": "Da Boss",
-      "description": "At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP."
-    },
-    {
-      "name": "Unstable Energies",
-      "description": "**ORKS PSYKER** units with this ability have a **psyker level** of 1 or higher, specified in that unit's abilities. Each **psychic ability** has a **psychic level** of 1 or higher, specified in that ability's name.\nIn a battle round, a friendly **ORKS PSYKER** unit can use a number of **psychic abilities** whose total **psychic level** does not exceed that **PSYKER** unit's **psyker level**."
+      "name": "War Cry (Once per battle, per army)",
+      "description": "At the start of the Command phase, you can use this ability. If you do, friendly **ORKS** units with the **Waaagh!** ability are **riled up** until the end of the next turn."
     }
   ],
-  "detachments": [],
+  "detachments": [
+    {
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
+    }
+  ],
   "units": [
     {
       "id": "8b5-898c-f79b-5a9c",

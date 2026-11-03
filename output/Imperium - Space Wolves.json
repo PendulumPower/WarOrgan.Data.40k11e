@@ -3,13 +3,15 @@
   "name": "Imperium - Adeptus Astartes - Space Wolves",
   "revision": 16,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [
+  "factionTraits": [],
+  "detachments": [
     {
-      "name": "Curse of the Wulfen",
-      "description": "While this unit is within 6” of a friendly ^^**Space Wolves Character**^^ model (excluding **^^Wulfen**^^ models) or within 12” of a friendly Wolf Priest model, if this unit is not battle-shocked:\n\n\n- If this unit has **^^Infantry**^^, this unit has +1 OC.\n- If this unit has **^^Vehicle**^^, this unit has +3 OC.\n\n\nBestial Forms: For the purposes of transport capacity, each **^^Wulfen**^^ model takes up the space of 2 models."
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
     }
   ],
-  "detachments": [],
   "units": [
     {
       "id": "c65-46c6-3a62-80c",

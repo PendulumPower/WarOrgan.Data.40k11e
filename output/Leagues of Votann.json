@@ -3,17 +3,15 @@
   "name": "Xenos - Leagues of Votann",
   "revision": 8,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [
+  "factionTraits": [],
+  "detachments": [
     {
-      "name": "Prioritised Efficiency",
-      "description": "If your Army Faction is ^^**Leagues of Votann^^**, ^^**Leagues of Votann^^** units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those ^^**Leagues of Votann^^** units have will change depending on how many Yield points (YP) you currently have:\n- At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase.\n\n- At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase.\n\n- At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase.\n\n**Hostile Acquisition**\n- Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll.\n\n- You can re‑roll Advance and Charge rolls made for this unit.\n\n**Fortify Takeover**\n- Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll.\n\n- Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll.\n\n\n**Yield Points**\nAt the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy:\nYou control one or more objective markers not within your deployment zone.\nYou control two or more objective markers not within your deployment zone.\nYou control more objective markers than your opponent.\n\n\nIn your turn, YP gained in this way are always gained before checking which ability ^^**Leagues of Votann**^^ units from your army have.\n\n\nWhenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
-    },
-    {
-      "name": "Conversion (Thunderkyn)",
-      "description": "Each time an attack made with this weapon targets an enemy unit that is not within 12\", an unmodified Hit roll of 4+ scores a Critical Hit."
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
     }
   ],
-  "detachments": [],
   "units": [
     {
       "id": "5914-3326-fac9-bf29",

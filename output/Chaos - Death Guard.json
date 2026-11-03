@@ -3,13 +3,15 @@
   "name": "Chaos - Death Guard",
   "revision": 20,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [
+  "factionTraits": [],
+  "detachments": [
     {
-      "name": "Nurgle's Gift (Aura)",
-      "description": "If your Army Faction is DEATH GUARD, while an enemy unit is within Contagion Range of one or more ^^**Death Guard^^** units from your army, it is Afflicted.\n\nCONTAGION RANGE\n1st Battle Round: Contagion Range = 3\"\n2nd Battle Round: Contagion Range = 6\"\n3rd Battle Round Onwards: Contagion Range = 9\"\n\nContagion Range cannot be greater than 12\" after modifiers.\n\n**AFFLICTED**\n\nDuring the Declare Battle Formations step, select one of the Plagues below. Until the end of the battle, while an enemy unit is Afflicted, subtract 1 from the Toughness characteristic of models in that unit, and that unit has the effect of your chosen Plague.\n\n**Skullsquirm Blight**\n- Each time a model in this unit makes a ranged attack, enemy units have the benefit of cover against that attack.\n- Each time a model in this unit makes a melee attack, subtract 1 from the Hit roll.\n\n**Rattlejoint Ague**\nWorsen the Save characteristic of models in this unit by 1.\n\n**Scabrous Soulrot**\nWorsen the Move, Leadership and Objective Control characteristics of models in this unit by 1 (this rule can only worsen a model's Objective Control characteristic to a minimum of 1)."
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
     }
   ],
-  "detachments": [],
   "units": [
     {
       "id": "57f2-e2d6-47ed-ddd2",

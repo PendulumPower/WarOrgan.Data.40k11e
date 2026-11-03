@@ -3,13 +3,15 @@
   "name": "Imperium - Astra Militarum - Library",
   "revision": 6,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [
+  "factionTraits": [],
+  "detachments": [
     {
-      "name": "Voice Of Command",
-      "description": "If your Army Faction is **^^Astra Militarum^^**, **^^Officer^^** models with this ability can issue Orders. Each **^^Officer^^**'s datasheet will specify how many Orders it can issue and which units are eligible to receive those Orders. Each time an **^^Officer^^** model issues an Order, select one of the Orders below, then select one eligible friendly unit within 6\" of that **^^Officer^^** model to issue it to. **^^Officer^^** models can issue Orders in your Command phase and at the end of a phase in which they disembarked from a **^^Transport^^** or were set up on the battlefield.\n\nUntil the start of your next Command phase, the unit you selected is affected by that Order. Unless otherwise stated, a unit can only be affected by one Order at a time (any Order subsequently issued to that unit replaces the current one). Orders cannot be issued to Battle-shocked units, and if a unit being affected by an Order becomes Battle-shocked, that Order ceases to affect that unit.\n\n\nOnly **^^Astra Militarum^^** models gain the benefit of an Order issued to their unit.\n\n**MOVE! MOVE! MOVE!**\nAdd 3\" to the Move characteristic of models in this unit.\n\n**FIX BAYONETS!**\nImprove the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n\n**TAKE AIM!**\nImprove the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n\n**FIRST RANK, FIRE! SECOND RANK, FIRE!**\nImprove the Attacks characteristic of Rapid Fire weapons equipped by models in this unit by 1.\n\n**TAKE COVER!**\nImprove the Save characteristic of models in this unit by 1 (this cannot improve a model’s Save to better than 3+).\n\n**DUTY AND HONOUR!**\nImprove the Leadership and Objective Control characteristics of models in this unit by 1."
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
     }
   ],
-  "detachments": [],
   "units": [
     {
       "id": "cb99-456-f100-40ed",

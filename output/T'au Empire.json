@@ -5,11 +5,18 @@
   "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [
     {
-      "name": "Void Combat Discipline",
-      "description": "Units from your army with the For the Greater Good ability lose that ability and **^^T'au Empire^^** units from your army gain this one.\n\nEach time a model in this unit makes a ranged attack, it can ignore other models in this unit for the purposes of determining visibility. In addition, this unit is eligible to perform the Set Overwatch Tactical Manoeuvre in a turn in which it Advanced or Fell Back."
+      "name": "For The Greater Good",
+      "description": "If your Army Faction is **T’AU EMPIRE**, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding **FORTIFICATION** and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the **[IGNORES COVER]** ability."
     }
   ],
-  "detachments": [],
+  "detachments": [
+    {
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
+    }
+  ],
   "units": [
     {
       "id": "179c-d88a-d49b-48b9",

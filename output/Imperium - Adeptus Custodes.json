@@ -3,25 +3,15 @@
   "name": "Imperium - Adeptus Custodes",
   "revision": 28,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [
+  "factionTraits": [],
+  "detachments": [
     {
-      "name": "Martial Ka'tah",
-      "description": "At the start of your Command phase, friendly ^^**Adeptus Custodes**^^ units with this ability are **readied**. While a friendly unit is **readied**, you can select one of the **ka-tah abilities** for that unit to use. If you do, that unit is no longer **readied**.\n\nEach **ka-tah ability** will tell you when that **ka-tah ability** can be used and the effects that **ka-tah ability** has on the unit using it."
-    },
-    {
-      "name": "Aegis of the Emperor",
-      "description": "Friendly ^^**Adeptus Custodes**^^ units with this ability have Feel No Pain 5+ against **mortal wounds**."
-    },
-    {
-      "name": "Aquila Commander",
-      "description": "At the start of the battle round, if a model with this ability is your ^^**Warlord**^^, gain 1CP."
-    },
-    {
-      "name": "Daughters of the Abyss",
-      "description": "- Friendly ^^**Anathema Psykana**^^ units with this ability have **Feel No Pain 3+** against **psychic attacks**.\n- Friendly ^^**Anathema Psykana**^^ units with this ability have the following ability:\nPsychic Null (Aura): Friendly ^^**Adeptus Custodes**^^ units within 6\" of this unit have Feel No Pain 5+ against **psychic attacks**."
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
     }
   ],
-  "detachments": [],
   "units": [
     {
       "id": "7a3e-cedf-9f08-fcac",

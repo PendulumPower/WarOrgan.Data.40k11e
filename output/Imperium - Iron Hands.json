@@ -4,7 +4,14 @@
   "revision": 4,
   "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
-  "detachments": [],
+  "detachments": [
+    {
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
+    }
+  ],
   "units": [
     {
       "id": "6c9d-4ec3-69dd-90b2",

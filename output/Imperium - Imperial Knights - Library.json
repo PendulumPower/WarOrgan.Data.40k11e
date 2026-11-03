@@ -5,11 +5,18 @@
   "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [
     {
-      "name": "Bondsman",
-      "description": "Some **^^Imperial Knights^^** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **^^Armiger^^** model within 12\" of that model (you cannot select an **^^Armiger^^** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **^^Armiger^^** model is affected by that Bondsman ability."
+      "name": "Code Chivalric",
+      "description": "If your Army Faction is **^^Imperial Knights^^**, at the end of the Read Mission Objectives step, you must determine your army's Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part.\n\nTo determine your army's Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table. The selected Deed will describe what needs to be achieved in order to complete that Deed.\n\nTo determine your army's Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\n\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1)."
     }
   ],
-  "detachments": [],
+  "detachments": [
+    {
+      "id": "default",
+      "name": "Faction Detachment",
+      "description": "",
+      "rules": []
+    }
+  ],
   "units": [
     {
       "id": "55fb-9c91-1a4f-3037",
