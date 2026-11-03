@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-    runs-on-ubuntu-latest: false # (standard runner below)
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,9 +19,7 @@ jobs:
         run: |
           echo "Cloning upstream BattleScribe data..."
           rm -rf upstream-data
-          # Replace with your actual upstream BSData repository URL if different
           git clone --depth 1 https://github.com/BSData/wh40k-11e.git upstream-data
-          # OR if your data is in a specific branch/repo format, adjust the clone URL above.
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
