@@ -7,11 +7,12 @@ const OUTPUT_DIR = path.join(__dirname, '../output');
 
 function ensureArray(val: any): any[] {
   if (!val) return [];
-  return Array.isArray(val) ? val : [val];
+  if (Array.isArray(val)) return val;
+  return [val];
 }
 
 async function runParser() {
-  console.log('⚡ Starting advanced War Organ dataset transformation...');
+  console.log('⚡ Starting deep War Organ dataset conversion...');
 
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -29,7 +30,7 @@ async function runParser() {
     process.exit(1);
   }
 
-  console.log(`📂 Processing ${jsonFiles.length} upstream JSON faction files...`);
+  console.log(`📂 Processing ${jsonFiles.length} upstream JSON files...`);
 
   let processedCount = 0;
 
@@ -39,56 +40,67 @@ async function runParser() {
       const rawContent = fs.readFileSync(fullPath, 'utf-8');
       const data = JSON.parse(rawContent);
 
-      // Handle both root-level data and nested 'catalogue' wrappers from upstream
       const root = data.catalogue || data;
 
-      // Extract selection entries, shared entries, and entry links from BattleScribe/BSData structure
-      const sharedEntries = ensureArray(root.sharedSelectionEntries?.selectionEntry);
-      const selectionEntries = ensureArray(root.selectionEntries?.selectionEntry);
-      const entryLinks = ensureArray(root.entryLinks?.entryLink);
-      const sharedProfiles = ensureArray(root.sharedProfiles?.profile);
+      // Extract entries from all possible nested keys
+      const rawEntries = [
+        ...ensureArray(root.selectionEntries),
+        ...ensureArray(root.selectionEntries?.selectionEntry),
+        ...ensureArray(root.sharedSelectionEntries),
+        ...ensureArray(root.sharedSelectionEntries?.selectionEntry),
+        ...ensureArray(root.entryLinks),
+        ...ensureArray(root.entryLinks?.entryLink),
+        ...ensureArray(root.units),
+        ...ensureArray(root.datasheets)
+      ];
 
-      // Unpack and map into War Organ's expected datasheet and unit structure
-      const unitsList = [
-        ...sharedEntries,
-        ...selectionEntries,
-        ...entryLinks
-      ].map((item: any) => ({
-        id: item.id || '',
-        name: item.name || 'Unnamed Unit',
-        type: item.type || item.binding || 'unit',
-        targetId: item.targetId || item.id || '',
-        costs: ensureArray(item.costs?.cost),
-        profiles: ensureArray(item.profiles?.profile || sharedProfiles).map((p: any) => ({
-          name: p.name || '',
-          type: p.typeName || '',
-          characteristics: extractCharacteristics(p)
-        })),
-        rules: ensureArray(item.rules?.rule).map((r: any) => ({
-          name: r.name || '',
-          description: r.description || ''
-        }))
-      }));
+      const datasheetsList = rawEntries.map((item: any) => {
+        const itemProfiles = [
+          ...ensureArray(item.profiles),
+          ...ensureArray(item.profiles?.profile)
+        ];
 
-      // Extract detachments and faction rules
-      const detachmentsList = ensureArray(root.detachments || root.sharedRules?.rule || []).map((d: any) => ({
+        return {
+          id: item.id || item.targetId || '',
+          name: item.name || 'Unnamed Datasheet',
+          type: item.type || 'unit',
+          targetId: item.targetId || item.id || '',
+          costs: ensureArray(item.costs || item.costs?.cost).map((c: any) => ({
+            name: c.name || 'pts',
+            value: c.value ?? c.costVal ?? 0
+          })),
+          profiles: itemProfiles.map((p: any) => ({
+            name: p.name || '',
+            type: p.typeName || p.type || '',
+            characteristics: extractCharacteristics(p)
+          })),
+          rules: ensureArray(item.rules || item.rules?.rule).map((r: any) => ({
+            name: r.name || '',
+            description: r.description || ''
+          }))
+        };
+      });
+
+      const detachmentsList = ensureArray(root.detachments || root.detachmentRules).map((d: any) => ({
         id: d.id || '',
         name: d.name || 'Detachment',
         description: d.description || ''
       }));
 
+      const factionTraits = ensureArray(root.factionTraits || root.sharedRules || root.rules).map((r: any) => ({
+        name: r.name || '',
+        description: r.description || ''
+      }));
+
       const warOrganFaction = {
         id: root.id || file.replace('.json', ''),
-        name: root.name || path.basename(file, '.json').replace(/_/g, ' - '),
+        name: root.name || path.basename(file, '.json'),
         revision: root.revision || 1,
         gameSystemId: root.gameSystemId || 'wh40k-11e',
-        factionTraits: ensureArray(root.sharedRules?.rule || root.rules || []).map((r: any) => ({
-          name: r.name || '',
-          description: r.description || ''
-        })),
+        factionTraits: factionTraits,
         detachments: detachmentsList,
-        units: unitsList,
-        datasheets: unitsList // Populates both keys for complete War Organ compatibility
+        units: datasheetsList,
+        datasheets: datasheetsList
       };
 
       fs.writeFileSync(
@@ -102,17 +114,21 @@ async function runParser() {
     }
   }
 
-  console.log(`✅ Successfully transformed and formatted ${processedCount} faction datasets for War Organ!`);
+  console.log(`✅ Successfully transformed ${processedCount} faction datasets for War Organ!`);
 }
 
 function extractCharacteristics(profile: any) {
-  const chars = ensureArray(profile?.characteristics?.characteristic);
+  const chars = [
+    ...ensureArray(profile?.characteristics),
+    ...ensureArray(profile?.characteristics?.characteristic)
+  ];
+
   const charMap: Record<string, any> = {};
 
   for (const c of chars) {
     if (!c) continue;
-    const key = c.name ? c.name.toLowerCase().replace(/[^a-z0-9]/g, '_') : 'val';
-    charMap[key] = c['#text'] !== undefined ? c['#text'] : (c.value || '');
+    const key = c.name ? c.name.toLowerCase().replace(/[^a-z0-9]/g, '_') : 'value';
+    charMap[key] = c['#text'] !== undefined ? c['#text'] : (c.value || c.$text || '');
   }
 
   return charMap;
