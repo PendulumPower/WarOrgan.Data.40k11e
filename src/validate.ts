@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import fs from 'fs';
+import path from 'path';
 import { glob } from 'glob';
 
 const UnitSchema = z.object({
@@ -16,10 +17,16 @@ const FactionSchema = z.object({
 
 async function validateOutput() {
   const files = await glob('output/*.json');
-  console.log(`🔍 Validating ${files.length} output files against schema...`);
+  console.log(`🔍 Validating ${files.length} output JSON files against schema...`);
+
+  if (files.length === 0) {
+    console.warn('⚠️ No output JSON files found to validate. Skipping validation.');
+    return;
+  }
 
   for (const file of files) {
-    const content = JSON.parse(fs.readFileSync(file, 'utf-8'));
+    const fullPath = path.resolve(file);
+    const content = JSON.parse(fs.readFileSync(fullPath, 'utf-8'));
     FactionSchema.parse(content);
   }
 
