@@ -1,9 +1,10 @@
 {
   "name": "war-organ-dataset-11e",
   "version": "1.0.0",
-  "description": "Automated 41k 11e dataset compiler for War Organ",
+  "description": "Automated 40k 11e dataset compiler for War Organ",
   "scripts": {
     "build": "tsx src/parse.ts",
+    "build-data": "tsx src/parse.ts",
     "validate": "tsx src/validate.ts"
   },
   "dependencies": {
