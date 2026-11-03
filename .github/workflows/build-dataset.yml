@@ -75,13 +75,24 @@ jobs:
         with:
           dotnet-version: 10.0.x
 
+      - name: Show the assets the builder will read
+        run: find "WarOrgan.Data.BuildDataset/Assets/${DATASET_FOLDER}" -maxdepth 2 | head -n 40
+
       - name: Validate and package (WarOrgan.Data.BuildDataset)
-        run: dotnet run --project WarOrgan.Data.BuildDataset -c Release
+        run: |
+          set -o pipefail
+          dotnet run --project WarOrgan.Data.BuildDataset -c Release 2>&1 | tee build.log
 
       - name: Locate the zip
         run: |
-          ZIP=$(find WarOrgan.Data.BuildDataset -path '*Output/*.zip' | head -n1)
-          if [ -z "$ZIP" ]; then echo "No dataset zip produced"; exit 1; fi
+          echo "All zips in the workspace:"
+          find . -name '*.zip' -not -path './node_modules/*' -not -path './bsdata/*' || true
+          ZIP=$(find . -name '*.zip' -not -path './node_modules/*' -not -path './bsdata/*' -not -path '*/obj/*' | head -n1)
+          if [ -z "$ZIP" ]; then
+            echo "No dataset zip produced. The builder log above/below shows why (usually validation errors):"
+            tail -n 60 build.log
+            exit 1
+          fi
           echo "ZIP=$ZIP" >> "$GITHUB_ENV"
           echo "Built: $ZIP"
 
