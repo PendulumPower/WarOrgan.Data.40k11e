@@ -13,15 +13,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository with Submodules
+      - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
 
-      - name: Update Upstream BSData Submodule to Latest
+      - name: Ensure Upstream Data Repository Exists
         run: |
-          git submodule update --init --recursive --remote --merge || true
+          mkdir -p upstream
+          if [ ! -d "upstream/bsdata/.git" ]; then
+            echo "Cloning upstream BSData 11e repository..."
+            rm -rf upstream/bsdata
+            git clone --depth 1 https://github.com/BSData/wh40k-11e.git upstream/bsdata
+          else
+            echo "Updating upstream BSData 11e repository..."
+            cd upstream/bsdata && git pull origin main && cd ../..
+          fi
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -57,13 +62,13 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/ upstream/ || true
+          git add output/ || true
           git commit -m "chore(dataset): sync latest 11e BSData updates [skip ci]" || true
           git push || true
 
       - name: Create GitHub Release & Upload Zip Asset
         if: steps.git-check.outputs.changed == 'true'
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: dataset-v.${{ github.run_number }}
           name: "War Organ 11e Dataset (Build ${{ github.run_number }})"
