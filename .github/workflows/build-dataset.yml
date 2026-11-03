@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to create releases and upload assets
 
     steps:
       - name: Checkout Repository
@@ -42,3 +44,13 @@ jobs:
         with:
           name: war-organ-dataset
           path: MyGame.zip
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: MyGame.zip
+          tag_name: dataset-v1.${{ github.run_number }}
+          name: War Organ Dataset v1.${{ github.run_number }}
+          body: "Automated dataset build synced with upstream BattleScribe catalogs."
+          draft: false
+          prerelease: false
