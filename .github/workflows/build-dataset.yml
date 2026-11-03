@@ -35,6 +35,9 @@ jobs:
           INPUT_DIR: ./upstream-data
           OUTPUT_DIR: ./Assets/MyGame
 
+      - name: Validate Generated Dataset
+        run: npm run validate
+
       - name: Package Dataset Zip
         run: |
           cd Assets/MyGame
@@ -46,6 +49,6 @@ jobs:
           files: MyGame.zip
           tag_name: v1.${{ github.run_number }}.0
           name: Dataset Release v1.${{ github.run_number }}.0
-          body: Automated dataset update compiled from upstream BSData.
+          body: Automated dataset update compiled from upstream BSData and validated against schema.
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
