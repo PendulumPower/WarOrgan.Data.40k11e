@@ -2,54 +2,44 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { XMLParser } from 'fast-xml-parser';
 
-interface Stat {
-  Id: string;
-  Value: string;
-}
-
-interface StatLine {
-  StatName: string;
-  Stats: Stat[];
+interface Profile {
+  name: string;
+  type: string;
+  characteristics: { [key: string]: string };
 }
 
 interface Unit {
-  Id: string;
-  DisplayName: string;
-  FactionKeywords: string[];
-  UnitComposition: {
-    ModelCompositions: Array<{
-      ModelName: string;
-      Limit: { Min: number; Max: number };
-      StatlineRef: string;
-      Wargear: Array<{ Models: number; InitialWargear: any[] }>;
-    }>;
-  };
-  Points: Array<{ ModelCount: number; Cost: number }>;
-  StatLines: StatLine[];
-  Weapons: any[];
+  id: string;
+  name: string;
+  type: string;
+  factionId: string;
+  costs: Array<{ name: string; value: number }>;
+  profiles: Profile[];
+  rules: any[];
+  wargear: any[];
 }
 
-interface FactionDefinition {
-  Name: string;
-  FactionKeyword: string;
-  MainColor: string;
-  DarkColor: string;
+interface CatalogueIndexItem {
+  id: string;
+  name: string;
+  fileName: string;
+  revision: number;
 }
 
 const inputDir = process.env.INPUT_DIR || './upstream-data';
 const outputDir = process.env.OUTPUT_DIR || './Assets/MyGame';
 
-const COLORS = [
-  { MainColor: '#315C91', DarkColor: '#6FA4D9' },
-  { MainColor: '#913131', DarkColor: '#D96F6F' },
-  { MainColor: '#319145', DarkColor: '#6FD982' },
-  { MainColor: '#917931', DarkColor: '#D9B86F' },
-  { MainColor: '#783191', DarkColor: '#B46FD9' }
-];
-
-function getColor(index: number) {
-  return COLORS[index % COLORS.length];
-}
+// Stat key normalization to lowercase for War Organ native schema
+const statKeyMap: { [key: string]: string } = {
+  'M': 'm', 'Move': 'm',
+  'T': 't', 'Toughness': 't',
+  'SV': 'sv', 'Save': 'sv',
+  'W': 'w', 'Wounds': 'w',
+  'LD': 'ld', 'Leadership': 'ld', 'Ld': 'ld',
+  'OC': 'oc',
+  'Invulnerable Save': 'insv',
+  'Base': 'base'
+};
 
 function parseCatalogue(filePath: string): { factionName: string; units: Unit[] } {
   const fileContent = fs.readFileSync(filePath, 'utf-8');
@@ -72,81 +62,58 @@ function parseCatalogue(filePath: string): { factionName: string; units: Unit[] 
   if (!catalogue) return { factionName: 'Unknown', units: [] };
 
   const factionName = catalogue['@_name'] || path.basename(filePath, '.cat');
+  const factionId = factionName.toLowerCase().replace(/[^a-z0-9]/g, '-');
   const units: Unit[] = [];
   
   const selectionEntries = catalogue.sharedSelectionEntries?.selectionEntry || [];
   const entriesArray = Array.isArray(selectionEntries) ? selectionEntries : [selectionEntries];
-
-  // Clean mapping to standard keys only (preventing duplicates)
-  const standardStatMap: { [key: string]: string } = {
-    'M': 'M', 'Move': 'M',
-    'T': 'T', 'Toughness': 'T',
-    'SV': 'SV', 'Save': 'SV',
-    'W': 'W', 'Wounds': 'W',
-    'LD': 'LD', 'Leadership': 'LD', 'Ld': 'LD',
-    'OC': 'OC'
-  };
 
   for (const entry of entriesArray) {
     if (entry['@_type'] === 'model' || entry['@_type'] === 'unit') {
       const unitName = entry['@_name'];
       if (!unitName) continue;
       
-      const unitId = unitName.toUpperCase().replace(/[^A-Z0-9]/g, '_');
+      const unitId = unitName.toLowerCase().replace(/[^a-z0-9]/g, '-');
 
-      const profiles = entry.profiles?.profile || [];
-      const profilesArray = Array.isArray(profiles) ? profiles : [profiles];
+      const profiles: Profile[] = [];
+      const rawProfiles = entry.profiles?.profile || [];
+      const profilesArray = Array.isArray(rawProfiles) ? rawProfiles : [rawProfiles];
       
-      const statMap: { [key: string]: string } = {};
-      for (const profile of profilesArray) {
-        if (profile['@_typeName'] === 'Unit' || profile['@_typeName'] === 'Model') {
-          const characteristics = profile.characteristics?.characteristic || [];
-          const charArray = Array.isArray(characteristics) ? characteristics : [characteristics];
-          for (const char of charArray) {
-            const charName = char['@_name'];
-            const charVal = char['#text']?.toString() || '-';
-            if (standardStatMap[charName]) {
-              statMap[standardStatMap[charName]] = charVal;
-            }
+      for (const p of profilesArray) {
+        const pName = p['@_name'] || unitName;
+        const pTypeName = p['@_typeName'] || 'Abilities';
+        const chars: { [key: string]: string } = {};
+        
+        const characteristics = p.characteristics?.characteristic || [];
+        const charArray = Array.isArray(characteristics) ? characteristics : [characteristics];
+        
+        for (const char of charArray) {
+          const charName = char['@_name'];
+          const charVal = char['#text']?.toString() || '';
+          if (pTypeName === 'Unit' || pTypeName === 'Model') {
+            const lowerKey = statKeyMap[charName] || charName.toLowerCase();
+            chars[lowerKey] = charVal;
+          } else {
+            chars['description'] = charVal;
           }
         }
-      }
 
-      // Ensure mandatory stats are present
-      const mandatoryStats = ['M', 'T', 'SV', 'W', 'LD', 'OC'];
-      for (const mStat of mandatoryStats) {
-        if (!statMap[mStat]) {
-          statMap[mStat] = '-';
-        }
+        profiles.push({
+          name: pName,
+          type: (pTypeName === 'Unit' || pTypeName === 'Model') ? 'Unit' : 'Abilities',
+          characteristics: chars
+        });
       }
-
-      const finalStats: Stat[] = Object.keys(statMap).map(id => ({
-        Id: id,
-        Value: statMap[id]
-      }));
 
       units.push({
-        Id: unitId,
-        DisplayName: unitName,
-        FactionKeywords: [factionName],
-        UnitComposition: {
-          ModelCompositions: [
-            {
-              ModelName: unitName,
-              Limit: { Min: 1, Max: 1 },
-              StatlineRef: unitName,
-              Wargear: [{ Models: 1, InitialWargear: [] }]
-            }
-          ]
-        },
-        Points: [{ ModelCount: 1, Cost: 100 }],
-        StatLines: [
-          {
-            StatName: unitName,
-            Stats: finalStats
-          }
-        ],
-        Weapons: []
+        id: unitId,
+        name: unitName,
+        type: entry['@_type'] || 'unit',
+        factionId: factionId,
+        costs: [{ name: 'pts', value: 100 }],
+        profiles: profiles,
+        rules: [],
+        wargear: []
       });
     }
   }
@@ -155,9 +122,9 @@ function parseCatalogue(filePath: string): { factionName: string; units: Unit[] 
 }
 
 function main() {
-  const rostersDir = path.join(outputDir, 'Rosters');
-  if (!fs.existsSync(rostersDir)) {
-    fs.mkdirSync(rostersDir, { recursive: true });
+  console.log(`Scanning input directory: ${inputDir}`);
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
   }
 
   const findFiles = (dir: string, ext: string): string[] => {
@@ -175,61 +142,66 @@ function main() {
   };
 
   const catFiles = [...findFiles(inputDir, '.cat'), ...findFiles(inputDir, '.json')];
-  const factionsMap: { [key: string]: Unit[] } = {};
-  const factionList: FactionDefinition[] = [];
+  console.log(`Found ${catFiles.length} catalog files to process.`);
 
-  let colorIndex = 0;
+  const cataloguesIndex: CatalogueIndexItem[] = [];
+
   for (const file of catFiles) {
     try {
       const { factionName, units } = parseCatalogue(file);
       if (units.length > 0) {
-        if (!factionsMap[factionName]) {
-          factionsMap[factionName] = [];
-          const colors = getColor(colorIndex++);
-          factionList.push({
-            Name: factionName,
-            FactionKeyword: factionName,
-            MainColor: colors.MainColor,
-            DarkColor: colors.DarkColor
-          });
-        }
-        factionsMap[factionName].push(...units);
+        const fileName = factionName.replace(/[^a-zA-Z0-9-_ ]/g, '') + '.json';
+        const factionId = factionName.toLowerCase().replace(/[^a-z0-9]/g, '-');
+
+        // Write faction JSON file directly at root of outputDir
+        const rosterData = {
+          id: factionId,
+          name: factionName,
+          revision: 1,
+          gameSystemId: "wh40k-11e",
+          factionTraits: [],
+          detachments: [
+            {
+              id: "default",
+              name: "Faction Detachment",
+              description: "",
+              rules: []
+            }
+          ],
+          units: units
+        };
+
+        fs.writeFileSync(
+          path.join(outputDir, fileName),
+          JSON.stringify(rosterData, null, 2)
+        );
+
+        cataloguesIndex.push({
+          id: factionId,
+          name: factionName,
+          fileName: fileName,
+          revision: 1
+        });
       }
     } catch (err) {
       console.error(`Error parsing file ${file}:`, err);
     }
   }
 
-  // 1. Write DataSetDefinition.json with mandatory Version property
-  const datasetDef = {
-    Version: 1,
-    Features: "None",
-    Factions: factionList,
-    BattleSizeDefinitions: [
-      { Name: "Incursion", PointsTotal: 1000, DetachmentPoints: 0, EnhancementLimit: 0, UnitLimit: 0 },
-      { Name: "Strike Force", PointsTotal: 2000, DetachmentPoints: 0, EnhancementLimit: 0, UnitLimit: 0 },
-      { Name: "Onslaught", PointsTotal: 3000, DetachmentPoints: 0, EnhancementLimit: 0, UnitLimit: 0 }
-    ]
+  // Write index.json manifesto directly at root
+  const indexManifest = {
+    gameSystemId: "wh40k-11e",
+    name: "Warhammer 40k 11th Edition - War Organ Dataset",
+    revision: Date.now(),
+    catalogues: cataloguesIndex
   };
 
   fs.writeFileSync(
-    path.join(outputDir, 'DataSetDefinition.json'),
-    JSON.stringify(datasetDef, null, 2)
+    path.join(outputDir, 'index.json'),
+    JSON.stringify(indexManifest, null, 2)
   );
 
-  // 2. Write individual faction JSON files in Rosters/
-  for (const [factionName, units] of Object.entries(factionsMap)) {
-    const safeFileName = factionName.replace(/[^a-zA-Z0-9-_]/g, '_') + '.json';
-    const rosterData = {
-      Name: factionName,
-      Units: units
-    };
-
-    fs.writeFileSync(
-      path.join(rostersDir, safeFileName),
-      JSON.stringify(rosterData, null, 2)
-    );
-  }
+  console.log(`Successfully generated index.json and ${cataloguesIndex.length} root-level faction files.`);
 }
 
 main();
