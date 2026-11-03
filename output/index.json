@@ -1,0 +1,283 @@
+{
+  "gameSystemId": "wh40k-11e",
+  "name": "Warhammer 40k 11th Edition - War Organ Dataset",
+  "revision": 1793721746580,
+  "catalogues": [
+    {
+      "id": "Warhammer 40,000",
+      "name": "Warhammer 40,000",
+      "fileName": "Warhammer 40,000.json",
+      "revision": 1
+    },
+    {
+      "id": "Unaligned Forces",
+      "name": "Unaligned Forces",
+      "fileName": "Unaligned Forces.json",
+      "revision": 1
+    },
+    {
+      "id": "Tyranids",
+      "name": "Tyranids",
+      "fileName": "Tyranids.json",
+      "revision": 1
+    },
+    {
+      "id": "T'au Empire",
+      "name": "T'au Empire",
+      "fileName": "T'au Empire.json",
+      "revision": 1
+    },
+    {
+      "id": "Orks",
+      "name": "Orks",
+      "fileName": "Orks.json",
+      "revision": 1
+    },
+    {
+      "id": "Necrons",
+      "name": "Necrons",
+      "fileName": "Necrons.json",
+      "revision": 1
+    },
+    {
+      "id": "Library - Tyranids",
+      "name": "Library - Tyranids",
+      "fileName": "Library - Tyranids.json",
+      "revision": 1
+    },
+    {
+      "id": "Library - Titans",
+      "name": "Library - Titans",
+      "fileName": "Library - Titans.json",
+      "revision": 1
+    },
+    {
+      "id": "Library - Astartes Heresy Legends",
+      "name": "Library - Astartes Heresy Legends",
+      "fileName": "Library - Astartes Heresy Legends.json",
+      "revision": 1
+    },
+    {
+      "id": "Leagues of Votann",
+      "name": "Leagues of Votann",
+      "fileName": "Leagues of Votann.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - White Scars",
+      "name": "Imperium - White Scars",
+      "fileName": "Imperium - White Scars.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Ultramarines",
+      "name": "Imperium - Ultramarines",
+      "fileName": "Imperium - Ultramarines.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Space Wolves",
+      "name": "Imperium - Space Wolves",
+      "fileName": "Imperium - Space Wolves.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Space Marines",
+      "name": "Imperium - Space Marines",
+      "fileName": "Imperium - Space Marines.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Salamanders",
+      "name": "Imperium - Salamanders",
+      "fileName": "Imperium - Salamanders.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Raven Guard",
+      "name": "Imperium - Raven Guard",
+      "fileName": "Imperium - Raven Guard.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Iron Hands",
+      "name": "Imperium - Iron Hands",
+      "fileName": "Imperium - Iron Hands.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Imperial Knights",
+      "name": "Imperium - Imperial Knights",
+      "fileName": "Imperium - Imperial Knights.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Imperial Knights - Library",
+      "name": "Imperium - Imperial Knights - Library",
+      "fileName": "Imperium - Imperial Knights - Library.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Imperial Fists",
+      "name": "Imperium - Imperial Fists",
+      "fileName": "Imperium - Imperial Fists.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Grey Knights",
+      "name": "Imperium - Grey Knights",
+      "fileName": "Imperium - Grey Knights.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Deathwatch",
+      "name": "Imperium - Deathwatch",
+      "fileName": "Imperium - Deathwatch.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Dark Angels",
+      "name": "Imperium - Dark Angels",
+      "fileName": "Imperium - Dark Angels.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Blood Angels",
+      "name": "Imperium - Blood Angels",
+      "fileName": "Imperium - Blood Angels.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Black Templars",
+      "name": "Imperium - Black Templars",
+      "fileName": "Imperium - Black Templars.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Astra Militarum",
+      "name": "Imperium - Astra Militarum",
+      "fileName": "Imperium - Astra Militarum.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Astra Militarum - Library",
+      "name": "Imperium - Astra Militarum - Library",
+      "fileName": "Imperium - Astra Militarum - Library.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Agents of the Imperium",
+      "name": "Imperium - Agents of the Imperium",
+      "fileName": "Imperium - Agents of the Imperium.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Adeptus Titanicus",
+      "name": "Imperium - Adeptus Titanicus",
+      "fileName": "Imperium - Adeptus Titanicus.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Adeptus Mechanicus",
+      "name": "Imperium - Adeptus Mechanicus",
+      "fileName": "Imperium - Adeptus Mechanicus.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Adeptus Custodes",
+      "name": "Imperium - Adeptus Custodes",
+      "fileName": "Imperium - Adeptus Custodes.json",
+      "revision": 1
+    },
+    {
+      "id": "Imperium - Adepta Sororitas",
+      "name": "Imperium - Adepta Sororitas",
+      "fileName": "Imperium - Adepta Sororitas.json",
+      "revision": 1
+    },
+    {
+      "id": "Genestealer Cults",
+      "name": "Genestealer Cults",
+      "fileName": "Genestealer Cults.json",
+      "revision": 1
+    },
+    {
+      "id": "Chaos - World Eaters",
+      "name": "Chaos - World Eaters",
+      "fileName": "Chaos - World Eaters.json",
+      "revision": 1
+    },
+    {
+      "id": "Chaos - Titanicus Traitoris",
+      "name": "Chaos - Titanicus Traitoris",
+      "fileName": "Chaos - Titanicus Traitoris.json",
+      "revision": 1
+    },
+    {
+      "id": "Chaos - Thousand Sons",
+      "name": "Chaos - Thousand Sons",
+      "fileName": "Chaos - Thousand Sons.json",
+      "revision": 1
+    },
+    {
+      "id": "Chaos - Emperor's Children",
+      "name": "Chaos - Emperor's Children",
+      "fileName": "Chaos - Emperor's Children.json",
+      "revision": 1
+    },
+    {
+      "id": "Chaos - Death Guard",
+      "name": "Chaos - Death Guard",
+      "fileName": "Chaos - Death Guard.json",
+      "revision": 1
+    },
+    {
+      "id": "Chaos - Chaos Space Marines",
+      "name": "Chaos - Chaos Space Marines",
+      "fileName": "Chaos - Chaos Space Marines.json",
+      "revision": 1
+    },
+    {
+      "id": "Chaos - Chaos Knights",
+      "name": "Chaos - Chaos Knights",
+      "fileName": "Chaos - Chaos Knights.json",
+      "revision": 1
+    },
+    {
+      "id": "Chaos - Chaos Knights Library",
+      "name": "Chaos - Chaos Knights Library",
+      "fileName": "Chaos - Chaos Knights Library.json",
+      "revision": 1
+    },
+    {
+      "id": "Chaos - Chaos Daemons",
+      "name": "Chaos - Chaos Daemons",
+      "fileName": "Chaos - Chaos Daemons.json",
+      "revision": 1
+    },
+    {
+      "id": "Chaos - Chaos Daemons Library",
+      "name": "Chaos - Chaos Daemons Library",
+      "fileName": "Chaos - Chaos Daemons Library.json",
+      "revision": 1
+    },
+    {
+      "id": "Aeldari - Drukhari",
+      "name": "Aeldari - Drukhari",
+      "fileName": "Aeldari - Drukhari.json",
+      "revision": 1
+    },
+    {
+      "id": "Aeldari - Craftworlds",
+      "name": "Aeldari - Craftworlds",
+      "fileName": "Aeldari - Craftworlds.json",
+      "revision": 1
+    },
+    {
+      "id": "Aeldari - Aeldari Library",
+      "name": "Aeldari - Aeldari Library",
+      "fileName": "Aeldari - Aeldari Library.json",
+      "revision": 1
+    }
+  ]
+}
