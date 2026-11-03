@@ -1,0 +1,74 @@
+name: Auto-Build 40k 11e War Organ Dataset
+
+on:
+  schedule:
+    - cron: '0 4 * * *'  # Runs daily at 04:00 UTC
+  workflow_dispatch:      # Allows manual trigger from the GitHub Actions UI
+  push:
+    branches:
+      - main
+
+jobs:
+  build-dataset:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository with Submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Update Upstream BSData Submodule to Latest
+        run: |
+          git submodule update --init --recursive --remote --merge || true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Build Parser & Schema Validator
+        run: |
+          npm run build
+          npm run validate
+
+      - name: Package Output Folder into Zip Archive
+        run: |
+          cd output
+          zip -r ../war-organ-dataset-11e.zip .
+          cd ..
+
+      - name: Check for Data Changes
+        id: git-check
+        run: |
+          git status --porcelain
+          if [ -z "$(git status --porcelain output/)" ]; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and Push Updated Dataset Files Back to Repo
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/ upstream/ || true
+          git commit -m "chore(dataset): sync latest 11e BSData updates [skip ci]" || true
+          git push || true
+
+      - name: Create GitHub Release & Upload Zip Asset
+        if: steps.git-check.outputs.changed == 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: dataset-v.${{ github.run_number }}
+          name: "War Organ 11e Dataset (Build ${{ github.run_number }})"
+          files: war-organ-dataset-11e.zip
+          body: "Automated daily synchronization and compilation of 11th Edition BSData for War Organ."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
