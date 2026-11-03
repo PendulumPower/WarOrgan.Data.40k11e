@@ -1,62 +1,28 @@
-name: Build War Organ Dataset
-
+name: Build dataset
 on:
   push:
-    branches: [ main, master ]
+    branches: [master]
   workflow_dispatch:
-
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Pull Upstream BSData
-        run: |
-          echo "Cloning upstream BattleScribe data..."
-          rm -rf upstream-data
-          git clone --depth 1 https://github.com/BSData/wh40k-11e.git upstream-data
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          node-version: '20'
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Clean Previous Builds
-        run: |
-          rm -rf Assets/MyGame
-          rm -f MyGame.zip
-
-      - name: Run Parser Script
-        run: npx ts-node src/parse.ts
-        env:
-          INPUT_DIR: ./upstream-data
-          OUTPUT_DIR: ./Assets/MyGame
-
-      - name: Package Dataset Zip
-        run: |
-          cd Assets/MyGame
-          zip -r ../../MyGame.zip .
-
-      - name: Upload Dataset Artifact
-        uses: actions/upload-artifact@v4
+          repository: BSData/<40k-11e-repo>
+          path: bsdata
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm install
+      - run: npx tsx src/parse.ts bsdata WarOrgan.Data.BuildDataset/Assets/<YourDataset>
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: 10.0.x }
+      - run: dotnet run --project WarOrgan.Data.BuildDataset -c Release
+      - run: echo "ZIP=$(find WarOrgan.Data.BuildDataset -path '*Output/*.zip' | head -n1)" >> $GITHUB_ENV
+      - uses: softprops/action-gh-release@v2
         with:
-          name: war-organ-dataset
-          path: MyGame.zip
-
-      - name: Publish GitHub Release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: MyGame.zip
-          tag_name: dataset-v1.${{ github.run_number }}
-          name: War Organ Dataset v1.${{ github.run_number }}
-          body: "Automated dataset build synced with upstream BattleScribe catalogs."
-          draft: false
-          prerelease: false
+          tag_name: v${{ github.run_number }}
+          files: ${{ env.ZIP }}
