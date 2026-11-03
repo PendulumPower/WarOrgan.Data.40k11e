@@ -25,7 +25,7 @@ jobs:
 
       - name: Clone Upstream BSData Repository
         run: |
-          git clone --depth 1 https://github.com/BSData/wh40k-10ed.git upstream-data
+          git clone --depth 1 https://github.com/BSData/wh40k-10e.git upstream-data
 
       - name: Run Dataset Parser Pipeline
         run: npm run build-data
