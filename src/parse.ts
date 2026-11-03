@@ -11,7 +11,7 @@ function ensureArray(val: any): any[] {
 }
 
 async function runParser() {
-  console.log('⚡ Starting comprehensive War Organ deep data compilation...');
+  console.log('⚡ Starting advanced library-merged War Organ dataset compilation...');
 
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -29,12 +29,27 @@ async function runParser() {
     process.exit(1);
   }
 
-  console.log(`📂 Processing ${jsonFiles.length} upstream faction files...`);
+  // Pre-load all library data files so we can merge shared units and rules into factions
+  const libraryMap: Record<string, any> = {};
+  for (const file of jsonFiles) {
+    if (file.toLowerCase().includes('library') || file.toLowerCase().includes('titan')) {
+      try {
+        const content = JSON.parse(fs.readFileSync(path.join(INPUT_DIR, file), 'utf-8'));
+        const root = content.catalogue || content;
+        libraryMap[file] = root;
+      } catch (e) {
+        // skip malformed library files
+      }
+    }
+  }
+
+  console.log(`📂 Processing ${jsonFiles.length} upstream faction files with library resolution...`);
 
   let processedCount = 0;
   const catalogueIndex: any[] = [];
 
   for (const file of jsonFiles) {
+    // Skip standalone library files from being output as primary factions if desired, or parse them
     try {
       const fullPath = path.join(INPUT_DIR, file);
       const rawContent = fs.readFileSync(fullPath, 'utf-8');
@@ -42,8 +57,8 @@ async function runParser() {
 
       const root = data.catalogue || data;
 
-      // Deep extract all datasheets and units with full profile depth
-      const rawUnits = [
+      // Gather units from this file and relevant libraries
+      let rawUnits = [
         ...ensureArray(root.units),
         ...ensureArray(root.datasheets),
         ...ensureArray(root.selectionEntries),
@@ -51,51 +66,83 @@ async function runParser() {
         ...ensureArray(root.entryLinks)
       ];
 
-      const mappedUnits = rawUnits.map((u: any) => ({
-        id: u.id || u.targetId || '',
-        name: u.name || 'Unnamed Unit',
-        type: u.type || 'unit',
-        factionId: u.factionId || root.id || '',
-        costs: ensureArray(u.costs || u.costList).map((c: any) => ({
-          name: c.name || 'pts',
-          value: c.value ?? c.costVal ?? 0
-        })),
-        profiles: ensureArray(u.profiles || u.profileList).map((p: any) => ({
-          name: p.name || '',
-          type: p.typeName || p.type || '',
-          characteristics: extractCharacteristics(p)
-        })),
-        rules: ensureArray(u.rules || u.ruleList).map((r: any) => ({
+      // If units are sparse, pull from available libraries
+      if (rawUnits.length <= 2) {
+        for (const libKey of Object.keys(libraryMap)) {
+          const lib = libraryMap[libKey];
+          rawUnits = [
+            ...rawUnits,
+            ...ensureArray(lib.units),
+            ...ensureArray(lib.datasheets),
+            ...ensureArray(lib.selectionEntries),
+            ...ensureArray(lib.sharedSelectionEntries)
+          ];
+        }
+      }
+
+      const mappedUnits = rawUnits.map((u: any) => {
+        const profiles = [
+          ...ensureArray(u.profiles),
+          ...ensureArray(u.profileList),
+          ...ensureArray(u.profiles?.profile)
+        ];
+
+        return {
+          id: u.id || u.targetId || Math.random().toString(),
+          name: u.name || 'Unnamed Unit',
+          type: u.type || 'unit',
+          factionId: u.factionId || root.id || '',
+          costs: ensureArray(u.costs || u.costList || u.costs?.cost).map((c: any) => ({
+            name: c.name || 'pts',
+            value: c.value ?? c.costVal ?? 0
+          })),
+          profiles: profiles.map((p: any) => ({
+            name: p.name || '',
+            type: p.typeName || p.type || '',
+            characteristics: extractCharacteristics(p)
+          })),
+          rules: ensureArray(u.rules || u.ruleList || u.rules?.rule).map((r: any) => ({
+            name: r.name || '',
+            description: r.description || ''
+          })),
+          wargear: ensureArray(u.wargear || u.selections || []).map((w: any) => ({
+            name: w.name || '',
+            cost: w.cost || 0
+          }))
+        };
+      });
+
+      const rawDetachments = [
+        ...ensureArray(root.detachments),
+        ...ensureArray(root.detachmentRules),
+        ...ensureArray(root.forces),
+        ...ensureArray(root.sharedRules?.rule)
+      ];
+
+      const mappedDetachments = rawDetachments.map((d: any) => ({
+        id: d.id || '',
+        name: d.name || 'Standard Detachment',
+        description: d.description || d.comment || '',
+        rules: ensureArray(d.rules || d.detachmentAbilities || []).map((r: any) => ({
           name: r.name || '',
           description: r.description || ''
-        })),
-        wargear: ensureArray(u.wargear || u.selections || []).map((w: any) => ({
-          name: w.name || '',
-          cost: w.cost || 0
         }))
       }));
 
-      const mappedDetachments = ensureArray(root.detachments || root.detachmentRules).map((d: any) => ({
-        id: d.id || '',
-        name: d.name || 'Detachment',
-        description: d.description || '',
-        rules: ensureArray(d.rules || d.detachmentAbilities || [])
-      }));
-
-      const mappedTraits = ensureArray(root.factionTraits || root.sharedRules || root.rules).map((r: any) => ({
+      const mappedTraits = ensureArray(root.factionTraits || root.sharedRules?.rule || root.rules).map((r: any) => ({
         name: r.name || '',
         description: r.description || ''
       }));
 
       const factionDataset = {
         id: root.id || file.replace('.json', ''),
-        name: root.name || path.basename(file, '.json'),
+        name: root.name || path.basename(file, '.json').replace('.json', ''),
         revision: root.revision || 1,
         gameSystemId: root.gameSystemId || 'wh40k-11e',
         factionTraits: mappedTraits,
-        detachments: mappedDetachments,
-        units: mappedUnits.length > 0 ? mappedUnits : ensureArray(data.units || data.datasheets),
-        datasheets: mappedUnits.length > 0 ? mappedUnits : ensureArray(data.units || data.datasheets)
+        detachments: mappedDetachments.length > 0 ? mappedDetachments : [{ id: 'default', name: 'Faction Detachment', description: '', rules: [] }],
+        units: mappedUnits,
+        datasheets: mappedUnits
       };
 
       catalogueIndex.push({
@@ -116,7 +163,7 @@ async function runParser() {
     }
   }
 
-  // Write master index for War Organ discovery
+  // Write master index for app loading
   fs.writeFileSync(
     path.join(OUTPUT_DIR, 'index.json'),
     JSON.stringify({
@@ -127,7 +174,7 @@ async function runParser() {
     }, null, 2)
   );
 
-  console.log(`✅ Successfully compiled ${processedCount} deep-parsed faction datasets!`);
+  console.log(`✅ Successfully compiled ${processedCount} fully merged datasets with library and detachment data!`);
 }
 
 function extractCharacteristics(profile: any) {
