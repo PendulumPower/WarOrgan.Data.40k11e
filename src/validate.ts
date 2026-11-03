@@ -10,13 +10,13 @@ const FactionSchema = z.object({
   gameSystemId: z.any().optional(),
   factionTraits: z.any().optional(),
   detachments: z.any().optional(),
-  units: z.any(),
-  datasheets: z.any().optional(),
+  units: z.array(z.any()),
+  datasheets: z.array(z.any()),
 });
 
 async function validateOutput() {
   const files = await glob('output/*.json');
-  console.log(`🔍 Validating ${files.length} compiled output files against War Organ schema...`);
+  console.log(`🔍 Validating ${files.length} output files against War Organ schema...`);
 
   if (files.length === 0) {
     console.warn('⚠️ No output JSON files found to validate.');
@@ -29,7 +29,7 @@ async function validateOutput() {
     FactionSchema.parse(content);
   }
 
-  console.log('✅ Validation passed cleanly! All datasets match War Organ template requirements.');
+  console.log('✅ Validation passed cleanly!');
 }
 
 validateOutput().catch((err) => {
