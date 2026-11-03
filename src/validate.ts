@@ -3,15 +3,25 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
+const ProfileSchema = z.object({
+  name: z.string(),
+  type: z.string(),
+  characteristics: z.record(z.string(), z.any()),
+});
+
 const UnitSchema = z.object({
   id: z.string(),
   name: z.string(),
+  type: z.string().optional(),
   targetId: z.string().optional(),
+  profiles: z.array(ProfileSchema).optional(),
 });
 
 const FactionSchema = z.object({
   id: z.string(),
   name: z.string(),
+  revision: z.any().optional(),
+  gameSystemId: z.any().optional(),
   units: z.array(UnitSchema),
 });
 
