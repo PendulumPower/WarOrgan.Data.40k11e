@@ -1,24 +1,12 @@
 import fs from 'fs';
 import path from 'path';
-import { XMLParser } from 'fast-xml-parser';
 import { glob } from 'glob';
 
 const INPUT_DIR = path.join(__dirname, '../upstream/bsdata');
 const OUTPUT_DIR = path.join(__dirname, '../output');
 
-const xmlParser = new XMLParser({
-  ignoreAttributes: false,
-  attributeNamePrefix: '',
-  parseAttributeValue: true,
-});
-
-function ensureArray(val: any) {
-  if (!val) return [];
-  return Array.isArray(val) ? val : [val];
-}
-
 async function runParser() {
-  console.log('⚡ Starting real dataset build from upstream BSData XML...');
+  console.log('⚡ Starting dataset build from upstream JSON files...');
 
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -29,50 +17,35 @@ async function runParser() {
     process.exit(1);
   }
 
-  // Debug: List top-level contents of INPUT_DIR to inspect repo structure
-  console.log('📂 Contents of upstream/bsdata root:');
-  try {
-    const topLevelFiles = fs.readdirSync(INPUT_DIR);
-    console.log(topLevelFiles);
-  } catch (e) {
-    console.error('Could not read directory:', e);
-  }
+  // Find all .json files in the upstream folder
+  const jsonFiles = await glob('*.json', { cwd: INPUT_DIR, nocase: true });
 
-  // Search recursively for any .cat files
-  const catFiles = await glob('**/*.cat', { cwd: INPUT_DIR, nocase: true });
-
-  if (catFiles.length === 0) {
-    console.error('❌ Error: No .cat files found inside upstream/bsdata using glob!');
+  if (jsonFiles.length === 0) {
+    console.error('❌ Error: No .json files found inside upstream/bsdata!');
     process.exit(1);
   }
 
-  console.log(`📂 Found ${catFiles.length} faction catalogue files. Processing...`);
+  console.log(`📂 Found ${jsonFiles.length} JSON faction files. Processing...`);
 
   let processedCount = 0;
 
-  for (const file of catFiles) {
+  for (const file of jsonFiles) {
     try {
       const fullPath = path.join(INPUT_DIR, file);
-      const rawXml = fs.readFileSync(fullPath, 'utf-8');
-      const parsed = xmlParser.parse(rawXml);
+      const rawContent = fs.readFileSync(fullPath, 'utf-8');
+      const jsonData = JSON.parse(rawContent);
 
-      const catalogue = parsed?.catalogue;
-      if (!catalogue) continue;
-
-      const units = extractUnitsFromCatalogue(catalogue);
-
+      // Ensure it maps nicely to War Organ's expected structure
       const warOrganFaction = {
-        id: catalogue.id || file,
-        name: catalogue.name || path.basename(file, '.cat'),
-        revision: catalogue.revision || 1,
-        gameSystemId: catalogue.gameSystemId,
-        units: units,
+        id: jsonData.id || file,
+        name: jsonData.name || path.basename(file, '.json'),
+        revision: jsonData.revision || 1,
+        gameSystemId: jsonData.gameSystemId || 'wh40k-11e',
+        units: jsonData.units || jsonData.entryLinks || jsonData.sharedSelectionEntries || [],
       };
 
-      const safeName = (catalogue.name || path.basename(file, '.cat')).toLowerCase().replace(/[^a-z0-9]/g, '_');
-      const fileName = `${safeName}.json`;
       fs.writeFileSync(
-        path.join(OUTPUT_DIR, fileName),
+        path.join(OUTPUT_DIR, file),
         JSON.stringify(warOrganFaction, null, 2)
       );
       
@@ -82,59 +55,10 @@ async function runParser() {
     }
   }
 
-  console.log(`✅ Successfully parsed ${processedCount} factions into real JSON datasets!`);
-}
-
-function extractUnitsFromCatalogue(catalogue: any) {
-  const units: any[] = [];
-
-  const sharedEntries = ensureArray(catalogue.sharedSelectionEntries?.selectionEntry);
-  for (const entry of sharedEntries) {
-    if (!entry) continue;
-    units.push({
-      id: entry.id || '',
-      name: entry.name || 'Unknown Unit',
-      type: entry.type || 'unit',
-      profiles: extractProfiles(entry),
-    });
-  }
-
-  const entryLinks = ensureArray(catalogue.entryLinks?.entryLink);
-  for (const link of entryLinks) {
-    if (!link) continue;
-    units.push({
-      id: link.id || '',
-      name: link.name || 'Unknown Link',
-      targetId: link.targetId || '',
-    });
-  }
-
-  return units;
-}
-
-function extractProfiles(entry: any) {
-  const profiles = ensureArray(entry.profiles?.profile);
-  return profiles.map((p: any) => ({
-    name: p?.name || '',
-    type: p?.typeName || '',
-    characteristics: extractCharacteristics(p),
-  }));
-}
-
-function extractCharacteristics(profile: any) {
-  const chars = ensureArray(profile?.characteristics?.characteristic);
-  const charMap: Record<string, any> = {};
-
-  for (const c of chars) {
-    if (!c) continue;
-    const key = c.name ? c.name.toLowerCase().replace(/[^a-z0-9]/g, '_') : 'val';
-    charMap[key] = c['#text'] !== undefined ? c['#text'] : c;
-  }
-
-  return charMap;
+  console.log(`✅ Successfully processed ${processedCount} JSON datasets into output/!`);
 }
 
 runParser().catch((err) => {
-  console.error('❌ Real Parser Fatal Error:', err);
+  console.error('❌ Parser Fatal Error:', err);
   process.exit(1);
 });
