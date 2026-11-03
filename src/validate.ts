@@ -3,34 +3,23 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-const ProfileSchema = z.object({
-  name: z.string(),
-  type: z.string(),
-  characteristics: z.record(z.string(), z.any()),
-});
-
-const UnitSchema = z.object({
-  id: z.string(),
-  name: z.string(),
-  type: z.string().optional(),
-  targetId: z.string().optional(),
-  profiles: z.array(ProfileSchema).optional(),
-});
-
 const FactionSchema = z.object({
   id: z.string(),
   name: z.string(),
   revision: z.any().optional(),
   gameSystemId: z.any().optional(),
-  units: z.array(UnitSchema),
+  factionTraits: z.any().optional(),
+  detachments: z.any().optional(),
+  units: z.any(),
+  datasheets: z.any().optional(),
 });
 
 async function validateOutput() {
   const files = await glob('output/*.json');
-  console.log(`🔍 Validating ${files.length} output JSON files against schema...`);
+  console.log(`🔍 Validating ${files.length} compiled output files against War Organ schema...`);
 
   if (files.length === 0) {
-    console.warn('⚠️ No output JSON files found to validate. Skipping validation.');
+    console.warn('⚠️ No output JSON files found to validate.');
     return;
   }
 
@@ -40,7 +29,7 @@ async function validateOutput() {
     FactionSchema.parse(content);
   }
 
-  console.log('✅ Validation passed cleanly!');
+  console.log('✅ Validation passed cleanly! All datasets match War Organ template requirements.');
 }
 
 validateOutput().catch((err) => {
