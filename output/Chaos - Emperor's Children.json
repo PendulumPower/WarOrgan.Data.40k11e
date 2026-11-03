@@ -3,8 +3,5451 @@
   "name": "Chaos - Emperor's Children",
   "revision": 15,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [],
+  "factionTraits": [
+    {
+      "name": "Thrill Seekers",
+      "description": "If your Army Faction is **^^Emperor's Children^^**, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase."
+    }
+  ],
   "detachments": [],
-  "units": [],
-  "datasheets": []
+  "units": [
+    {
+      "id": "e390-b58b-db9-816",
+      "name": "Lucius the Eternal",
+      "type": "model",
+      "targetId": "e390-b58b-db9-816",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 130
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Lucius the Eternal",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "6",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "50mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: FLAWLESS BLADES"
+          }
+        },
+        {
+          "name": "Duellist’s Hubris",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights First ability."
+          }
+        },
+        {
+          "name": "A Challenge Worthy of Skill",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes an attack that targets a **^^Character, Monster^^** or **^^Walker^^** unit, you can re-roll the Hit roll and re-roll the Wound roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c7a7-3164-12bc-3462",
+      "name": "Warlord",
+      "type": "upgrade",
+      "targetId": "c7a7-3164-12bc-3462",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1e0a-cf2b-6602-2a34",
+      "name": "Fulgrim",
+      "type": "model",
+      "targetId": "1e0a-cf2b-6602-2a34",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 340
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Fulgrim",
+          "type": "Unit",
+          "characteristics": {
+            "m": "16\"",
+            "t": "11",
+            "sv": "2+",
+            "w": "16",
+            "ld": "5+",
+            "oc": "6",
+            "insv": "4+",
+            "base": "130mm"
+          }
+        },
+        {
+          "name": "Daemonic Poisons",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player's Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+, that enemy unit suffers D3 mortal wounds."
+          }
+        },
+        {
+          "name": "Daemon Prince of Slaanesh",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the start of your opponent's Command phase, select one of the abilities in the Daemon Prince of Slaanesh section. Until the start of your opponent's next Command phase, this model has that ability."
+          }
+        },
+        {
+          "name": "Damaged: 1-6 Wounds Remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Supreme Commander",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this model is in your army, it must be your **^^Warlord^^**."
+          }
+        },
+        {
+          "name": "Serpentine",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes a Normal, Advance or Fall Back move, it can move over sections of terrain features that are 4\" or less in height."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7b4c-dfe0-6a0a-304a",
+      "name": "Lord Exultant",
+      "type": "model",
+      "targetId": "7b4c-dfe0-6a0a-304a",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 95
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Lord Exultant",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Perfectionists",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the **^^[LETHAL HITS]^^** ability."
+          }
+        },
+        {
+          "name": "Euphoric Strikes",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+          }
+        },
+        {
+          "name": "Lord of the Host",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this model is attached to an **^^Emperor's Children Battleline^^** unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6\" ability."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: INFRACTORS, TORMENTORS"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "e13a-503d-72dc-f4ed",
+      "name": "Plasma pistol",
+      "type": "upgrade",
+      "targetId": "e13a-503d-72dc-f4ed",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "1",
+            "bs": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "keywords": "Pistol"
+          }
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "1",
+            "bs": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "keywords": "Hazardous, Pistol"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "aab5-3545-6d30-9e87",
+      "name": "Power fist",
+      "type": "upgrade",
+      "targetId": "aab5-3545-6d30-9e87",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Power fist",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3469-166f-44f3-51b8",
+      "name": "Bolt pistol",
+      "type": "upgrade",
+      "targetId": "3469-166f-44f3-51b8",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "1",
+            "bs": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Pistol"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7d60-17ec-c8ad-1ba4",
+      "name": "Rapture lash",
+      "type": "upgrade",
+      "targetId": "7d60-17ec-c8ad-1ba4",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Rapture lash",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "6",
+            "ws": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c0fe-28ad-5f83-e1d1",
+      "name": "Screamer pistol",
+      "type": "upgrade",
+      "targetId": "c0fe-28ad-5f83-e1d1",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Screamer pistol",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "3",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Ignores Cover, Pistol"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ee50-955a-0a81-41f1",
+      "name": "Lord Kakophonist",
+      "type": "model",
+      "targetId": "ee50-955a-0a81-41f1",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Lord Kakophonist",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "6",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: CHAOS TERMINATORS, NOISE MARINES"
+          }
+        },
+        {
+          "name": "Obsessive Annunciation",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, ranged weapons equipped by that unit have the [SUSTAINED HITS 1] ability."
+          }
+        },
+        {
+          "name": "Doom Siren",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this model's unit has shot, select one enemy **^^Infantry^^** unit hit by one or more of those attacks and roll three D6: for each 4+, that enemy unit suffers 1 mortal wound. If an enemy suffers one or more mortal wounds as a result of this ability, it must take a Battle-shock test."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2cd1-13f5-d59d-cc7f",
+      "name": "Sorcerer",
+      "type": "model",
+      "targetId": "2cd1-13f5-d59d-cc7f",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 55
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: INFRACTORS, NOISE MARINES, TORMENTORS"
+          }
+        },
+        {
+          "name": "Sorcerer",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Warped Interference (Psychic)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, each time a ranged attack targets that unit, models in it have the Benefit of Cover against that attack."
+          }
+        },
+        {
+          "name": "Wracking Agonies (Psychic)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this model has shot, select one INFANTRY unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2\" from its Move characteristic and subtract 2 from charge rolls made for it."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ad59-b823-900d-ee2d",
+      "name": "Daemon Prince of Slaanesh",
+      "type": "model",
+      "targetId": "ad59-b823-900d-ee2d",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 165
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Daemon Prince of Slaanesh",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "10",
+            "sv": "2+",
+            "w": "10",
+            "ld": "6+",
+            "oc": "3",
+            "insv": "4+",
+            "base": "60mm"
+          }
+        },
+        {
+          "name": "Lord of Excess",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is within 3\" of one or more friendly **^^Slaanesh Infantry^^**, this model has the Lone Operative ability."
+          }
+        },
+        {
+          "name": "Excessive Vigour (Aura)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While a friendly **^^Slaanesh^^** unit is within 6\" of this model, if that unit made a Charge move this turn, improve the Armour Penetration characteristic of melee weapons equipped by that unit by 1."
+          }
+        },
+        {
+          "name": "Ecstatic Death",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b464-6a59-916f-c9d9",
+      "name": "Infernal cannon",
+      "type": "upgrade",
+      "targetId": "b464-6a59-916f-c9d9",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "3",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9ad3-083a-577b-56b0",
+      "name": "Hellforged weapons",
+      "type": "upgrade",
+      "targetId": "9ad3-083a-577b-56b0",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "➤ Hellforged weapons - strike",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "6",
+            "ws": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "3",
+            "keywords": ""
+          }
+        },
+        {
+          "name": "➤ Hellforged weapons - sweep",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "14",
+            "ws": "2+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "e452-08be-33e6-3864",
+      "name": "Daemon Prince of Slaanesh with Wings",
+      "type": "model",
+      "targetId": "e452-08be-33e6-3864",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 205
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Daemon Prince of Slaanesh with Wings",
+          "type": "Unit",
+          "characteristics": {
+            "m": "14\"",
+            "t": "9",
+            "sv": "2+",
+            "w": "10",
+            "ld": "6+",
+            "oc": "3",
+            "insv": "4+",
+            "base": "60mm"
+          }
+        },
+        {
+          "name": "Daemonic Destruction",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6 for each of this model's remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
+          }
+        },
+        {
+          "name": "Stimulated by Pain",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "4494-dd7d-69f7-306c",
+      "name": "Tormentors",
+      "type": "unit",
+      "targetId": "4494-dd7d-69f7-306c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Tormentors",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "2",
+            "ld": "6+",
+            "oc": "2",
+            "insv": "",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Objective Defiled",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ea86-f483-33bb-182b",
+      "name": "Power sword",
+      "type": "upgrade",
+      "targetId": "ea86-f483-33bb-182b",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Power sword",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "4",
+            "ws": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ab80-e71b-5a84-2852",
+      "name": "Close combat weapon",
+      "type": "upgrade",
+      "targetId": "ab80-e71b-5a84-2852",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Close combat weapon",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "e456-0afc-9b42-226c",
+      "name": "Infractors",
+      "type": "unit",
+      "targetId": "e456-0afc-9b42-226c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 95
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Infractors",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "2",
+            "ld": "6+",
+            "oc": "2",
+            "insv": "",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Excessive Assault",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "183e-f3bb-3ce6-7b55",
+      "name": "Flawless Blades",
+      "type": "unit",
+      "targetId": "183e-f3bb-3ce6-7b55",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 95
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Flawless Blades",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "3",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "5+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Daemonic Patrons",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack. an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5926-4deb-a85d-c73a",
+      "name": "Chaos Terminators",
+      "type": "unit",
+      "targetId": "5926-4deb-a85d-c73a",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 155
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Lethal Obsession",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this unit has shot, you can use this ability. If you do, select one enemy unit hit by those ranged attacks. Until the end of the turn, when this unit **declares a charge**: \n- This unit can re-roll that **charge roll**. \n- This unit must end that **charge move engaged** with that enemy unit."
+          }
+        },
+        {
+          "name": "Chaos Terminators",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "3",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "37f9-08dc-948b-7a0b",
+      "name": "Accursed weapon",
+      "type": "upgrade",
+      "targetId": "37f9-08dc-948b-7a0b",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "bab4-f1b2-607d-7508",
+      "name": "Paired accursed weapons",
+      "type": "upgrade",
+      "targetId": "bab4-f1b2-607d-7508",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Paired accursed weapons",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "5",
+            "ws": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "keywords": "Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "02c9-ea19-b105-af58",
+      "name": "Combi-bolter",
+      "type": "upgrade",
+      "targetId": "02c9-ea19-b105-af58",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Combi-bolter",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Rapid Fire 2"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "d2dc-a1d1-3834-ffb6",
+      "name": "Power fist",
+      "type": "upgrade",
+      "targetId": "d2dc-a1d1-3834-ffb6",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Power fist",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5896-a17e-58be-c2e9",
+      "name": "Chainfist",
+      "type": "upgrade",
+      "targetId": "5896-a17e-58be-c2e9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Chainfist",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "4+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "keywords": "Anti-VEHICLE 3+"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7d1a-fb5c-9d3b-fca8",
+      "name": "Combi-weapon",
+      "type": "upgrade",
+      "targetId": "7d1a-fb5c-9d3b-fca8",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "1",
+            "bs": "4+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "896c-5816-3abd-5199",
+      "name": "Chaos Spawn",
+      "type": "unit",
+      "targetId": "896c-5816-3abd-5199",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Chaos Spawn",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "5",
+            "sv": "4+",
+            "w": "4",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "50mm"
+          }
+        },
+        {
+          "name": "Scuttling Horrors",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to 6”."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "f10c-5f3e-c09d-0b12",
+      "name": "Chaos Land Raider",
+      "type": "model",
+      "targetId": "f10c-5f3e-c09d-0b12",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 210
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Chaos Land Raider",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "12",
+            "sv": "2+",
+            "w": "16",
+            "ld": "6+",
+            "oc": "5",
+            "insv": "",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Assault Ramp",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+          }
+        },
+        {
+          "name": "Chaos Land Raider",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 14 **^^Emperor's Children Infantry^^** models. Each **^^Terminator^^** and ^^**Flawless Blade^^** model takes up the space of 2 models."
+          }
+        },
+        {
+          "name": "Damaged: 1-5 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7695-54a2-f38b-a89c",
+      "name": "Havoc launcher",
+      "type": "upgrade",
+      "targetId": "7695-54a2-f38b-a89c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Havoc launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "48\"",
+            "a": "D6",
+            "bs": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "keywords": "Blast"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b16a-3c62-69d6-5c90",
+      "name": "Twin heavy bolter",
+      "type": "upgrade",
+      "targetId": "b16a-3c62-69d6-5c90",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Twin heavy bolter",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "36\"",
+            "a": "3",
+            "bs": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Sustained Hits 1, Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5817-0d6c-973c-68f8",
+      "name": "Noise Marines",
+      "type": "unit",
+      "targetId": "5817-0d6c-973c-68f8",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 160
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Terrifying Crescendo",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next Shooting phase, each time a Battle-shock or Leadership test is taken for that enemy unit, subtract 1 from that test."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5086-e851-0cbc-3762",
+      "name": "Sonic blaster",
+      "type": "upgrade",
+      "targetId": "5086-e851-0cbc-3762",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Sonic blaster",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "18\"",
+            "a": "3",
+            "bs": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Ignores Cover"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3750-df25-165d-d003",
+      "name": "Heldrake",
+      "type": "model",
+      "targetId": "3750-df25-165d-d003",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 175
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Airborne Predator",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model ends a Normal move, you can select one enemy unit that it moved over during that move and roll two D6, adding 1 to each result if that enemy unit can ^^FLY^^: for each 4+, that enemy unit suffers D3 mortal wounds."
+          }
+        },
+        {
+          "name": "Heldrake",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "10",
+            "sv": "3+",
+            "w": "14",
+            "ld": "7+",
+            "oc": "0",
+            "insv": "5+",
+            "base": "120x92mm"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "656c-8b78-8e59-0591",
+      "name": "Maulerfiend",
+      "type": "model",
+      "targetId": "656c-8b78-8e59-0591",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 120
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Maulerfiend",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "10",
+            "sv": "3+",
+            "w": "12",
+            "ld": "6+",
+            "oc": "3",
+            "insv": "5+",
+            "base": "120x92mm"
+          }
+        },
+        {
+          "name": "Glutton for Punishment",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes an attack, if it is below its Starting Strength, add 1 to the Hit roll. If this model is also Below Half-Strength, add 1 to the Wound roll as well."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8ae1-aa47-e1d1-1b31",
+      "name": "Chaos Rhino",
+      "type": "model",
+      "targetId": "8ae1-aa47-e1d1-1b31",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Chaos Rhino",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "9",
+            "sv": "3+",
+            "w": "10",
+            "ld": "6+",
+            "oc": "2",
+            "insv": "",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Assault Vehicle",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Units can disembark from this **^^Vehicle**^^ after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally."
+          }
+        },
+        {
+          "name": "Chaos Rhino",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 12 **^^Emperor's Children Infantry^^**models (excluding ^^**Terminator**^^ and ^^**Flawless Blade**^^ models)."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "a6ad-d379-46ee-2c24",
+      "name": "Detachment",
+      "type": "upgrade",
+      "targetId": "a6ad-d379-46ee-2c24",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "20df-143c-fc59-77e0",
+      "name": "Shalaxi Helbane",
+      "type": "model",
+      "targetId": "20df-143c-fc59-77e0",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 315
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Shalaxi Helbane",
+          "type": "Unit",
+          "characteristics": {
+            "m": "14\"",
+            "t": "10",
+            "sv": "3+",
+            "w": "20",
+            "ld": "6+",
+            "oc": "5",
+            "insv": "4+",
+            "base": "100mm"
+          }
+        },
+        {
+          "name": "No Prey Can Evade",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "You can re-roll Advance and Charge rolls made for this model."
+          }
+        },
+        {
+          "name": "Monarch of the Hunt",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the start of the first battle round, select one enemy unit to be this model's quarry. Each time this model makes a melee attack that targets its quarry, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model's quarry is destroyed, select one new enemy unit to be this model's quarry."
+          }
+        },
+        {
+          "name": "Damaged: 1-7 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7b2b-4508-263d-f20f",
+      "name": "Keeper of Secrets",
+      "type": "model",
+      "targetId": "7b2b-4508-263d-f20f",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 265
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Keeper of Secrets",
+          "type": "Unit",
+          "characteristics": {
+            "m": "14\"",
+            "t": "10",
+            "sv": "5+",
+            "w": "18",
+            "ld": "6+",
+            "oc": "5",
+            "insv": "4+",
+            "base": "100mm"
+          }
+        },
+        {
+          "name": "Daemon Lord of Slaanesh (Aura)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While a friendly ^^**Legions of Excess**^^ unit is within 6\" of this model, improve the Armour Penetration of melee weapons in that unit by 1."
+          }
+        },
+        {
+          "name": "Mesmerising Form",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time an attack targets this model, subtract 1 from the Hit roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "06f6-b870-4e43-4ed9",
+      "name": "Daemonettes",
+      "type": "unit",
+      "targetId": "06f6-b870-4e43-4ed9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 100
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Daemonettes",
+          "type": "Unit",
+          "characteristics": {
+            "m": "9\"",
+            "t": "3",
+            "sv": "7+",
+            "w": "1",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "5+",
+            "base": "25mm"
+          }
+        },
+        {
+          "name": "Horrifying Beauty",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the start of the Fight phase, each enemy unit in Engagement Range of one or more units from your army with this ability must take a Battle-shock test, subtracting 1 from that test if that enemy unit is Below Half-strength."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c2ca-f754-cc05-0743",
+      "name": "Fiends",
+      "type": "unit",
+      "targetId": "c2ca-f754-cc05-0743",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 90
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Soporific Musk",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time an enemy unit (excluding ^^**Monsters**^^ and **^^Vehicles**^^) within Engagement Range of one or more units from your army with this ability Falls Back, models in that unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c9df-2c38-25e5-ffc7",
+      "name": "Seekers",
+      "type": "unit",
+      "targetId": "c9df-2c38-25e5-ffc7",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Unholy Speed",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "You can re-roll Advance and Charge rolls made for this unit."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5955-90eb-2f66-c483",
+      "name": "Combat Elixirs equipped in Current Battle",
+      "type": "upgrade",
+      "targetId": "5955-90eb-2f66-c483",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "32bc-07c5-6da4-c94e",
+      "name": "Perfect Ascension",
+      "type": "upgrade",
+      "targetId": "32bc-07c5-6da4-c94e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "eeac-c9b8-3904-11a5",
+      "name": "Excruciator [Crucible]",
+      "type": "model",
+      "targetId": "eeac-c9b8-3904-11a5",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 60
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Excruciator",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "4",
+            "sv": "3+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit can be attached to the following units: ^^**Infractors, Noise Marines, Tormentors**^^"
+          }
+        },
+        {
+          "name": "Warped Invigoration (Psychic)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this model has shot, if an enemy unit was hit by one or more of those attacks, until the end of the turn, add 1 to Charge rolls made for this unit."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "cc4d-41d6-dfea-414f",
+      "name": "Champion of Excess [Crucible]",
+      "type": "model",
+      "targetId": "cc4d-41d6-dfea-414f",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 80
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Champion of Excess",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "4",
+            "sv": "3+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit can be attached to the following units: ^^**Infractors, Noise Marines, Tormentors**^^"
+          }
+        },
+        {
+          "name": "Euphoric Strikes",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2334-eccf-6ea5-562e",
+      "name": "Flawless Champion [Crucible]",
+      "type": "model",
+      "targetId": "2334-eccf-6ea5-562e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 100
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Flawless Champion",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "5+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit can be attached to the following units: ^^**Flawless Blades**^^"
+          }
+        },
+        {
+          "name": "Obsessive Huntsman",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Melee weapons equipped by this model have the [Precision] ability."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b541-3292-a5cc-dbeb",
+      "name": "Defiler",
+      "type": "model",
+      "targetId": "b541-3292-a5cc-dbeb",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 300
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Defiler",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "11",
+            "sv": "3+",
+            "w": "18",
+            "ld": "6+",
+            "oc": "5",
+            "insv": "5+",
+            "base": "160mm"
+          }
+        },
+        {
+          "name": "Scuttling Walker",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding ^^**Titanic**^^ models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+          }
+        },
+        {
+          "name": "Revel in Desecration",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "28e7-6f00-b632-ab91",
+      "name": "Electroscourge",
+      "type": "upgrade",
+      "targetId": "28e7-6f00-b632-ab91",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Electroscourge",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "5",
+            "ws": "3+",
+            "s": "12",
+            "ap": "-2",
+            "d": "2",
+            "keywords": "Extra Attacks, Sustained Hits 2"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "34b5-f449-28f6-b365",
+      "name": "Heavy reaper autocannon",
+      "type": "upgrade",
+      "targetId": "34b5-f449-28f6-b365",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 15
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Heavy reaper autocannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "48\"",
+            "a": "4",
+            "bs": "3+",
+            "s": "9",
+            "ap": "-1",
+            "d": "3",
+            "keywords": "Devastating Wounds, Sustained Hits 1"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "97f3-a20b-5848-cfd9",
+      "name": "Hades lascannon",
+      "type": "upgrade",
+      "targetId": "97f3-a20b-5848-cfd9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 15
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Hades lascannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "48\"",
+            "a": "2",
+            "bs": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2158-afb6-f9e2-3337",
+      "name": "Lucius the Eternal",
+      "type": "selectionEntry",
+      "targetId": "e390-b58b-db9-816",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "9ab9-323e-29fb-d571",
+      "name": "Show/Hide Options",
+      "type": "selectionEntry",
+      "targetId": "e8ef-836a-a9d1-901d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "fdfc-1d52-ab77-2605",
+      "name": "Fulgrim",
+      "type": "selectionEntry",
+      "targetId": "1e0a-cf2b-6602-2a34",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "c2cc-c272-6138-673b",
+      "name": "Lord Exultant",
+      "type": "selectionEntry",
+      "targetId": "7b4c-dfe0-6a0a-304a",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "3144-df82-3e22-2ab1",
+      "name": "Lord Kakophonist",
+      "type": "selectionEntry",
+      "targetId": "ee50-955a-0a81-41f1",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "b6e8-a3d7-e4e4-ffc2",
+      "name": "Sorcerer",
+      "type": "selectionEntry",
+      "targetId": "2cd1-13f5-d59d-cc7f",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "a9c7-8fc5-a504-15ba",
+      "name": "Daemon Prince of Slaanesh",
+      "type": "selectionEntry",
+      "targetId": "ad59-b823-900d-ee2d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "79f0-a61f-cec5-0530",
+      "name": "Daemon Prince of Slaanesh with Wings",
+      "type": "selectionEntry",
+      "targetId": "e452-08be-33e6-3864",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "fa28-2905-8989-8a2b",
+      "name": "Tormentors",
+      "type": "selectionEntry",
+      "targetId": "4494-dd7d-69f7-306c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1167-1f78-feed-c6ca",
+      "name": "Infractors",
+      "type": "selectionEntry",
+      "targetId": "e456-0afc-9b42-226c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "9f04-d6da-3dff-4d23",
+      "name": "Flawless Blades",
+      "type": "selectionEntry",
+      "targetId": "183e-f3bb-3ce6-7b55",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8584-5fcd-53bf-7cc5",
+      "name": "Chaos Terminators",
+      "type": "selectionEntry",
+      "targetId": "5926-4deb-a85d-c73a",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "9759-acbf-5109-75a0",
+      "name": "Chaos Spawn",
+      "type": "selectionEntry",
+      "targetId": "896c-5816-3abd-5199",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ff50-aaa8-e1f0-0dbc",
+      "name": "Chaos Land Raider",
+      "type": "selectionEntry",
+      "targetId": "f10c-5f3e-c09d-0b12",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "382e-7f67-4810-beef",
+      "name": "Noise Marines",
+      "type": "selectionEntry",
+      "targetId": "5817-0d6c-973c-68f8",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2bb8-bcbf-ca09-57ae",
+      "name": "Heldrake",
+      "type": "selectionEntry",
+      "targetId": "3750-df25-165d-d003",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "d7b0-a290-4f8d-f338",
+      "name": "Maulerfiend",
+      "type": "selectionEntry",
+      "targetId": "656c-8b78-8e59-0591",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8359-7588-cbb4-d9fb",
+      "name": "Chaos Rhino",
+      "type": "selectionEntry",
+      "targetId": "8ae1-aa47-e1d1-1b31",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1ff8-c67b-509e-1bbb",
+      "name": "Detachment",
+      "type": "selectionEntry",
+      "targetId": "a6ad-d379-46ee-2c24",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7e4e-a930-4283-1d1d",
+      "name": "Shalaxi Helbane",
+      "type": "selectionEntry",
+      "targetId": "20df-143c-fc59-77e0",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "b113-c019-887d-37f0",
+      "name": "Keeper of Secrets",
+      "type": "selectionEntry",
+      "targetId": "7b2b-4508-263d-f20f",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "677d-06a1-c112-c044",
+      "name": "Daemonettes",
+      "type": "selectionEntry",
+      "targetId": "06f6-b870-4e43-4ed9",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "cf42-04fb-1da4-ce7c",
+      "name": "Fiends",
+      "type": "selectionEntry",
+      "targetId": "c2ca-f754-cc05-0743",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2610-a708-7a64-1129",
+      "name": "Seekers",
+      "type": "selectionEntry",
+      "targetId": "c9df-2c38-25e5-ffc7",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "c3c6-dee7-d59b-8b88",
+      "name": "Order of Battle",
+      "type": "selectionEntry",
+      "targetId": "eda7-8b4b-3719-af36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "b3eb-11b1-26f7-0369",
+      "name": "Combat Elixirs equipped in Current Battle",
+      "type": "selectionEntry",
+      "targetId": "5955-90eb-2f66-c483",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ea4b-d075-c59f-248f",
+      "name": "Excruciator [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "eeac-c9b8-3904-11a5",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "72d2-001f-d6c9-bd61",
+      "name": "Champion of Excess [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "cc4d-41d6-dfea-414f",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "0b5a-3d67-3e9f-d066",
+      "name": "Flawless Champion [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "2334-eccf-6ea5-562e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2053-6887-5344-5a84",
+      "name": "Daemonic Charioteer [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "8597-d6dd-511e-80ae",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "b5ad-dbe6-36c2-3b22",
+      "name": "Daemonic Herald [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "3a39-0b56-25e0-eff8",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e8a9-2c26-4e69-98dd",
+      "name": "Immortal Champion [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "3594-bf68-4a46-fbf8",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "a936-cfdb-f498-8a5c",
+      "name": "Defiler",
+      "type": "selectionEntry",
+      "targetId": "b541-3292-a5cc-dbeb",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "e390-b58b-db9-816",
+      "name": "Lucius the Eternal",
+      "type": "model",
+      "targetId": "e390-b58b-db9-816",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 130
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Lucius the Eternal",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "6",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "50mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: FLAWLESS BLADES"
+          }
+        },
+        {
+          "name": "Duellist’s Hubris",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights First ability."
+          }
+        },
+        {
+          "name": "A Challenge Worthy of Skill",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes an attack that targets a **^^Character, Monster^^** or **^^Walker^^** unit, you can re-roll the Hit roll and re-roll the Wound roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c7a7-3164-12bc-3462",
+      "name": "Warlord",
+      "type": "upgrade",
+      "targetId": "c7a7-3164-12bc-3462",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1e0a-cf2b-6602-2a34",
+      "name": "Fulgrim",
+      "type": "model",
+      "targetId": "1e0a-cf2b-6602-2a34",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 340
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Fulgrim",
+          "type": "Unit",
+          "characteristics": {
+            "m": "16\"",
+            "t": "11",
+            "sv": "2+",
+            "w": "16",
+            "ld": "5+",
+            "oc": "6",
+            "insv": "4+",
+            "base": "130mm"
+          }
+        },
+        {
+          "name": "Daemonic Poisons",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player's Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+, that enemy unit suffers D3 mortal wounds."
+          }
+        },
+        {
+          "name": "Daemon Prince of Slaanesh",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the start of your opponent's Command phase, select one of the abilities in the Daemon Prince of Slaanesh section. Until the start of your opponent's next Command phase, this model has that ability."
+          }
+        },
+        {
+          "name": "Damaged: 1-6 Wounds Remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Supreme Commander",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this model is in your army, it must be your **^^Warlord^^**."
+          }
+        },
+        {
+          "name": "Serpentine",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes a Normal, Advance or Fall Back move, it can move over sections of terrain features that are 4\" or less in height."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7b4c-dfe0-6a0a-304a",
+      "name": "Lord Exultant",
+      "type": "model",
+      "targetId": "7b4c-dfe0-6a0a-304a",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 95
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Lord Exultant",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Perfectionists",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the **^^[LETHAL HITS]^^** ability."
+          }
+        },
+        {
+          "name": "Euphoric Strikes",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+          }
+        },
+        {
+          "name": "Lord of the Host",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this model is attached to an **^^Emperor's Children Battleline^^** unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6\" ability."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: INFRACTORS, TORMENTORS"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "e13a-503d-72dc-f4ed",
+      "name": "Plasma pistol",
+      "type": "upgrade",
+      "targetId": "e13a-503d-72dc-f4ed",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "➤ Plasma pistol - standard",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "1",
+            "bs": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "keywords": "Pistol"
+          }
+        },
+        {
+          "name": "➤ Plasma pistol - supercharge",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "1",
+            "bs": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "keywords": "Hazardous, Pistol"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "aab5-3545-6d30-9e87",
+      "name": "Power fist",
+      "type": "upgrade",
+      "targetId": "aab5-3545-6d30-9e87",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Power fist",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3469-166f-44f3-51b8",
+      "name": "Bolt pistol",
+      "type": "upgrade",
+      "targetId": "3469-166f-44f3-51b8",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "1",
+            "bs": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Pistol"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7d60-17ec-c8ad-1ba4",
+      "name": "Rapture lash",
+      "type": "upgrade",
+      "targetId": "7d60-17ec-c8ad-1ba4",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Rapture lash",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "6",
+            "ws": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c0fe-28ad-5f83-e1d1",
+      "name": "Screamer pistol",
+      "type": "upgrade",
+      "targetId": "c0fe-28ad-5f83-e1d1",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Screamer pistol",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "3",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Ignores Cover, Pistol"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ee50-955a-0a81-41f1",
+      "name": "Lord Kakophonist",
+      "type": "model",
+      "targetId": "ee50-955a-0a81-41f1",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Lord Kakophonist",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "6",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: CHAOS TERMINATORS, NOISE MARINES"
+          }
+        },
+        {
+          "name": "Obsessive Annunciation",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, ranged weapons equipped by that unit have the [SUSTAINED HITS 1] ability."
+          }
+        },
+        {
+          "name": "Doom Siren",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this model's unit has shot, select one enemy **^^Infantry^^** unit hit by one or more of those attacks and roll three D6: for each 4+, that enemy unit suffers 1 mortal wound. If an enemy suffers one or more mortal wounds as a result of this ability, it must take a Battle-shock test."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2cd1-13f5-d59d-cc7f",
+      "name": "Sorcerer",
+      "type": "model",
+      "targetId": "2cd1-13f5-d59d-cc7f",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 55
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: INFRACTORS, NOISE MARINES, TORMENTORS"
+          }
+        },
+        {
+          "name": "Sorcerer",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Warped Interference (Psychic)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, each time a ranged attack targets that unit, models in it have the Benefit of Cover against that attack."
+          }
+        },
+        {
+          "name": "Wracking Agonies (Psychic)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this model has shot, select one INFANTRY unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2\" from its Move characteristic and subtract 2 from charge rolls made for it."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ad59-b823-900d-ee2d",
+      "name": "Daemon Prince of Slaanesh",
+      "type": "model",
+      "targetId": "ad59-b823-900d-ee2d",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 165
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Daemon Prince of Slaanesh",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "10",
+            "sv": "2+",
+            "w": "10",
+            "ld": "6+",
+            "oc": "3",
+            "insv": "4+",
+            "base": "60mm"
+          }
+        },
+        {
+          "name": "Lord of Excess",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is within 3\" of one or more friendly **^^Slaanesh Infantry^^**, this model has the Lone Operative ability."
+          }
+        },
+        {
+          "name": "Excessive Vigour (Aura)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While a friendly **^^Slaanesh^^** unit is within 6\" of this model, if that unit made a Charge move this turn, improve the Armour Penetration characteristic of melee weapons equipped by that unit by 1."
+          }
+        },
+        {
+          "name": "Ecstatic Death",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b464-6a59-916f-c9d9",
+      "name": "Infernal cannon",
+      "type": "upgrade",
+      "targetId": "b464-6a59-916f-c9d9",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Infernal cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "3",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9ad3-083a-577b-56b0",
+      "name": "Hellforged weapons",
+      "type": "upgrade",
+      "targetId": "9ad3-083a-577b-56b0",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "➤ Hellforged weapons - strike",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "6",
+            "ws": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "3",
+            "keywords": ""
+          }
+        },
+        {
+          "name": "➤ Hellforged weapons - sweep",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "14",
+            "ws": "2+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "e452-08be-33e6-3864",
+      "name": "Daemon Prince of Slaanesh with Wings",
+      "type": "model",
+      "targetId": "e452-08be-33e6-3864",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 205
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Daemon Prince of Slaanesh with Wings",
+          "type": "Unit",
+          "characteristics": {
+            "m": "14\"",
+            "t": "9",
+            "sv": "2+",
+            "w": "10",
+            "ld": "6+",
+            "oc": "3",
+            "insv": "4+",
+            "base": "60mm"
+          }
+        },
+        {
+          "name": "Daemonic Destruction",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6 for each of this model's remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
+          }
+        },
+        {
+          "name": "Stimulated by Pain",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "4494-dd7d-69f7-306c",
+      "name": "Tormentors",
+      "type": "unit",
+      "targetId": "4494-dd7d-69f7-306c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Tormentors",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "2",
+            "ld": "6+",
+            "oc": "2",
+            "insv": "",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Objective Defiled",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ea86-f483-33bb-182b",
+      "name": "Power sword",
+      "type": "upgrade",
+      "targetId": "ea86-f483-33bb-182b",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Power sword",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "4",
+            "ws": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ab80-e71b-5a84-2852",
+      "name": "Close combat weapon",
+      "type": "upgrade",
+      "targetId": "ab80-e71b-5a84-2852",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Close combat weapon",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "e456-0afc-9b42-226c",
+      "name": "Infractors",
+      "type": "unit",
+      "targetId": "e456-0afc-9b42-226c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 95
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Infractors",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "2",
+            "ld": "6+",
+            "oc": "2",
+            "insv": "",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Excessive Assault",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "183e-f3bb-3ce6-7b55",
+      "name": "Flawless Blades",
+      "type": "unit",
+      "targetId": "183e-f3bb-3ce6-7b55",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 95
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Flawless Blades",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "3",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "5+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Daemonic Patrons",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack. an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5926-4deb-a85d-c73a",
+      "name": "Chaos Terminators",
+      "type": "unit",
+      "targetId": "5926-4deb-a85d-c73a",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 155
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Lethal Obsession",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this unit has shot, you can use this ability. If you do, select one enemy unit hit by those ranged attacks. Until the end of the turn, when this unit **declares a charge**: \n- This unit can re-roll that **charge roll**. \n- This unit must end that **charge move engaged** with that enemy unit."
+          }
+        },
+        {
+          "name": "Chaos Terminators",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "3",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "37f9-08dc-948b-7a0b",
+      "name": "Accursed weapon",
+      "type": "upgrade",
+      "targetId": "37f9-08dc-948b-7a0b",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "bab4-f1b2-607d-7508",
+      "name": "Paired accursed weapons",
+      "type": "upgrade",
+      "targetId": "bab4-f1b2-607d-7508",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Paired accursed weapons",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "5",
+            "ws": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "keywords": "Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "02c9-ea19-b105-af58",
+      "name": "Combi-bolter",
+      "type": "upgrade",
+      "targetId": "02c9-ea19-b105-af58",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Combi-bolter",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Rapid Fire 2"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "d2dc-a1d1-3834-ffb6",
+      "name": "Power fist",
+      "type": "upgrade",
+      "targetId": "d2dc-a1d1-3834-ffb6",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Power fist",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5896-a17e-58be-c2e9",
+      "name": "Chainfist",
+      "type": "upgrade",
+      "targetId": "5896-a17e-58be-c2e9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Chainfist",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "4+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "keywords": "Anti-VEHICLE 3+"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7d1a-fb5c-9d3b-fca8",
+      "name": "Combi-weapon",
+      "type": "upgrade",
+      "targetId": "7d1a-fb5c-9d3b-fca8",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Combi-weapon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "1",
+            "bs": "4+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "896c-5816-3abd-5199",
+      "name": "Chaos Spawn",
+      "type": "unit",
+      "targetId": "896c-5816-3abd-5199",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Chaos Spawn",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "5",
+            "sv": "4+",
+            "w": "4",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "50mm"
+          }
+        },
+        {
+          "name": "Scuttling Horrors",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to 6”."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "f10c-5f3e-c09d-0b12",
+      "name": "Chaos Land Raider",
+      "type": "model",
+      "targetId": "f10c-5f3e-c09d-0b12",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 210
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Chaos Land Raider",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "12",
+            "sv": "2+",
+            "w": "16",
+            "ld": "6+",
+            "oc": "5",
+            "insv": "",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Assault Ramp",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+          }
+        },
+        {
+          "name": "Chaos Land Raider",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 14 **^^Emperor's Children Infantry^^** models. Each **^^Terminator^^** and ^^**Flawless Blade^^** model takes up the space of 2 models."
+          }
+        },
+        {
+          "name": "Damaged: 1-5 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7695-54a2-f38b-a89c",
+      "name": "Havoc launcher",
+      "type": "upgrade",
+      "targetId": "7695-54a2-f38b-a89c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Havoc launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "48\"",
+            "a": "D6",
+            "bs": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "keywords": "Blast"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b16a-3c62-69d6-5c90",
+      "name": "Twin heavy bolter",
+      "type": "upgrade",
+      "targetId": "b16a-3c62-69d6-5c90",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Twin heavy bolter",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "36\"",
+            "a": "3",
+            "bs": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Sustained Hits 1, Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5817-0d6c-973c-68f8",
+      "name": "Noise Marines",
+      "type": "unit",
+      "targetId": "5817-0d6c-973c-68f8",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 160
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Terrifying Crescendo",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next Shooting phase, each time a Battle-shock or Leadership test is taken for that enemy unit, subtract 1 from that test."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5086-e851-0cbc-3762",
+      "name": "Sonic blaster",
+      "type": "upgrade",
+      "targetId": "5086-e851-0cbc-3762",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Sonic blaster",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "18\"",
+            "a": "3",
+            "bs": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Ignores Cover"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3750-df25-165d-d003",
+      "name": "Heldrake",
+      "type": "model",
+      "targetId": "3750-df25-165d-d003",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 175
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Airborne Predator",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model ends a Normal move, you can select one enemy unit that it moved over during that move and roll two D6, adding 1 to each result if that enemy unit can ^^FLY^^: for each 4+, that enemy unit suffers D3 mortal wounds."
+          }
+        },
+        {
+          "name": "Heldrake",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "10",
+            "sv": "3+",
+            "w": "14",
+            "ld": "7+",
+            "oc": "0",
+            "insv": "5+",
+            "base": "120x92mm"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "656c-8b78-8e59-0591",
+      "name": "Maulerfiend",
+      "type": "model",
+      "targetId": "656c-8b78-8e59-0591",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 120
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Maulerfiend",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "10",
+            "sv": "3+",
+            "w": "12",
+            "ld": "6+",
+            "oc": "3",
+            "insv": "5+",
+            "base": "120x92mm"
+          }
+        },
+        {
+          "name": "Glutton for Punishment",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes an attack, if it is below its Starting Strength, add 1 to the Hit roll. If this model is also Below Half-Strength, add 1 to the Wound roll as well."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8ae1-aa47-e1d1-1b31",
+      "name": "Chaos Rhino",
+      "type": "model",
+      "targetId": "8ae1-aa47-e1d1-1b31",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Chaos Rhino",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "9",
+            "sv": "3+",
+            "w": "10",
+            "ld": "6+",
+            "oc": "2",
+            "insv": "",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Assault Vehicle",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Units can disembark from this **^^Vehicle**^^ after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally."
+          }
+        },
+        {
+          "name": "Chaos Rhino",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 12 **^^Emperor's Children Infantry^^**models (excluding ^^**Terminator**^^ and ^^**Flawless Blade**^^ models)."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "a6ad-d379-46ee-2c24",
+      "name": "Detachment",
+      "type": "upgrade",
+      "targetId": "a6ad-d379-46ee-2c24",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "20df-143c-fc59-77e0",
+      "name": "Shalaxi Helbane",
+      "type": "model",
+      "targetId": "20df-143c-fc59-77e0",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 315
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Shalaxi Helbane",
+          "type": "Unit",
+          "characteristics": {
+            "m": "14\"",
+            "t": "10",
+            "sv": "3+",
+            "w": "20",
+            "ld": "6+",
+            "oc": "5",
+            "insv": "4+",
+            "base": "100mm"
+          }
+        },
+        {
+          "name": "No Prey Can Evade",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "You can re-roll Advance and Charge rolls made for this model."
+          }
+        },
+        {
+          "name": "Monarch of the Hunt",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the start of the first battle round, select one enemy unit to be this model's quarry. Each time this model makes a melee attack that targets its quarry, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model's quarry is destroyed, select one new enemy unit to be this model's quarry."
+          }
+        },
+        {
+          "name": "Damaged: 1-7 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7b2b-4508-263d-f20f",
+      "name": "Keeper of Secrets",
+      "type": "model",
+      "targetId": "7b2b-4508-263d-f20f",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 265
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Keeper of Secrets",
+          "type": "Unit",
+          "characteristics": {
+            "m": "14\"",
+            "t": "10",
+            "sv": "5+",
+            "w": "18",
+            "ld": "6+",
+            "oc": "5",
+            "insv": "4+",
+            "base": "100mm"
+          }
+        },
+        {
+          "name": "Daemon Lord of Slaanesh (Aura)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While a friendly ^^**Legions of Excess**^^ unit is within 6\" of this model, improve the Armour Penetration of melee weapons in that unit by 1."
+          }
+        },
+        {
+          "name": "Mesmerising Form",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time an attack targets this model, subtract 1 from the Hit roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "06f6-b870-4e43-4ed9",
+      "name": "Daemonettes",
+      "type": "unit",
+      "targetId": "06f6-b870-4e43-4ed9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 100
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Daemonettes",
+          "type": "Unit",
+          "characteristics": {
+            "m": "9\"",
+            "t": "3",
+            "sv": "7+",
+            "w": "1",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "5+",
+            "base": "25mm"
+          }
+        },
+        {
+          "name": "Horrifying Beauty",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the start of the Fight phase, each enemy unit in Engagement Range of one or more units from your army with this ability must take a Battle-shock test, subtracting 1 from that test if that enemy unit is Below Half-strength."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c2ca-f754-cc05-0743",
+      "name": "Fiends",
+      "type": "unit",
+      "targetId": "c2ca-f754-cc05-0743",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 90
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Soporific Musk",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time an enemy unit (excluding ^^**Monsters**^^ and **^^Vehicles**^^) within Engagement Range of one or more units from your army with this ability Falls Back, models in that unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c9df-2c38-25e5-ffc7",
+      "name": "Seekers",
+      "type": "unit",
+      "targetId": "c9df-2c38-25e5-ffc7",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Unholy Speed",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "You can re-roll Advance and Charge rolls made for this unit."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5955-90eb-2f66-c483",
+      "name": "Combat Elixirs equipped in Current Battle",
+      "type": "upgrade",
+      "targetId": "5955-90eb-2f66-c483",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "32bc-07c5-6da4-c94e",
+      "name": "Perfect Ascension",
+      "type": "upgrade",
+      "targetId": "32bc-07c5-6da4-c94e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "eeac-c9b8-3904-11a5",
+      "name": "Excruciator [Crucible]",
+      "type": "model",
+      "targetId": "eeac-c9b8-3904-11a5",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 60
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Excruciator",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "4",
+            "sv": "3+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit can be attached to the following units: ^^**Infractors, Noise Marines, Tormentors**^^"
+          }
+        },
+        {
+          "name": "Warped Invigoration (Psychic)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this model has shot, if an enemy unit was hit by one or more of those attacks, until the end of the turn, add 1 to Charge rolls made for this unit."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "cc4d-41d6-dfea-414f",
+      "name": "Champion of Excess [Crucible]",
+      "type": "model",
+      "targetId": "cc4d-41d6-dfea-414f",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 80
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Champion of Excess",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "4",
+            "sv": "3+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit can be attached to the following units: ^^**Infractors, Noise Marines, Tormentors**^^"
+          }
+        },
+        {
+          "name": "Euphoric Strikes",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2334-eccf-6ea5-562e",
+      "name": "Flawless Champion [Crucible]",
+      "type": "model",
+      "targetId": "2334-eccf-6ea5-562e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 100
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Flawless Champion",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "5+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit can be attached to the following units: ^^**Flawless Blades**^^"
+          }
+        },
+        {
+          "name": "Obsessive Huntsman",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Melee weapons equipped by this model have the [Precision] ability."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b541-3292-a5cc-dbeb",
+      "name": "Defiler",
+      "type": "model",
+      "targetId": "b541-3292-a5cc-dbeb",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 300
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Defiler",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "11",
+            "sv": "3+",
+            "w": "18",
+            "ld": "6+",
+            "oc": "5",
+            "insv": "5+",
+            "base": "160mm"
+          }
+        },
+        {
+          "name": "Scuttling Walker",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding ^^**Titanic**^^ models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+          }
+        },
+        {
+          "name": "Revel in Desecration",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "28e7-6f00-b632-ab91",
+      "name": "Electroscourge",
+      "type": "upgrade",
+      "targetId": "28e7-6f00-b632-ab91",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Electroscourge",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "5",
+            "ws": "3+",
+            "s": "12",
+            "ap": "-2",
+            "d": "2",
+            "keywords": "Extra Attacks, Sustained Hits 2"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "34b5-f449-28f6-b365",
+      "name": "Heavy reaper autocannon",
+      "type": "upgrade",
+      "targetId": "34b5-f449-28f6-b365",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 15
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Heavy reaper autocannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "48\"",
+            "a": "4",
+            "bs": "3+",
+            "s": "9",
+            "ap": "-1",
+            "d": "3",
+            "keywords": "Devastating Wounds, Sustained Hits 1"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "97f3-a20b-5848-cfd9",
+      "name": "Hades lascannon",
+      "type": "upgrade",
+      "targetId": "97f3-a20b-5848-cfd9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 15
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Hades lascannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "48\"",
+            "a": "2",
+            "bs": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2158-afb6-f9e2-3337",
+      "name": "Lucius the Eternal",
+      "type": "selectionEntry",
+      "targetId": "e390-b58b-db9-816",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "9ab9-323e-29fb-d571",
+      "name": "Show/Hide Options",
+      "type": "selectionEntry",
+      "targetId": "e8ef-836a-a9d1-901d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "fdfc-1d52-ab77-2605",
+      "name": "Fulgrim",
+      "type": "selectionEntry",
+      "targetId": "1e0a-cf2b-6602-2a34",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "c2cc-c272-6138-673b",
+      "name": "Lord Exultant",
+      "type": "selectionEntry",
+      "targetId": "7b4c-dfe0-6a0a-304a",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "3144-df82-3e22-2ab1",
+      "name": "Lord Kakophonist",
+      "type": "selectionEntry",
+      "targetId": "ee50-955a-0a81-41f1",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "b6e8-a3d7-e4e4-ffc2",
+      "name": "Sorcerer",
+      "type": "selectionEntry",
+      "targetId": "2cd1-13f5-d59d-cc7f",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "a9c7-8fc5-a504-15ba",
+      "name": "Daemon Prince of Slaanesh",
+      "type": "selectionEntry",
+      "targetId": "ad59-b823-900d-ee2d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "79f0-a61f-cec5-0530",
+      "name": "Daemon Prince of Slaanesh with Wings",
+      "type": "selectionEntry",
+      "targetId": "e452-08be-33e6-3864",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "fa28-2905-8989-8a2b",
+      "name": "Tormentors",
+      "type": "selectionEntry",
+      "targetId": "4494-dd7d-69f7-306c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1167-1f78-feed-c6ca",
+      "name": "Infractors",
+      "type": "selectionEntry",
+      "targetId": "e456-0afc-9b42-226c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "9f04-d6da-3dff-4d23",
+      "name": "Flawless Blades",
+      "type": "selectionEntry",
+      "targetId": "183e-f3bb-3ce6-7b55",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8584-5fcd-53bf-7cc5",
+      "name": "Chaos Terminators",
+      "type": "selectionEntry",
+      "targetId": "5926-4deb-a85d-c73a",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "9759-acbf-5109-75a0",
+      "name": "Chaos Spawn",
+      "type": "selectionEntry",
+      "targetId": "896c-5816-3abd-5199",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ff50-aaa8-e1f0-0dbc",
+      "name": "Chaos Land Raider",
+      "type": "selectionEntry",
+      "targetId": "f10c-5f3e-c09d-0b12",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "382e-7f67-4810-beef",
+      "name": "Noise Marines",
+      "type": "selectionEntry",
+      "targetId": "5817-0d6c-973c-68f8",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2bb8-bcbf-ca09-57ae",
+      "name": "Heldrake",
+      "type": "selectionEntry",
+      "targetId": "3750-df25-165d-d003",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "d7b0-a290-4f8d-f338",
+      "name": "Maulerfiend",
+      "type": "selectionEntry",
+      "targetId": "656c-8b78-8e59-0591",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8359-7588-cbb4-d9fb",
+      "name": "Chaos Rhino",
+      "type": "selectionEntry",
+      "targetId": "8ae1-aa47-e1d1-1b31",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1ff8-c67b-509e-1bbb",
+      "name": "Detachment",
+      "type": "selectionEntry",
+      "targetId": "a6ad-d379-46ee-2c24",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7e4e-a930-4283-1d1d",
+      "name": "Shalaxi Helbane",
+      "type": "selectionEntry",
+      "targetId": "20df-143c-fc59-77e0",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "b113-c019-887d-37f0",
+      "name": "Keeper of Secrets",
+      "type": "selectionEntry",
+      "targetId": "7b2b-4508-263d-f20f",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "677d-06a1-c112-c044",
+      "name": "Daemonettes",
+      "type": "selectionEntry",
+      "targetId": "06f6-b870-4e43-4ed9",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "cf42-04fb-1da4-ce7c",
+      "name": "Fiends",
+      "type": "selectionEntry",
+      "targetId": "c2ca-f754-cc05-0743",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2610-a708-7a64-1129",
+      "name": "Seekers",
+      "type": "selectionEntry",
+      "targetId": "c9df-2c38-25e5-ffc7",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "c3c6-dee7-d59b-8b88",
+      "name": "Order of Battle",
+      "type": "selectionEntry",
+      "targetId": "eda7-8b4b-3719-af36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "b3eb-11b1-26f7-0369",
+      "name": "Combat Elixirs equipped in Current Battle",
+      "type": "selectionEntry",
+      "targetId": "5955-90eb-2f66-c483",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ea4b-d075-c59f-248f",
+      "name": "Excruciator [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "eeac-c9b8-3904-11a5",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "72d2-001f-d6c9-bd61",
+      "name": "Champion of Excess [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "cc4d-41d6-dfea-414f",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "0b5a-3d67-3e9f-d066",
+      "name": "Flawless Champion [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "2334-eccf-6ea5-562e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2053-6887-5344-5a84",
+      "name": "Daemonic Charioteer [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "8597-d6dd-511e-80ae",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "b5ad-dbe6-36c2-3b22",
+      "name": "Daemonic Herald [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "3a39-0b56-25e0-eff8",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e8a9-2c26-4e69-98dd",
+      "name": "Immortal Champion [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "3594-bf68-4a46-fbf8",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "a936-cfdb-f498-8a5c",
+      "name": "Defiler",
+      "type": "selectionEntry",
+      "targetId": "b541-3292-a5cc-dbeb",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ]
 }

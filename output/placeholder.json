@@ -1,5 +1,8 @@
 {
   "id": "placeholder",
   "name": "Placeholder Dataset",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

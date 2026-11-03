@@ -5,6 +5,566 @@
   "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
-  "units": [],
-  "datasheets": []
+  "units": [
+    {
+      "id": "8eb5-a990-6eb0-9b41",
+      "name": "Warhound Titan",
+      "type": "model",
+      "targetId": "8eb5-a990-6eb0-9b41",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 1100
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Warhound Titan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "14\"",
+            "t": "13",
+            "sv": "2+",
+            "w": "40",
+            "ld": "6+",
+            "oc": "16",
+            "insv": "5+ (Ranged)",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Flank Speed",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 8\" to the Move characteristic of this model."
+          }
+        },
+        {
+          "name": "Damaged: 1-13 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-13 wounds remaining, subtract 8 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Striding Colossus",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time you target this model with a Stratagem, you must spend twice that Stratagem’s stated CP cost to do so."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b7e8-f3ae-be53-9ba5",
+      "name": "Reaver Titan",
+      "type": "model",
+      "targetId": "b7e8-f3ae-be53-9ba5",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 2200
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Damaged: 1-20 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-20 wounds remaining, subtract 10 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Reaver Titan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "14",
+            "sv": "2+",
+            "w": "60",
+            "ld": "6+",
+            "oc": "20",
+            "insv": "5+ (Ranged)",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "God-machine",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back."
+          }
+        },
+        {
+          "name": "Striding Colossus",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time you target this model with a Stratagem, you must spend three times that Stratagem’s stated CP cost to do so."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8e6f-4e09-12d5-fafd",
+      "name": "Warbringer Nemesis Titan",
+      "type": "model",
+      "targetId": "8e6f-4e09-12d5-fafd",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 2600
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Damaged: 1-26 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-26 wounds remaining, subtract 10 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Warbringer Nemesis Titan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "14",
+            "sv": "2+",
+            "w": "80",
+            "ld": "6+",
+            "oc": "20",
+            "insv": "5+ (Ranged)",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Titanic Fire Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly IMPERIUM model makes an attack that targets that enemy unit, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+          }
+        },
+        {
+          "name": "Titanic Fire Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly CHAOS model makes an attack that targets that enemy unit, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+          }
+        },
+        {
+          "name": "Striding Colossus",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time you target this model with a Stratagem, you must spend three times that Stratagem’s stated CP cost to do so."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "eafa-cd47-1c2f-61ee",
+      "name": "Warlord Titan",
+      "type": "model",
+      "targetId": "eafa-cd47-1c2f-61ee",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 3500
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Damaged: 1-33 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-33 wounds remaining, subtract 15 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Warlord Titan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "16",
+            "sv": "2+",
+            "w": "100",
+            "ld": "6+",
+            "oc": "30",
+            "insv": "5+ (Ranged)",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Wrath of the Omnissiah",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+          }
+        },
+        {
+          "name": "Striding Colossus",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time you target this model with a Stratagem, you must spend four times that Stratagem’s stated CP cost to do so."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3d92-c50-b2c2-1635",
+      "name": "Reaver Titan",
+      "type": "selectionEntry",
+      "targetId": "b7e8-f3ae-be53-9ba5",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "49c7-851e-6326-fb7c",
+      "name": "Reaver Titan",
+      "type": "selectionEntry",
+      "targetId": "b7e8-f3ae-be53-9ba5",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1564-6ed2-e6d4-4dbe",
+      "name": "Warbringer Nemesis Titan",
+      "type": "selectionEntry",
+      "targetId": "8e6f-4e09-12d5-fafd",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "b12e-420e-73a8-6121",
+      "name": "Warhound Titan",
+      "type": "selectionEntry",
+      "targetId": "8eb5-a990-6eb0-9b41",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2c2f-442e-aaac-eea5",
+      "name": "Warlord Titan",
+      "type": "selectionEntry",
+      "targetId": "eafa-cd47-1c2f-61ee",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ed2a-94a1-d5f8-a036",
+      "name": "Warbringer Nemesis Titan",
+      "type": "selectionEntry",
+      "targetId": "8e6f-4e09-12d5-fafd",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "cc59-104d-e445-689",
+      "name": "Warhound Titan",
+      "type": "selectionEntry",
+      "targetId": "8eb5-a990-6eb0-9b41",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "12c5-1c2d-92a5-c628",
+      "name": "Warlord Titan",
+      "type": "selectionEntry",
+      "targetId": "eafa-cd47-1c2f-61ee",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "8eb5-a990-6eb0-9b41",
+      "name": "Warhound Titan",
+      "type": "model",
+      "targetId": "8eb5-a990-6eb0-9b41",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 1100
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Warhound Titan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "14\"",
+            "t": "13",
+            "sv": "2+",
+            "w": "40",
+            "ld": "6+",
+            "oc": "16",
+            "insv": "5+ (Ranged)",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Flank Speed",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 8\" to the Move characteristic of this model."
+          }
+        },
+        {
+          "name": "Damaged: 1-13 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-13 wounds remaining, subtract 8 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Striding Colossus",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time you target this model with a Stratagem, you must spend twice that Stratagem’s stated CP cost to do so."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b7e8-f3ae-be53-9ba5",
+      "name": "Reaver Titan",
+      "type": "model",
+      "targetId": "b7e8-f3ae-be53-9ba5",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 2200
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Damaged: 1-20 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-20 wounds remaining, subtract 10 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Reaver Titan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "14",
+            "sv": "2+",
+            "w": "60",
+            "ld": "6+",
+            "oc": "20",
+            "insv": "5+ (Ranged)",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "God-machine",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back."
+          }
+        },
+        {
+          "name": "Striding Colossus",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time you target this model with a Stratagem, you must spend three times that Stratagem’s stated CP cost to do so."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8e6f-4e09-12d5-fafd",
+      "name": "Warbringer Nemesis Titan",
+      "type": "model",
+      "targetId": "8e6f-4e09-12d5-fafd",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 2600
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Damaged: 1-26 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-26 wounds remaining, subtract 10 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Warbringer Nemesis Titan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "14",
+            "sv": "2+",
+            "w": "80",
+            "ld": "6+",
+            "oc": "20",
+            "insv": "5+ (Ranged)",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Titanic Fire Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly IMPERIUM model makes an attack that targets that enemy unit, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+          }
+        },
+        {
+          "name": "Titanic Fire Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly CHAOS model makes an attack that targets that enemy unit, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+          }
+        },
+        {
+          "name": "Striding Colossus",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time you target this model with a Stratagem, you must spend three times that Stratagem’s stated CP cost to do so."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "eafa-cd47-1c2f-61ee",
+      "name": "Warlord Titan",
+      "type": "model",
+      "targetId": "eafa-cd47-1c2f-61ee",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 3500
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Damaged: 1-33 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-33 wounds remaining, subtract 15 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Warlord Titan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "16",
+            "sv": "2+",
+            "w": "100",
+            "ld": "6+",
+            "oc": "30",
+            "insv": "5+ (Ranged)",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Wrath of the Omnissiah",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+          }
+        },
+        {
+          "name": "Striding Colossus",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time you target this model with a Stratagem, you must spend four times that Stratagem’s stated CP cost to do so."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3d92-c50-b2c2-1635",
+      "name": "Reaver Titan",
+      "type": "selectionEntry",
+      "targetId": "b7e8-f3ae-be53-9ba5",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "49c7-851e-6326-fb7c",
+      "name": "Reaver Titan",
+      "type": "selectionEntry",
+      "targetId": "b7e8-f3ae-be53-9ba5",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1564-6ed2-e6d4-4dbe",
+      "name": "Warbringer Nemesis Titan",
+      "type": "selectionEntry",
+      "targetId": "8e6f-4e09-12d5-fafd",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "b12e-420e-73a8-6121",
+      "name": "Warhound Titan",
+      "type": "selectionEntry",
+      "targetId": "8eb5-a990-6eb0-9b41",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2c2f-442e-aaac-eea5",
+      "name": "Warlord Titan",
+      "type": "selectionEntry",
+      "targetId": "eafa-cd47-1c2f-61ee",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ed2a-94a1-d5f8-a036",
+      "name": "Warbringer Nemesis Titan",
+      "type": "selectionEntry",
+      "targetId": "8e6f-4e09-12d5-fafd",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "cc59-104d-e445-689",
+      "name": "Warhound Titan",
+      "type": "selectionEntry",
+      "targetId": "8eb5-a990-6eb0-9b41",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "12c5-1c2d-92a5-c628",
+      "name": "Warlord Titan",
+      "type": "selectionEntry",
+      "targetId": "eafa-cd47-1c2f-61ee",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ]
 }

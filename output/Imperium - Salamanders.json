@@ -5,6 +5,388 @@
   "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
-  "units": [],
-  "datasheets": []
+  "units": [
+    {
+      "id": "98c-87ea-f51b-1475",
+      "name": "Adrax Agatone",
+      "type": "model",
+      "targetId": "98c-87ea-f51b-1475",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 90
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Adrax Agatone",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "2+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Unto the Anvil",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit’s melee attacks can:\n\n\n- Re-roll wound rolls of 1.\n- Or: If the assault doctrine is active for this unit, re-roll wound rolls."
+          }
+        },
+        {
+          "name": "Lord of the Pyroclasts",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While an enemy unit is engaged with this unit, that enemy unit has -1 OC."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\nASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b351-fccc-2121-1e1e",
+      "name": "Vulkan He'stan",
+      "type": "model",
+      "targetId": "b351-fccc-2121-1e1e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 105
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Vulkan He'stan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "2+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Forgefather",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, select one visible enemy unit within 24\" of this model. Friendly ^^**Adeptus Astartes**^^ units’ [Melta]/[Torrent] attacks that target that enemy unit have +2 S."
+          }
+        },
+        {
+          "name": "Seeker of the Unfound",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "The first time this model is set up on the battlefield, select one objective on the battlefield. While this model is within range of that objective, this model has:\n\n\n- 10 OC.\n- 5+ Ld.\n- Feel No Pain 4+."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\nASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, ERADICATOR SQUAD WITH MELTA RIFLES, INFERNUS SQUAD, VANGUARD VETERAN SQUAD"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "287a-5c60-5a7e-80a8",
+      "name": "Adrax Agatone",
+      "type": "selectionEntry",
+      "targetId": "98c-87ea-f51b-1475",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e1d6-3316-2209-dc77",
+      "name": "Vulkan He'stan",
+      "type": "selectionEntry",
+      "targetId": "b351-fccc-2121-1e1e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "98c-87ea-f51b-1475",
+      "name": "Adrax Agatone",
+      "type": "model",
+      "targetId": "98c-87ea-f51b-1475",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 90
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Adrax Agatone",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "2+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Unto the Anvil",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit’s melee attacks can:\n\n\n- Re-roll wound rolls of 1.\n- Or: If the assault doctrine is active for this unit, re-roll wound rolls."
+          }
+        },
+        {
+          "name": "Lord of the Pyroclasts",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While an enemy unit is engaged with this unit, that enemy unit has -1 OC."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\nASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b351-fccc-2121-1e1e",
+      "name": "Vulkan He'stan",
+      "type": "model",
+      "targetId": "b351-fccc-2121-1e1e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 105
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Vulkan He'stan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "2+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Forgefather",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, select one visible enemy unit within 24\" of this model. Friendly ^^**Adeptus Astartes**^^ units’ [Melta]/[Torrent] attacks that target that enemy unit have +2 S."
+          }
+        },
+        {
+          "name": "Seeker of the Unfound",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "The first time this model is set up on the battlefield, select one objective on the battlefield. While this model is within range of that objective, this model has:\n\n\n- 10 OC.\n- 5+ Ld.\n- Feel No Pain 4+."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\nASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, ERADICATOR SQUAD WITH MELTA RIFLES, INFERNUS SQUAD, VANGUARD VETERAN SQUAD"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "287a-5c60-5a7e-80a8",
+      "name": "Adrax Agatone",
+      "type": "selectionEntry",
+      "targetId": "98c-87ea-f51b-1475",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e1d6-3316-2209-dc77",
+      "name": "Vulkan He'stan",
+      "type": "selectionEntry",
+      "targetId": "b351-fccc-2121-1e1e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ]
 }

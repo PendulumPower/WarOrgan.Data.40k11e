@@ -5,6 +5,152 @@
   "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
-  "units": [],
-  "datasheets": []
+  "units": [
+    {
+      "id": "b9ee-35d4-2177-b643",
+      "name": "Detachment",
+      "type": "selectionEntry",
+      "targetId": "5a84-ea91-b707-1656",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "6997-af61-9230-8827",
+      "name": "Show/Hide Options",
+      "type": "selectionEntry",
+      "targetId": "e8ef-836a-a9d1-901d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "5292-3dad-c3d9-75e5",
+      "name": "Tech-Priest Manipulus",
+      "type": "selectionEntry",
+      "targetId": "2d9b-610a-dc4d-15ae",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "c877-cf82-26d2-cfd8",
+      "name": "Skitarii Marshal",
+      "type": "selectionEntry",
+      "targetId": "b897-e4c6-fcb6-6538",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ec2c-94ac-9338-ce57",
+      "name": "Skitarii Rangers",
+      "type": "selectionEntry",
+      "targetId": "de59-f65c-181a-8509",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "71f9-d22e-3dad-08f0",
+      "name": "Skitarii Vanguard",
+      "type": "selectionEntry",
+      "targetId": "ba33-c21-bddc-ab0",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "fbfe-7348-5b36-ac1e",
+      "name": "Tech-Priest Dominus",
+      "type": "selectionEntry",
+      "targetId": "6424-ed86-9e15-3e14",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "5f76-92d5-26fe-d023",
+      "name": "Order of Battle",
+      "type": "selectionEntry",
+      "targetId": "eda7-8b4b-3719-af36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "b9ee-35d4-2177-b643",
+      "name": "Detachment",
+      "type": "selectionEntry",
+      "targetId": "5a84-ea91-b707-1656",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "6997-af61-9230-8827",
+      "name": "Show/Hide Options",
+      "type": "selectionEntry",
+      "targetId": "e8ef-836a-a9d1-901d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "5292-3dad-c3d9-75e5",
+      "name": "Tech-Priest Manipulus",
+      "type": "selectionEntry",
+      "targetId": "2d9b-610a-dc4d-15ae",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "c877-cf82-26d2-cfd8",
+      "name": "Skitarii Marshal",
+      "type": "selectionEntry",
+      "targetId": "b897-e4c6-fcb6-6538",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ec2c-94ac-9338-ce57",
+      "name": "Skitarii Rangers",
+      "type": "selectionEntry",
+      "targetId": "de59-f65c-181a-8509",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "71f9-d22e-3dad-08f0",
+      "name": "Skitarii Vanguard",
+      "type": "selectionEntry",
+      "targetId": "ba33-c21-bddc-ab0",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "fbfe-7348-5b36-ac1e",
+      "name": "Tech-Priest Dominus",
+      "type": "selectionEntry",
+      "targetId": "6424-ed86-9e15-3e14",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "5f76-92d5-26fe-d023",
+      "name": "Order of Battle",
+      "type": "selectionEntry",
+      "targetId": "eda7-8b4b-3719-af36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ]
 }

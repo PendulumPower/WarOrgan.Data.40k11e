@@ -3,8 +3,6705 @@
   "name": "Imperium - Adeptus Custodes",
   "revision": 28,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [],
+  "factionTraits": [
+    {
+      "name": "Martial Ka'tah",
+      "description": "At the start of your Command phase, friendly ^^**Adeptus Custodes**^^ units with this ability are **readied**. While a friendly unit is **readied**, you can select one of the **ka-tah abilities** for that unit to use. If you do, that unit is no longer **readied**.\n\nEach **ka-tah ability** will tell you when that **ka-tah ability** can be used and the effects that **ka-tah ability** has on the unit using it."
+    },
+    {
+      "name": "Aegis of the Emperor",
+      "description": "Friendly ^^**Adeptus Custodes**^^ units with this ability have Feel No Pain 5+ against **mortal wounds**."
+    },
+    {
+      "name": "Aquila Commander",
+      "description": "At the start of the battle round, if a model with this ability is your ^^**Warlord**^^, gain 1CP."
+    },
+    {
+      "name": "Daughters of the Abyss",
+      "description": "- Friendly ^^**Anathema Psykana**^^ units with this ability have **Feel No Pain 3+** against **psychic attacks**.\n- Friendly ^^**Anathema Psykana**^^ units with this ability have the following ability:\nPsychic Null (Aura): Friendly ^^**Adeptus Custodes**^^ units within 6\" of this unit have Feel No Pain 5+ against **psychic attacks**."
+    }
+  ],
   "detachments": [],
-  "units": [],
-  "datasheets": []
+  "units": [
+    {
+      "id": "7a3e-cedf-9f08-fcac",
+      "name": "Martial Ka'tah Reference",
+      "type": "upgrade",
+      "targetId": "7a3e-cedf-9f08-fcac",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Calistus",
+          "type": "Martial Ka'tah",
+          "characteristics": {
+            "when": "Your Movement phase, when a friendly **readied** unit is **selected to move**.",
+            "target": "That **readied** unit",
+            "effect": "When your unit makes a **normal/advance/fall-back move**, your unit can move through all types of model."
+          }
+        },
+        {
+          "name": "Conservai",
+          "type": "Martial Ka'tah",
+          "characteristics": {
+            "when": "Your Command phase",
+            "target": "One friendly **readied** unit",
+            "effect": "Until the end of the turn:\n- Being **engaged/battle-shocked** does not prevent your unit from being **eligible to start an action**.\n- Starting an **action** does not prevent your unit from being **eligible to shoot**."
+          }
+        },
+        {
+          "name": "Dacatarai",
+          "type": "Martial Ka'tah",
+          "characteristics": {
+            "when": "Start of the Fight phase.",
+            "target": "One friendly **readied** unit.",
+            "effect": "Your unit's melee attacks that target an enemy unit (excluding ^^**Monster/Vehicle**^^ units) can re-roll **hit rolls\" of 1."
+          }
+        },
+        {
+          "name": "Kaptaris",
+          "type": "Martial Ka'tah",
+          "characteristics": {
+            "when": "Start of the Fight phase",
+            "target": "One friendly **readied** unit",
+            "effect": "Melee attacks that target your unit have -1 to **hit rolls**."
+          }
+        },
+        {
+          "name": "Rendax",
+          "type": "Martial Ka'tah",
+          "characteristics": {
+            "when": "Fight phase, when a friendly **readied** unit is **selected to fight**.",
+            "target": "One friendly **readied** unit",
+            "effect": "Your unit's melee attacks have [LETHAL HITS: MONSTER/VEHICLE]."
+          }
+        },
+        {
+          "name": "Salvus",
+          "type": "Martial Ka'tah",
+          "characteristics": {
+            "when": "Your Shooting phase, when a **readied** unit is **selected to shoot**.",
+            "target": "That **readied** unit.",
+            "effect": "Your unit can ignore modifiers to your unit's:\n- BS\n- **Hit rolls** and **wound rolls**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9e42-7207-9c30-6122",
+      "name": "Aleya [Legends]",
+      "type": "model",
+      "targetId": "9e42-7207-9c30-6122",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 55
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Aleya",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "3",
+            "sv": "3+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "5+",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Tactical Perception",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has Fights First."
+          }
+        },
+        {
+          "name": "Tenacious Spirit",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "- While this unit is below starting strength, this unit's attacks have +1 to **hit rolls**.\n- While this unit is below half-strength, this unit's attacks have +1 to **wound rolls**."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: PROSECUTORS, VIGILATORS, WITCHSEEKERS"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c8a6-a4c5-703e-b717",
+      "name": "Allarus Custodians",
+      "type": "unit",
+      "targetId": "c8a6-a4c5-703e-b717",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 180
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Slayers of Tyrants",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's melee attacks that target a unit with a T greater than this unit's T have +1 to **wound rolls**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "d7cb-7d30-715b-50d2",
+      "name": "Anathema Psykana Rhino",
+      "type": "model",
+      "targetId": "d7cb-7d30-715b-50d2",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Anathema Psykana Rhino",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "9",
+            "sv": "3+",
+            "w": "10",
+            "ld": "6+",
+            "oc": "2",
+            "insv": ""
+          }
+        },
+        {
+          "name": "Anathema Psykana Rhino",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 12 ANATHEMA PSYKANA INFANTRY models."
+          }
+        },
+        {
+          "name": "Assault Vehicle",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Movement phase, when this unit ends an **advance move**, units embarked within this unit can make a **shock disembark move**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "48b7-e713-d5b1-f11c",
+      "name": "Blade Champion",
+      "type": "model",
+      "targetId": "48b7-e713-d5b1-f11c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 175
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS"
+          }
+        },
+        {
+          "name": "Blade Champion",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "7",
+            "sv": "2+",
+            "w": "7",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Sword of the Throne",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the start of the first battle round, select one enemy unit to be this model's **mark**.\n-This model's attacks that target this model's **mark** have +1 to **wound rolls**.\n- Each time this model's **mark** is destroyed, select one enemy unit to be this model's **mark**."
+          }
+        },
+        {
+          "name": "Swift Onslaught",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit can:\n- Re-roll **advance rolls**.\n- Re-roll **charge rolls**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "91b3-2e1c-e642-d213",
+      "name": "Custodian Guard Sodality",
+      "type": "unit",
+      "targetId": "91b3-2e1c-e642-d213",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 240
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Impenetrable Defence",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's attacks have [**SUSTAINED HITS 1: non-MONSTER/VEHICLE] if any of the following apply:\n- This unit is within range of an objective.\n- The target of those attacks is within range of an objective."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9610-b148-8433-93b8",
+      "name": "Custodian Wardens",
+      "type": "unit",
+      "targetId": "9610-b148-8433-93b8",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 200
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Living Fortress",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Attacks that target this unit have -1AP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7099-71b-56e8-7191",
+      "name": "Knight-Centura",
+      "type": "model",
+      "targetId": "7099-71b-56e8-7191",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 55
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Knight-Centura",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "3",
+            "sv": "3+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "5+"
+          }
+        },
+        {
+          "name": "Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\n- Prosecutors\n- Vigilators\n- Witchseekers"
+          }
+        },
+        {
+          "name": "Seeker's Instincts",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "- This unit has +2\" M.\n- This unit can re-roll **advance rolls** and **charge rolls**."
+          }
+        },
+        {
+          "name": "Corner the Quarry",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "When an enemy unit (excluding MONSTERS/VEHICLES) **engaged** with this unit makes a **fall-back move**, that enemy unit must use the **desperate escape mode**. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3ec3-a4df-fdbf-5507",
+      "name": "Prosecutor Squad",
+      "type": "unit",
+      "targetId": "3ec3-a4df-fdbf-5507",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 45
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Purity of Execution",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, you can select one **visible** enemy unit within 18\" of this unit. That unit is **detected**.\n- While a unit is **detected**, that unit has +3\" **detection range**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b61c-b815-65c0-b1cc",
+      "name": "Shield-Captain",
+      "type": "model",
+      "targetId": "b61c-b815-65c0-b1cc",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 180
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Shield-Captain",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "7",
+            "sv": "2+",
+            "w": "8",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS"
+          }
+        },
+        {
+          "name": "Vengeful Surge",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nIn your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2\""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "6319-eeba-b717-bd86",
+      "name": "Shield-Captain in Allarus Terminator Armour",
+      "type": "model",
+      "targetId": "6319-eeba-b717-bd86",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 185
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Shield-Captain in Allarus Terminator Armour",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "8",
+            "sv": "2+",
+            "w": "9",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON CUSTODIANS"
+          }
+        },
+        {
+          "name": "Archeotech Teleport-shunter",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nIn your Movement phase, if this unit is **unengaged** and has not been **selected to move** this phase, you can use this ability. If you do, place this unit in **strategic reserves** and this unit must make an **ingress move** this phase."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "58fa-4a25-a5af-1144",
+      "name": "Shield-Captain on Dawneagle Jetbike",
+      "type": "model",
+      "targetId": "58fa-4a25-a5af-1144",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 205
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: AGAMATUS CUSTODIANS, VERTUS PRAETORS"
+          }
+        },
+        {
+          "name": "Sweeping Advance",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nAt the end of the Fight phase, if this unit was **eligible to fight** this phase:\n- If this unit is **unengaged**, this unit can make a **normal move**.\n- Or: if this unit is **engaged**, this unit can make a **fall-back move**."
+          }
+        },
+        {
+          "name": "Shield-Captain on Dawneagle Jetbike",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "8",
+            "sv": "2+",
+            "w": "10",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "75x42mm Oval"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7d7c-c212-47a3-38e4",
+      "name": "Trajann Valoris",
+      "type": "model",
+      "targetId": "7d7c-c212-47a3-38e4",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 265
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Trajann Valoris",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "7",
+            "sv": "2+",
+            "w": "10",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY"
+          }
+        },
+        {
+          "name": "Captain-General (Aura)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Friendly ^^**Adeptus Custodes**^^ units (excluding ^^**MONSTER/VEHICLE**^^ units) within 6\" of this model can:\n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1"
+          }
+        },
+        {
+          "name": "Moment Shackle",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per army)\nAt the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 A.\n- This model has 3+ InSv."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8103-2e01-5d6a-b761",
+      "name": "Valerian [Legends]",
+      "type": "model",
+      "targetId": "8103-2e01-5d6a-b761",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 130
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Valerian",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "7",
+            "sv": "2+",
+            "w": "8",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS"
+          }
+        },
+        {
+          "name": "Golden Laurels",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Attacks that target this unit have -1 AP."
+          }
+        },
+        {
+          "name": "Hero of Lion's Gate",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nAfter making a hit roll, wound roll or save roll for this model, you can change the result to an unmodified 6."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "188b-e48b-29f-1456",
+      "name": "Venerable Contemptor Dreadnought [Legends]",
+      "type": "model",
+      "targetId": "188b-e48b-29f-1456",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 220
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Venerable Contemptor Dreadnought",
+          "type": "Unit",
+          "characteristics": {
+            "m": "9\"",
+            "t": "10",
+            "sv": "2+",
+            "w": "12",
+            "ld": "5+",
+            "oc": "3",
+            "insv": "5+",
+            "base": "60mm"
+          }
+        },
+        {
+          "name": "Unyielding Ancient",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nAt the end of a phase in which this model is destroyed, roll one D6:\n- On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged and with 3 wounds remaining"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "76be-3bcb-cf4-bcbd",
+      "name": "Venerable Land Raider [Legends]",
+      "type": "model",
+      "targetId": "76be-3bcb-cf4-bcbd",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 230
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Venerable Land Raider",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "12",
+            "sv": "2+",
+            "w": "16",
+            "ld": "7+",
+            "oc": "5",
+            "insv": "",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Assault Ramp",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Movement phase, when this unit ends a **normal move**, units embarked within this unit can make an **assault disembark move**."
+          }
+        },
+        {
+          "name": "Venerable Land Raider",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 6 ADEPTUS CUSTODES INFANTRY models."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "918b-c9ed-7af7-74df",
+      "name": "Vertus Praetors",
+      "type": "unit",
+      "targetId": "918b-c9ed-7af7-74df",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 220
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Quicksilver Execution",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this unit made a **charge move** this turn, this unit's melee attacks have [SUSTAINED HITS 1]"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "dd2d-568a-9c56-1b6e",
+      "name": "Vigilator Squad",
+      "type": "unit",
+      "targetId": "dd2d-568a-9c56-1b6e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 50
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Deft Parry",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Melee attacks that target this unit have -1 to **hit rolls**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "503b-f7be-eeeb-9e31",
+      "name": "Witchseeker Squad",
+      "type": "unit",
+      "targetId": "503b-f7be-eeeb-9e31",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 55
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Sanctified Flames",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a **battle-shock roll* with -1 to that **battle-shock roll** if that enemy unit is a ^^**Psyker**^^ unit.."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "af0f-5212-907e-7125",
+      "name": "Custodian Guard Sodality with Adrasite Spears [Legends]",
+      "type": "unit",
+      "targetId": "af0f-5212-907e-7125",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 200
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Stand Vigil",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's attacks can:\n- Re-roll wound rolls of 1.\n- Or: If this unit is within range of an objective, re-roll wound rolls"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "6f9f-e6aa-ba13-aab1",
+      "name": "Sagittarum Custodians Sodality [Legends]",
+      "type": "unit",
+      "targetId": "6f9f-e6aa-ba13-aab1",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 185
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Disintegration Beams",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nIn your Shooting phase, you can use this ability. If you do, this unit's ranged attacks have [DEVASTATING WOUNDS]."
+          }
+        },
+        {
+          "name": "Saturation Volleys",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this unit has shot, you can select one enemy non-Monster/Vehicle unit hit by those attacks. That unit is suppressed until the start of your next turn:\n- While a unit is suppressed, that unit's attacks have -1 to hit rolls."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "00ab-41c4-cf52-4ad2",
+      "name": "Gyrfalcon Jetbike Sodality",
+      "type": "unit",
+      "targetId": "00ab-41c4-cf52-4ad2",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 260
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Death Blow",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this unit made a **charge move** this turn, this unit's melee attacks have +1 AP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "201e-e502-a8d1-3974",
+      "name": "Venatari with Kinetic Destroyers",
+      "type": "unit",
+      "targetId": "201e-e502-a8d1-3974",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 255
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Strike from the Skies",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, if this unit made an **ingress move** this turn, this unit's ranged attacks can re-roll **hit rolls**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "4988-d93e-5034-2b3c",
+      "name": "Contemptor-Galatus Dreadnought",
+      "type": "model",
+      "targetId": "4988-d93e-5034-2b3c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 220
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Contemptor-Galatus Dreadnought",
+          "type": "Unit",
+          "characteristics": {
+            "m": "9\"",
+            "t": "10",
+            "sv": "2+",
+            "w": "12",
+            "ld": "5+",
+            "oc": "3",
+            "insv": "4+",
+            "base": "60mm"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "db3b-02cd-87a2-3b52",
+      "name": "Contemptor-Achillus Dreadnought",
+      "type": "model",
+      "targetId": "db3b-02cd-87a2-3b52",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 230
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Contemptor-Achillus Dreadnought",
+          "type": "Unit",
+          "characteristics": {
+            "m": "9\"",
+            "t": "10",
+            "sv": "2+",
+            "w": "12",
+            "ld": "5+",
+            "oc": "3",
+            "insv": "5+",
+            "base": "60mm"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "06df-2fb2-8dfa-2fce",
+      "name": "Pallas Grav-attack",
+      "type": "model",
+      "targetId": "06df-2fb2-8dfa-2fce",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 135
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Palas Grav-attack",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "9",
+            "sv": "2+",
+            "w": "10",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "5+",
+            "base": "105x70mm Oval"
+          }
+        },
+        {
+          "name": "Mobile Hunter",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, when this unit has shot, you can use this ability. If you do:\n- This unit can make a **normal move** of up to D6\".\n- This unit is not **eligible to declare a charge** until the end of the turn."
+          }
+        },
+        {
+          "name": "Flare Shields",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has a 4+ **InSv** against ranged attacks."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3ee2-62a9-af84-1a90",
+      "name": "Caladius Grav-tank",
+      "type": "model",
+      "targetId": "3ee2-62a9-af84-1a90",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 230
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Caladius Grav-tank",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "11",
+            "sv": "2+",
+            "w": "14",
+            "ld": "5+",
+            "oc": "4",
+            "insv": "5+",
+            "base": "150x95mm Oval"
+          }
+        },
+        {
+          "name": "Destructor Optics",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's ranged attacks that target a unit (excluding MONSTER/VEHICLE) have +1 AP."
+          }
+        },
+        {
+          "name": "Flare Shields",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has a 4+ **InSv** against ranged attacks."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "e7d8-1c73-7d03-8b62",
+      "name": "Telemon Heavy Dreadnought",
+      "type": "model",
+      "targetId": "e7d8-1c73-7d03-8b62",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 280
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Telemon Heavy Dreadnought",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "11",
+            "sv": "2+",
+            "w": "14",
+            "ld": "5+",
+            "oc": "4",
+            "insv": "4+",
+            "base": "100mm"
+          }
+        },
+        {
+          "name": "Guardian Eternal",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Ranged attacks that target this unit have -1 D."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "f35e-ef9c-9ef4-77e1",
+      "name": "Coronus Grav-carrier",
+      "type": "model",
+      "targetId": "f35e-ef9c-9ef4-77e1",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 225
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Coronus Grav-carrier",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "12",
+            "sv": "2+",
+            "w": "16",
+            "ld": "5+",
+            "oc": "5",
+            "insv": "5+",
+            "base": "150x95mm Oval"
+          }
+        },
+        {
+          "name": "Assault Vehicle",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Movement phase, when this unit ends an **advance move**, units embarked within this unit can make a **shock disembark move**."
+          }
+        },
+        {
+          "name": "Coronus Grav-carrier",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 8 ^^Adeptus Custodes Infantry^^ models. It cannot transport ^^**Jump Pack**^^ models."
+          }
+        },
+        {
+          "name": "Repulsor Suspensor Technology",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per phase, per unit)\nIn your opponent's Shooting phase, when an enemy unit has shot, if this unit lost a wound as a result of those attacks and is **unengaged**, this unit can make a **normal move* of up to D6\"."
+          }
+        },
+        {
+          "name": "Flare Shields",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has a 4+ **InSv** against ranged attacks."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9c1a-7efd-ed36-440e",
+      "name": "Orion Assault Dropship",
+      "type": "model",
+      "targetId": "9c1a-7efd-ed36-440e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 690
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Orion Assault Dropship",
+          "type": "Unit",
+          "characteristics": {
+            "m": "14\"",
+            "t": "12",
+            "sv": "2+",
+            "w": "22",
+            "ld": "6+",
+            "oc": "0",
+            "insv": "5+",
+            "base": "160mm"
+          }
+        },
+        {
+          "name": "Assault Dropship",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Movement phase, when a friendly ^^**Adeptus Custodes**^^ unit is selected to make a **tactical disembark move** from this unit, if that unit is then selected to make an **advance move**, that **advance move** does not prevent that unit from being **eligible to declare a charge**."
+          }
+        },
+        {
+          "name": "Orion Assault Dropship",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 12 ^^**Adeptus Custodes Infantry**^^ models. Or 1 ^^**Dreadnought**^^ models. While transporting 1 ^^**Dreadnought**^^ unit, this unit also has a transport capacity of 6 ^^**Adeptus Custodes Infantry**^^ models."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9335-74d9-ad68-3ff7",
+      "name": "Ares Gunship",
+      "type": "model",
+      "targetId": "9335-74d9-ad68-3ff7",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 580
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Ares Gunship",
+          "type": "Unit",
+          "characteristics": {
+            "m": "-",
+            "t": "12",
+            "sv": "2+",
+            "w": "22",
+            "ld": "6+",
+            "oc": "-",
+            "insv": "5+",
+            "base": "160mm"
+          }
+        },
+        {
+          "name": "Infernus Firebombs",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your opponent's Fight phase, select one visible enemy unit (excluding Lone Operative and Aircraft units) within 24\" of this unit:\n- Ranged attacks that target that enemy unit have [IGNORES COVER] until the end of your next turn,\n- Roll one D6 for each model in that enemy unit:\n- On a 6, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "0574-f558-2957-584f",
+      "name": "Warlord",
+      "type": "upgrade",
+      "targetId": "0574-f558-2957-584f",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "5218-339c-eb34-9ac0",
+      "name": "Detachment",
+      "type": "upgrade",
+      "targetId": "5218-339c-eb34-9ac0",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "4863-f443-2b45-e18b",
+      "name": "Balistus grenade launcher",
+      "type": "upgrade",
+      "targetId": "4863-f443-2b45-e18b",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Balistus grenade launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "18\"",
+            "a": "3",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Assault, Blast 1"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5ec7-5d19-a18b-25e4",
+      "name": "Solerite power gauntlet",
+      "type": "upgrade",
+      "targetId": "5ec7-5d19-a18b-25e4",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Solerite power gauntlet",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "5",
+            "ws": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "6dae-e4c7-7a80-7c66",
+      "name": "Twin adrathic destructor",
+      "type": "upgrade",
+      "targetId": "6dae-e4c7-7a80-7c66",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Twin adrathic destructor",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "18\"",
+            "a": "1",
+            "bs": "2+",
+            "s": "6",
+            "ap": "-2",
+            "d": "3",
+            "keywords": "Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8ec2-b211-8106-228a",
+      "name": "Solerite power talon",
+      "type": "upgrade",
+      "targetId": "8ec2-b211-8106-228a",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Solerite power talon",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "7",
+            "ws": "2+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "f12b-b113-de8a-4f1e",
+      "name": "Flamer",
+      "type": "upgrade",
+      "targetId": "f12b-b113-de8a-4f1e",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Flamer",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "3",
+            "bs": "-",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Anti-PSYKER 4+, Assault, Blast 1, Torrent"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "f31f-9d97-dfba-b445",
+      "name": "Hunter-killer missile",
+      "type": "upgrade",
+      "targetId": "f31f-9d97-dfba-b445",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "48\"",
+            "a": "1",
+            "bs": "2+",
+            "s": "14",
+            "ap": "-3",
+            "d": "D3+3",
+            "keywords": "One Shot"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "de0b-37e9-b9f5-d3a6",
+      "name": "Guardian of the Throne [Crucible]",
+      "type": "model",
+      "targetId": "de0b-37e9-b9f5-d3a6",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 130
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Guardian of the Throne",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "6",
+            "ld": "6+",
+            "oc": "2",
+            "insv": "4+"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ^^**Custodian Guard, Custodian Wardens**^^"
+          }
+        },
+        {
+          "name": "Ka'tah Master",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per phase, you can re-roll one Hit roll or one Wound roll for an attack made by this model."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "e58d-17d4-71f8-4137",
+      "name": "Null Maiden [Crucible]",
+      "type": "model",
+      "targetId": "e58d-17d4-71f8-4137",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 65
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Null Maiden",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "3",
+            "sv": "3+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "5+"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ^^**Prosecutors, Vigilators, Witchseekers**^^"
+          }
+        },
+        {
+          "name": "Daughter of the Abyss",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c11a-f70a-2877-ed27",
+      "name": "Kataphraktoi Exemplar [Crucible]",
+      "type": "model",
+      "targetId": "c11a-f70a-2877-ed27",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 150
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Kataphraktoi Exemplar",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "7",
+            "sv": "2+",
+            "w": "8",
+            "ld": "6+",
+            "oc": "2",
+            "insv": "4+"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ^^**Vertus Praetors**^^"
+          }
+        },
+        {
+          "name": "Fiend Slayer",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes an attack that targets a ^^**Monster**^^ or ^^**Vehicle**^^ unit, you can re-roll the Wound roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "540a-65ba-1752-f217",
+      "name": "Castellan Axe",
+      "type": "upgrade",
+      "targetId": "540a-65ba-1752-f217",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Castellan Axe",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "5",
+            "ws": "2+",
+            "s": "10",
+            "ap": "-2",
+            "d": "4",
+            "keywords": ""
+          }
+        },
+        {
+          "name": "Castellan Axe",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Assault, Rapid Fire 2"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "53df-e02f-5f3e-6a1d",
+      "name": "Guardian Spear",
+      "type": "upgrade",
+      "targetId": "53df-e02f-5f3e-6a1d",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Guardian Spear",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "8",
+            "ws": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "keywords": "Cleave 1"
+          }
+        },
+        {
+          "name": "Guardian Spear",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Assault, Rapid Fire 2"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "24df-9486-2df9-83f8",
+      "name": "Balistus grenade launcher",
+      "type": "upgrade",
+      "targetId": "24df-9486-2df9-83f8",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Balistus grenade launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "18\"",
+            "a": "D6",
+            "bs": "2+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Blast"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "1576-174e-e5d6-82ea",
+      "name": "Salvo launcher",
+      "type": "upgrade",
+      "targetId": "1576-174e-e5d6-82ea",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Salvo launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "2+",
+            "s": "10",
+            "ap": "-2",
+            "d": "D3+2",
+            "keywords": "\n"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "58c3-4e14-bc1a-318b",
+      "name": "Hurricane bolter",
+      "type": "upgrade",
+      "targetId": "58c3-4e14-bc1a-318b",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Hurricane bolter",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "18\"",
+            "a": "3",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Rapid Fire 3, Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "df80-bbdc-bd0a-3428",
+      "name": "Sentinel Guard Sodality",
+      "type": "unit",
+      "targetId": "df80-bbdc-bd0a-3428",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 240
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Stand Vigil",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's attacks have [**LETHAL HITS: non-MONSTER/VEHICLE] if any of the following apply:\n- This unit is within range of an objective.\n- The target of those attacks is within range of an objective."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "59ef-1bf3-f681-c8ae",
+      "name": "Vexilla",
+      "type": "upgrade",
+      "targetId": "59ef-1bf3-f681-c8ae",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Vexilla",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "- This unit has +1 OC.\n- This unit can ignore modifiers to this unit's Ld."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "94b3-ef7f-f71f-c86e",
+      "name": "Castellan Axe",
+      "type": "upgrade",
+      "targetId": "94b3-ef7f-f71f-c86e",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Castellan axe",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "2+",
+            "s": "10",
+            "ap": "-2",
+            "d": "4",
+            "keywords": ""
+          }
+        },
+        {
+          "name": "Castellan axe",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Assault, Rapid Fire 2"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ab4a-1a4f-5898-70db",
+      "name": "Guardian Spear",
+      "type": "upgrade",
+      "targetId": "ab4a-1a4f-5898-70db",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Guardian Spear",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "6",
+            "ws": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "keywords": ""
+          }
+        },
+        {
+          "name": "Guardian Spear",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Assault, Rapid Fire 2"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9d57-6156-aebd-73e9",
+      "name": "Aquilon Terminators with Solarite Power Gauntlets",
+      "type": "unit",
+      "targetId": "9d57-6156-aebd-73e9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 285
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Dread Foe",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's melee attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 AP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "67a7-0ebe-3c5f-c0f9",
+      "name": "Aquilon Terminators with Solarite Power Talons",
+      "type": "unit",
+      "targetId": "67a7-0ebe-3c5f-c0f9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 275
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Reap a Terrible Tally",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit’s attacks that target an Infantry unit can:\n- Re‑roll hit rolls of 1.\n- Re‑roll wound rolls of 1."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5ebc-7aca-d7c4-1c4d",
+      "name": "Venatari with Verutum Lances",
+      "type": "unit",
+      "targetId": "5ebc-7aca-d7c4-1c4d",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 270
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Swift Ruin",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per phase, per army)\nYou can target this unit with the **Rapid Ingress stratagem** regardless of any other uses of that **stratagem** this phase. If you do:\n- That use is -1CP.\n- That use does not prevent any uses of that **stratagem** on other units this phase."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9f43-3691-5be1-8623",
+      "name": "Twin Neutronium Cascade Projectors",
+      "type": "upgrade",
+      "targetId": "9f43-3691-5be1-8623",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Twin Neutronium Cascade Projectors",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "3",
+            "bs": "-",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "keywords": "Blast 1, Torrent, Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "72c5-8bd0-19f5-f246",
+      "name": "Caestus Fist",
+      "type": "upgrade",
+      "targetId": "72c5-8bd0-19f5-f246",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Caestus Fist",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "5",
+            "ws": "2+",
+            "s": "14",
+            "ap": "-3",
+            "d": "4",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "62a1-1fa7-70b7-614d",
+      "name": "Twin Lastrum Bolt Cannon",
+      "type": "upgrade",
+      "targetId": "62a1-1fa7-70b7-614d",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Twin Lastrum Bolt Cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "36\"",
+            "a": "3",
+            "bs": "2+",
+            "s": "6",
+            "ap": "-2",
+            "d": "2",
+            "keywords": "Sustained Hits 1, Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "dca3-638e-52a2-b1b8",
+      "name": "Armoured hull",
+      "type": "upgrade",
+      "targetId": "dca3-638e-52a2-b1b8",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Armoured hull",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "4",
+            "ws": "4+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "dbf0-5211-463c-40ec",
+      "name": "Caladius Annihilator Grav-tank",
+      "type": "model",
+      "targetId": "dbf0-5211-463c-40ec",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 250
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Caladius Annihilator Grav-tank",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "11",
+            "sv": "2+",
+            "w": "14",
+            "ld": "5+",
+            "oc": "4",
+            "insv": "5+",
+            "base": "150x95mm Oval"
+          }
+        },
+        {
+          "name": "Advanced Firepower",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's ranged attacks that target a MONSTER/VEHICLE unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**."
+          }
+        },
+        {
+          "name": "Flare Shields",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has a 4+ **InSv** against ranged attacks."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2693-63bf-611f-37fe",
+      "name": "Twin Arachnus Blaze Cannon",
+      "type": "upgrade",
+      "targetId": "2693-63bf-611f-37fe",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Twin Arachnus Blaze Cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "2+",
+            "s": "10",
+            "ap": "-3",
+            "d": "D3+2",
+            "keywords": "Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "77b6-41ee-7952-e94d",
+      "name": "Gun Stock",
+      "type": "upgrade",
+      "targetId": "77b6-41ee-7952-e94d",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Gun Stock",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "3+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "50dc-1775-467d-be20",
+      "name": "Custodian Guard Sodality with Pyrithite Spears [Legends]",
+      "type": "unit",
+      "targetId": "50dc-1775-467d-be20",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 215
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "No Foe Shall Stand",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nThis unit's ranged attacks have [LETHAL HITS] and [IGNORES COVER]."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9f10-d8db-a7b3-5784",
+      "name": "Allarus Custodians",
+      "type": "selectionEntry",
+      "targetId": "c8a6-a4c5-703e-b717",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "d0ce-f2d3-358f-4530",
+      "name": "Custodian Guard Sodality",
+      "type": "selectionEntry",
+      "targetId": "91b3-2e1c-e642-d213",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "718c-e2b1-4ba5-28a7",
+      "name": "Aleya [Legends]",
+      "type": "selectionEntry",
+      "targetId": "9e42-7207-9c30-6122",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2139-e547-edf5-74ce",
+      "name": "Anathema Psykana Rhino",
+      "type": "selectionEntry",
+      "targetId": "d7cb-7d30-715b-50d2",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "473-b72d-a70b-e3aa",
+      "name": "Blade Champion",
+      "type": "selectionEntry",
+      "targetId": "48b7-e713-d5b1-f11c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2bbd-2d61-e435-d902",
+      "name": "Custodian Wardens",
+      "type": "selectionEntry",
+      "targetId": "9610-b148-8433-93b8",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ac28-f8a6-1d06-6f5e",
+      "name": "Knight-Centura",
+      "type": "selectionEntry",
+      "targetId": "7099-71b-56e8-7191",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "71c0-19d8-f88b-c89",
+      "name": "Prosecutor Squad",
+      "type": "selectionEntry",
+      "targetId": "3ec3-a4df-fdbf-5507",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "3ab2-181b-28a4-6978",
+      "name": "Shield-Captain",
+      "type": "selectionEntry",
+      "targetId": "b61c-b815-65c0-b1cc",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "afa2-9ab7-5385-547d",
+      "name": "Shield-Captain in Allarus Terminator Armour",
+      "type": "selectionEntry",
+      "targetId": "6319-eeba-b717-bd86",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ad15-ddf2-9dd4-71a",
+      "name": "Shield-Captain on Dawneagle Jetbike",
+      "type": "selectionEntry",
+      "targetId": "58fa-4a25-a5af-1144",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "87ec-de53-6df9-9c22",
+      "name": "Trajann Valoris",
+      "type": "selectionEntry",
+      "targetId": "7d7c-c212-47a3-38e4",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1fd5-8cf0-bef3-3970",
+      "name": "Valerian [Legends]",
+      "type": "selectionEntry",
+      "targetId": "8103-2e01-5d6a-b761",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2744-e5a2-79e2-2b4f",
+      "name": "Venerable Contemptor Dreadnought [Legends]",
+      "type": "selectionEntry",
+      "targetId": "188b-e48b-29f-1456",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "9efe-c8e5-7da-3ae0",
+      "name": "Venerable Land Raider [Legends]",
+      "type": "selectionEntry",
+      "targetId": "76be-3bcb-cf4-bcbd",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "6c75-afbb-c482-7e3e",
+      "name": "Vertus Praetors",
+      "type": "selectionEntry",
+      "targetId": "918b-c9ed-7af7-74df",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "3f7-9ca6-48fe-fb11",
+      "name": "Vigilator Squad",
+      "type": "selectionEntry",
+      "targetId": "dd2d-568a-9c56-1b6e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "23ec-128a-efbe-797f",
+      "name": "Witchseeker Squad",
+      "type": "selectionEntry",
+      "targetId": "503b-f7be-eeeb-9e31",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "dee1-2f23-d810-23dd",
+      "name": "Custodian Guard Sodality with Adrasite Spears [Legends]",
+      "type": "selectionEntry",
+      "targetId": "af0f-5212-907e-7125",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "a6f7-e352-b6b3-dfe8",
+      "name": "Sagittarum Custodians Sodality [Legends]",
+      "type": "selectionEntry",
+      "targetId": "6f9f-e6aa-ba13-aab1",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "28a9-923b-c230-bc66",
+      "name": "Gyrfalcon Jetbike Sodality",
+      "type": "selectionEntry",
+      "targetId": "00ab-41c4-cf52-4ad2",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "15e2-1903-8d94-f574",
+      "name": "Venatari with Kinetic Destroyers",
+      "type": "selectionEntry",
+      "targetId": "201e-e502-a8d1-3974",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "fccb-aa74-dcb9-5209",
+      "name": "Contemptor-Galatus Dreadnought",
+      "type": "selectionEntry",
+      "targetId": "4988-d93e-5034-2b3c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "c755-0afd-5fca-c92c",
+      "name": "Contemptor-Achillus Dreadnought",
+      "type": "selectionEntry",
+      "targetId": "db3b-02cd-87a2-3b52",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7b13-004f-1fb5-97f8",
+      "name": "Pallas Grav-attack",
+      "type": "selectionEntry",
+      "targetId": "06df-2fb2-8dfa-2fce",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "a772-f94f-b612-8976",
+      "name": "Caladius Grav-tank",
+      "type": "selectionEntry",
+      "targetId": "3ee2-62a9-af84-1a90",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "be63-e831-bd3f-8209",
+      "name": "Telemon Heavy Dreadnought",
+      "type": "selectionEntry",
+      "targetId": "e7d8-1c73-7d03-8b62",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "f5c8-476c-06ad-22c7",
+      "name": "Coronus Grav-carrier",
+      "type": "selectionEntry",
+      "targetId": "f35e-ef9c-9ef4-77e1",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "bf30-1e72-7097-5cc3",
+      "name": "Ares Gunship",
+      "type": "selectionEntry",
+      "targetId": "9335-74d9-ad68-3ff7",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "729a-c007-5f89-c2f6",
+      "name": "Orion Assault Dropship",
+      "type": "selectionEntry",
+      "targetId": "9c1a-7efd-ed36-440e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "9d4f-c524-e432-f877",
+      "name": "Detachment",
+      "type": "selectionEntry",
+      "targetId": "5218-339c-eb34-9ac0",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "3458-3cff-ef5f-a7c5",
+      "name": "Show/Hide Options",
+      "type": "selectionEntry",
+      "targetId": "e8ef-836a-a9d1-901d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "3a31-7ba2-5400-1642",
+      "name": "Order of Battle",
+      "type": "selectionEntry",
+      "targetId": "eda7-8b4b-3719-af36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "4610-a6b4-41ea-d2a9",
+      "name": "Guardian of the Throne [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "de0b-37e9-b9f5-d3a6",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "f8ae-e6a1-48f0-56f8",
+      "name": "Null Maiden [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "e58d-17d4-71f8-4137",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1450-9fae-5e76-1f91",
+      "name": "Kataphraktoi Exemplar [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "c11a-f70a-2877-ed27",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "dc83-9680-c6e7-d451",
+      "name": "Sentinel Guard Sodality",
+      "type": "selectionEntry",
+      "targetId": "df80-bbdc-bd0a-3428",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7474-dad2-f999-2a9e",
+      "name": "Aquilon Terminators with Solarite Power Gauntlets",
+      "type": "selectionEntry",
+      "targetId": "9d57-6156-aebd-73e9",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "de9a-cd58-f9c4-f80d",
+      "name": "Aquilon Terminators with Solarite Power Talons",
+      "type": "selectionEntry",
+      "targetId": "67a7-0ebe-3c5f-c0f9",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "355e-c317-d03c-44e0",
+      "name": "Venatari with Verutum Lances",
+      "type": "selectionEntry",
+      "targetId": "5ebc-7aca-d7c4-1c4d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "118f-de5c-439a-766f",
+      "name": "Caladius Annihilator Grav-tank",
+      "type": "selectionEntry",
+      "targetId": "dbf0-5211-463c-40ec",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "94e1-835d-0a12-6eae",
+      "name": "Custodian Guard Sodality with Pyrithite Spears [Legends]",
+      "type": "selectionEntry",
+      "targetId": "50dc-1775-467d-be20",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "7a3e-cedf-9f08-fcac",
+      "name": "Martial Ka'tah Reference",
+      "type": "upgrade",
+      "targetId": "7a3e-cedf-9f08-fcac",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Calistus",
+          "type": "Martial Ka'tah",
+          "characteristics": {
+            "when": "Your Movement phase, when a friendly **readied** unit is **selected to move**.",
+            "target": "That **readied** unit",
+            "effect": "When your unit makes a **normal/advance/fall-back move**, your unit can move through all types of model."
+          }
+        },
+        {
+          "name": "Conservai",
+          "type": "Martial Ka'tah",
+          "characteristics": {
+            "when": "Your Command phase",
+            "target": "One friendly **readied** unit",
+            "effect": "Until the end of the turn:\n- Being **engaged/battle-shocked** does not prevent your unit from being **eligible to start an action**.\n- Starting an **action** does not prevent your unit from being **eligible to shoot**."
+          }
+        },
+        {
+          "name": "Dacatarai",
+          "type": "Martial Ka'tah",
+          "characteristics": {
+            "when": "Start of the Fight phase.",
+            "target": "One friendly **readied** unit.",
+            "effect": "Your unit's melee attacks that target an enemy unit (excluding ^^**Monster/Vehicle**^^ units) can re-roll **hit rolls\" of 1."
+          }
+        },
+        {
+          "name": "Kaptaris",
+          "type": "Martial Ka'tah",
+          "characteristics": {
+            "when": "Start of the Fight phase",
+            "target": "One friendly **readied** unit",
+            "effect": "Melee attacks that target your unit have -1 to **hit rolls**."
+          }
+        },
+        {
+          "name": "Rendax",
+          "type": "Martial Ka'tah",
+          "characteristics": {
+            "when": "Fight phase, when a friendly **readied** unit is **selected to fight**.",
+            "target": "One friendly **readied** unit",
+            "effect": "Your unit's melee attacks have [LETHAL HITS: MONSTER/VEHICLE]."
+          }
+        },
+        {
+          "name": "Salvus",
+          "type": "Martial Ka'tah",
+          "characteristics": {
+            "when": "Your Shooting phase, when a **readied** unit is **selected to shoot**.",
+            "target": "That **readied** unit.",
+            "effect": "Your unit can ignore modifiers to your unit's:\n- BS\n- **Hit rolls** and **wound rolls**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9e42-7207-9c30-6122",
+      "name": "Aleya [Legends]",
+      "type": "model",
+      "targetId": "9e42-7207-9c30-6122",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 55
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Aleya",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "3",
+            "sv": "3+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "5+",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Tactical Perception",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has Fights First."
+          }
+        },
+        {
+          "name": "Tenacious Spirit",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "- While this unit is below starting strength, this unit's attacks have +1 to **hit rolls**.\n- While this unit is below half-strength, this unit's attacks have +1 to **wound rolls**."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: PROSECUTORS, VIGILATORS, WITCHSEEKERS"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c8a6-a4c5-703e-b717",
+      "name": "Allarus Custodians",
+      "type": "unit",
+      "targetId": "c8a6-a4c5-703e-b717",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 180
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Slayers of Tyrants",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's melee attacks that target a unit with a T greater than this unit's T have +1 to **wound rolls**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "d7cb-7d30-715b-50d2",
+      "name": "Anathema Psykana Rhino",
+      "type": "model",
+      "targetId": "d7cb-7d30-715b-50d2",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Anathema Psykana Rhino",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "9",
+            "sv": "3+",
+            "w": "10",
+            "ld": "6+",
+            "oc": "2",
+            "insv": ""
+          }
+        },
+        {
+          "name": "Anathema Psykana Rhino",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 12 ANATHEMA PSYKANA INFANTRY models."
+          }
+        },
+        {
+          "name": "Assault Vehicle",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Movement phase, when this unit ends an **advance move**, units embarked within this unit can make a **shock disembark move**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "48b7-e713-d5b1-f11c",
+      "name": "Blade Champion",
+      "type": "model",
+      "targetId": "48b7-e713-d5b1-f11c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 175
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS"
+          }
+        },
+        {
+          "name": "Blade Champion",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "7",
+            "sv": "2+",
+            "w": "7",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Sword of the Throne",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the start of the first battle round, select one enemy unit to be this model's **mark**.\n-This model's attacks that target this model's **mark** have +1 to **wound rolls**.\n- Each time this model's **mark** is destroyed, select one enemy unit to be this model's **mark**."
+          }
+        },
+        {
+          "name": "Swift Onslaught",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit can:\n- Re-roll **advance rolls**.\n- Re-roll **charge rolls**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "91b3-2e1c-e642-d213",
+      "name": "Custodian Guard Sodality",
+      "type": "unit",
+      "targetId": "91b3-2e1c-e642-d213",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 240
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Impenetrable Defence",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's attacks have [**SUSTAINED HITS 1: non-MONSTER/VEHICLE] if any of the following apply:\n- This unit is within range of an objective.\n- The target of those attacks is within range of an objective."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9610-b148-8433-93b8",
+      "name": "Custodian Wardens",
+      "type": "unit",
+      "targetId": "9610-b148-8433-93b8",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 200
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Living Fortress",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Attacks that target this unit have -1AP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7099-71b-56e8-7191",
+      "name": "Knight-Centura",
+      "type": "model",
+      "targetId": "7099-71b-56e8-7191",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 55
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Knight-Centura",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "3",
+            "sv": "3+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "5+"
+          }
+        },
+        {
+          "name": "Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\n- Prosecutors\n- Vigilators\n- Witchseekers"
+          }
+        },
+        {
+          "name": "Seeker's Instincts",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "- This unit has +2\" M.\n- This unit can re-roll **advance rolls** and **charge rolls**."
+          }
+        },
+        {
+          "name": "Corner the Quarry",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "When an enemy unit (excluding MONSTERS/VEHICLES) **engaged** with this unit makes a **fall-back move**, that enemy unit must use the **desperate escape mode**. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3ec3-a4df-fdbf-5507",
+      "name": "Prosecutor Squad",
+      "type": "unit",
+      "targetId": "3ec3-a4df-fdbf-5507",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 45
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Purity of Execution",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, you can select one **visible** enemy unit within 18\" of this unit. That unit is **detected**.\n- While a unit is **detected**, that unit has +3\" **detection range**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b61c-b815-65c0-b1cc",
+      "name": "Shield-Captain",
+      "type": "model",
+      "targetId": "b61c-b815-65c0-b1cc",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 180
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Shield-Captain",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "7",
+            "sv": "2+",
+            "w": "8",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS"
+          }
+        },
+        {
+          "name": "Vengeful Surge",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nIn your opponent's Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a **surge move** of up to D6+2\""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "6319-eeba-b717-bd86",
+      "name": "Shield-Captain in Allarus Terminator Armour",
+      "type": "model",
+      "targetId": "6319-eeba-b717-bd86",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 185
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Shield-Captain in Allarus Terminator Armour",
+          "type": "Unit",
+          "characteristics": {
+            "m": "7\"",
+            "t": "8",
+            "sv": "2+",
+            "w": "9",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON CUSTODIANS"
+          }
+        },
+        {
+          "name": "Archeotech Teleport-shunter",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nIn your Movement phase, if this unit is **unengaged** and has not been **selected to move** this phase, you can use this ability. If you do, place this unit in **strategic reserves** and this unit must make an **ingress move** this phase."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "58fa-4a25-a5af-1144",
+      "name": "Shield-Captain on Dawneagle Jetbike",
+      "type": "model",
+      "targetId": "58fa-4a25-a5af-1144",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 205
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: AGAMATUS CUSTODIANS, VERTUS PRAETORS"
+          }
+        },
+        {
+          "name": "Sweeping Advance",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nAt the end of the Fight phase, if this unit was **eligible to fight** this phase:\n- If this unit is **unengaged**, this unit can make a **normal move**.\n- Or: if this unit is **engaged**, this unit can make a **fall-back move**."
+          }
+        },
+        {
+          "name": "Shield-Captain on Dawneagle Jetbike",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "8",
+            "sv": "2+",
+            "w": "10",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "75x42mm Oval"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7d7c-c212-47a3-38e4",
+      "name": "Trajann Valoris",
+      "type": "model",
+      "targetId": "7d7c-c212-47a3-38e4",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 265
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Trajann Valoris",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "7",
+            "sv": "2+",
+            "w": "10",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ALLARUS CUSTODIANS, AQUILON TERMINATORS WITH SOLARITE POWER GAUNTLETS, AQUILON TERMINATORS WITH SOLARITE POWER TALONS, CUSTODIAN GUARD SODALITY, CUSTODIAN GUARD SODALITY WITH ADRASITE SPEARS, CUSTODIAN GUARD SODALITY WITH PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS SODALITY, SENTINEL GUARD SODALITY"
+          }
+        },
+        {
+          "name": "Captain-General (Aura)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Friendly ^^**Adeptus Custodes**^^ units (excluding ^^**MONSTER/VEHICLE**^^ units) within 6\" of this model can:\n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1"
+          }
+        },
+        {
+          "name": "Moment Shackle",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per army)\nAt the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 A.\n- This model has 3+ InSv."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8103-2e01-5d6a-b761",
+      "name": "Valerian [Legends]",
+      "type": "model",
+      "targetId": "8103-2e01-5d6a-b761",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 130
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Valerian",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "7",
+            "sv": "2+",
+            "w": "8",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: CUSTODIAN GUARD, CUSTODIAN GUARD WITH ADRASITE AND PYRITHITE SPEARS, CUSTODIAN WARDENS, SAGITTARUM CUSTODIANS"
+          }
+        },
+        {
+          "name": "Golden Laurels",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Attacks that target this unit have -1 AP."
+          }
+        },
+        {
+          "name": "Hero of Lion's Gate",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nAfter making a hit roll, wound roll or save roll for this model, you can change the result to an unmodified 6."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "188b-e48b-29f-1456",
+      "name": "Venerable Contemptor Dreadnought [Legends]",
+      "type": "model",
+      "targetId": "188b-e48b-29f-1456",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 220
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Venerable Contemptor Dreadnought",
+          "type": "Unit",
+          "characteristics": {
+            "m": "9\"",
+            "t": "10",
+            "sv": "2+",
+            "w": "12",
+            "ld": "5+",
+            "oc": "3",
+            "insv": "5+",
+            "base": "60mm"
+          }
+        },
+        {
+          "name": "Unyielding Ancient",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nAt the end of a phase in which this model is destroyed, roll one D6:\n- On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged and with 3 wounds remaining"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "76be-3bcb-cf4-bcbd",
+      "name": "Venerable Land Raider [Legends]",
+      "type": "model",
+      "targetId": "76be-3bcb-cf4-bcbd",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 230
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Venerable Land Raider",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "12",
+            "sv": "2+",
+            "w": "16",
+            "ld": "7+",
+            "oc": "5",
+            "insv": "",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Assault Ramp",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Movement phase, when this unit ends a **normal move**, units embarked within this unit can make an **assault disembark move**."
+          }
+        },
+        {
+          "name": "Venerable Land Raider",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 6 ADEPTUS CUSTODES INFANTRY models."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "918b-c9ed-7af7-74df",
+      "name": "Vertus Praetors",
+      "type": "unit",
+      "targetId": "918b-c9ed-7af7-74df",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 220
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Quicksilver Execution",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this unit made a **charge move** this turn, this unit's melee attacks have [SUSTAINED HITS 1]"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "dd2d-568a-9c56-1b6e",
+      "name": "Vigilator Squad",
+      "type": "unit",
+      "targetId": "dd2d-568a-9c56-1b6e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 50
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Deft Parry",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Melee attacks that target this unit have -1 to **hit rolls**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "503b-f7be-eeeb-9e31",
+      "name": "Witchseeker Squad",
+      "type": "unit",
+      "targetId": "503b-f7be-eeeb-9e31",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 55
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Sanctified Flames",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a **battle-shock roll* with -1 to that **battle-shock roll** if that enemy unit is a ^^**Psyker**^^ unit.."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "af0f-5212-907e-7125",
+      "name": "Custodian Guard Sodality with Adrasite Spears [Legends]",
+      "type": "unit",
+      "targetId": "af0f-5212-907e-7125",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 200
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Stand Vigil",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's attacks can:\n- Re-roll wound rolls of 1.\n- Or: If this unit is within range of an objective, re-roll wound rolls"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "6f9f-e6aa-ba13-aab1",
+      "name": "Sagittarum Custodians Sodality [Legends]",
+      "type": "unit",
+      "targetId": "6f9f-e6aa-ba13-aab1",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 185
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Disintegration Beams",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nIn your Shooting phase, you can use this ability. If you do, this unit's ranged attacks have [DEVASTATING WOUNDS]."
+          }
+        },
+        {
+          "name": "Saturation Volleys",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this unit has shot, you can select one enemy non-Monster/Vehicle unit hit by those attacks. That unit is suppressed until the start of your next turn:\n- While a unit is suppressed, that unit's attacks have -1 to hit rolls."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "00ab-41c4-cf52-4ad2",
+      "name": "Gyrfalcon Jetbike Sodality",
+      "type": "unit",
+      "targetId": "00ab-41c4-cf52-4ad2",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 260
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Death Blow",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this unit made a **charge move** this turn, this unit's melee attacks have +1 AP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "201e-e502-a8d1-3974",
+      "name": "Venatari with Kinetic Destroyers",
+      "type": "unit",
+      "targetId": "201e-e502-a8d1-3974",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 255
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Strike from the Skies",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, if this unit made an **ingress move** this turn, this unit's ranged attacks can re-roll **hit rolls**."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "4988-d93e-5034-2b3c",
+      "name": "Contemptor-Galatus Dreadnought",
+      "type": "model",
+      "targetId": "4988-d93e-5034-2b3c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 220
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Contemptor-Galatus Dreadnought",
+          "type": "Unit",
+          "characteristics": {
+            "m": "9\"",
+            "t": "10",
+            "sv": "2+",
+            "w": "12",
+            "ld": "5+",
+            "oc": "3",
+            "insv": "4+",
+            "base": "60mm"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "db3b-02cd-87a2-3b52",
+      "name": "Contemptor-Achillus Dreadnought",
+      "type": "model",
+      "targetId": "db3b-02cd-87a2-3b52",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 230
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Contemptor-Achillus Dreadnought",
+          "type": "Unit",
+          "characteristics": {
+            "m": "9\"",
+            "t": "10",
+            "sv": "2+",
+            "w": "12",
+            "ld": "5+",
+            "oc": "3",
+            "insv": "5+",
+            "base": "60mm"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "06df-2fb2-8dfa-2fce",
+      "name": "Pallas Grav-attack",
+      "type": "model",
+      "targetId": "06df-2fb2-8dfa-2fce",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 135
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Palas Grav-attack",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "9",
+            "sv": "2+",
+            "w": "10",
+            "ld": "5+",
+            "oc": "2",
+            "insv": "5+",
+            "base": "105x70mm Oval"
+          }
+        },
+        {
+          "name": "Mobile Hunter",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, when this unit has shot, you can use this ability. If you do:\n- This unit can make a **normal move** of up to D6\".\n- This unit is not **eligible to declare a charge** until the end of the turn."
+          }
+        },
+        {
+          "name": "Flare Shields",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has a 4+ **InSv** against ranged attacks."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3ee2-62a9-af84-1a90",
+      "name": "Caladius Grav-tank",
+      "type": "model",
+      "targetId": "3ee2-62a9-af84-1a90",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 230
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Caladius Grav-tank",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "11",
+            "sv": "2+",
+            "w": "14",
+            "ld": "5+",
+            "oc": "4",
+            "insv": "5+",
+            "base": "150x95mm Oval"
+          }
+        },
+        {
+          "name": "Destructor Optics",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's ranged attacks that target a unit (excluding MONSTER/VEHICLE) have +1 AP."
+          }
+        },
+        {
+          "name": "Flare Shields",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has a 4+ **InSv** against ranged attacks."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "e7d8-1c73-7d03-8b62",
+      "name": "Telemon Heavy Dreadnought",
+      "type": "model",
+      "targetId": "e7d8-1c73-7d03-8b62",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 280
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Telemon Heavy Dreadnought",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "11",
+            "sv": "2+",
+            "w": "14",
+            "ld": "5+",
+            "oc": "4",
+            "insv": "4+",
+            "base": "100mm"
+          }
+        },
+        {
+          "name": "Guardian Eternal",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Ranged attacks that target this unit have -1 D."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "f35e-ef9c-9ef4-77e1",
+      "name": "Coronus Grav-carrier",
+      "type": "model",
+      "targetId": "f35e-ef9c-9ef4-77e1",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 225
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Coronus Grav-carrier",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "12",
+            "sv": "2+",
+            "w": "16",
+            "ld": "5+",
+            "oc": "5",
+            "insv": "5+",
+            "base": "150x95mm Oval"
+          }
+        },
+        {
+          "name": "Assault Vehicle",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Movement phase, when this unit ends an **advance move**, units embarked within this unit can make a **shock disembark move**."
+          }
+        },
+        {
+          "name": "Coronus Grav-carrier",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 8 ^^Adeptus Custodes Infantry^^ models. It cannot transport ^^**Jump Pack**^^ models."
+          }
+        },
+        {
+          "name": "Repulsor Suspensor Technology",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per phase, per unit)\nIn your opponent's Shooting phase, when an enemy unit has shot, if this unit lost a wound as a result of those attacks and is **unengaged**, this unit can make a **normal move* of up to D6\"."
+          }
+        },
+        {
+          "name": "Flare Shields",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has a 4+ **InSv** against ranged attacks."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9c1a-7efd-ed36-440e",
+      "name": "Orion Assault Dropship",
+      "type": "model",
+      "targetId": "9c1a-7efd-ed36-440e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 690
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Orion Assault Dropship",
+          "type": "Unit",
+          "characteristics": {
+            "m": "14\"",
+            "t": "12",
+            "sv": "2+",
+            "w": "22",
+            "ld": "6+",
+            "oc": "0",
+            "insv": "5+",
+            "base": "160mm"
+          }
+        },
+        {
+          "name": "Assault Dropship",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Movement phase, when a friendly ^^**Adeptus Custodes**^^ unit is selected to make a **tactical disembark move** from this unit, if that unit is then selected to make an **advance move**, that **advance move** does not prevent that unit from being **eligible to declare a charge**."
+          }
+        },
+        {
+          "name": "Orion Assault Dropship",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 12 ^^**Adeptus Custodes Infantry**^^ models. Or 1 ^^**Dreadnought**^^ models. While transporting 1 ^^**Dreadnought**^^ unit, this unit also has a transport capacity of 6 ^^**Adeptus Custodes Infantry**^^ models."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9335-74d9-ad68-3ff7",
+      "name": "Ares Gunship",
+      "type": "model",
+      "targetId": "9335-74d9-ad68-3ff7",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 580
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Ares Gunship",
+          "type": "Unit",
+          "characteristics": {
+            "m": "-",
+            "t": "12",
+            "sv": "2+",
+            "w": "22",
+            "ld": "6+",
+            "oc": "-",
+            "insv": "5+",
+            "base": "160mm"
+          }
+        },
+        {
+          "name": "Infernus Firebombs",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your opponent's Fight phase, select one visible enemy unit (excluding Lone Operative and Aircraft units) within 24\" of this unit:\n- Ranged attacks that target that enemy unit have [IGNORES COVER] until the end of your next turn,\n- Roll one D6 for each model in that enemy unit:\n- On a 6, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "0574-f558-2957-584f",
+      "name": "Warlord",
+      "type": "upgrade",
+      "targetId": "0574-f558-2957-584f",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "5218-339c-eb34-9ac0",
+      "name": "Detachment",
+      "type": "upgrade",
+      "targetId": "5218-339c-eb34-9ac0",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "4863-f443-2b45-e18b",
+      "name": "Balistus grenade launcher",
+      "type": "upgrade",
+      "targetId": "4863-f443-2b45-e18b",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Balistus grenade launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "18\"",
+            "a": "3",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Assault, Blast 1"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5ec7-5d19-a18b-25e4",
+      "name": "Solerite power gauntlet",
+      "type": "upgrade",
+      "targetId": "5ec7-5d19-a18b-25e4",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Solerite power gauntlet",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "5",
+            "ws": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "6dae-e4c7-7a80-7c66",
+      "name": "Twin adrathic destructor",
+      "type": "upgrade",
+      "targetId": "6dae-e4c7-7a80-7c66",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Twin adrathic destructor",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "18\"",
+            "a": "1",
+            "bs": "2+",
+            "s": "6",
+            "ap": "-2",
+            "d": "3",
+            "keywords": "Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8ec2-b211-8106-228a",
+      "name": "Solerite power talon",
+      "type": "upgrade",
+      "targetId": "8ec2-b211-8106-228a",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Solerite power talon",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "7",
+            "ws": "2+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "f12b-b113-de8a-4f1e",
+      "name": "Flamer",
+      "type": "upgrade",
+      "targetId": "f12b-b113-de8a-4f1e",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Flamer",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "3",
+            "bs": "-",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Anti-PSYKER 4+, Assault, Blast 1, Torrent"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "f31f-9d97-dfba-b445",
+      "name": "Hunter-killer missile",
+      "type": "upgrade",
+      "targetId": "f31f-9d97-dfba-b445",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Hunter-killer missile",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "48\"",
+            "a": "1",
+            "bs": "2+",
+            "s": "14",
+            "ap": "-3",
+            "d": "D3+3",
+            "keywords": "One Shot"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "de0b-37e9-b9f5-d3a6",
+      "name": "Guardian of the Throne [Crucible]",
+      "type": "model",
+      "targetId": "de0b-37e9-b9f5-d3a6",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 130
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Guardian of the Throne",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "6",
+            "ld": "6+",
+            "oc": "2",
+            "insv": "4+"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ^^**Custodian Guard, Custodian Wardens**^^"
+          }
+        },
+        {
+          "name": "Ka'tah Master",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per phase, you can re-roll one Hit roll or one Wound roll for an attack made by this model."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "e58d-17d4-71f8-4137",
+      "name": "Null Maiden [Crucible]",
+      "type": "model",
+      "targetId": "e58d-17d4-71f8-4137",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 65
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Null Maiden",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "3",
+            "sv": "3+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "5+"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ^^**Prosecutors, Vigilators, Witchseekers**^^"
+          }
+        },
+        {
+          "name": "Daughter of the Abyss",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c11a-f70a-2877-ed27",
+      "name": "Kataphraktoi Exemplar [Crucible]",
+      "type": "model",
+      "targetId": "c11a-f70a-2877-ed27",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 150
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Kataphraktoi Exemplar",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "7",
+            "sv": "2+",
+            "w": "8",
+            "ld": "6+",
+            "oc": "2",
+            "insv": "4+"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ^^**Vertus Praetors**^^"
+          }
+        },
+        {
+          "name": "Fiend Slayer",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes an attack that targets a ^^**Monster**^^ or ^^**Vehicle**^^ unit, you can re-roll the Wound roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "540a-65ba-1752-f217",
+      "name": "Castellan Axe",
+      "type": "upgrade",
+      "targetId": "540a-65ba-1752-f217",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Castellan Axe",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "5",
+            "ws": "2+",
+            "s": "10",
+            "ap": "-2",
+            "d": "4",
+            "keywords": ""
+          }
+        },
+        {
+          "name": "Castellan Axe",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Assault, Rapid Fire 2"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "53df-e02f-5f3e-6a1d",
+      "name": "Guardian Spear",
+      "type": "upgrade",
+      "targetId": "53df-e02f-5f3e-6a1d",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Guardian Spear",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "8",
+            "ws": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "keywords": "Cleave 1"
+          }
+        },
+        {
+          "name": "Guardian Spear",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Assault, Rapid Fire 2"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "24df-9486-2df9-83f8",
+      "name": "Balistus grenade launcher",
+      "type": "upgrade",
+      "targetId": "24df-9486-2df9-83f8",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Balistus grenade launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "18\"",
+            "a": "D6",
+            "bs": "2+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Blast"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "1576-174e-e5d6-82ea",
+      "name": "Salvo launcher",
+      "type": "upgrade",
+      "targetId": "1576-174e-e5d6-82ea",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Salvo launcher",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "2+",
+            "s": "10",
+            "ap": "-2",
+            "d": "D3+2",
+            "keywords": "\n"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "58c3-4e14-bc1a-318b",
+      "name": "Hurricane bolter",
+      "type": "upgrade",
+      "targetId": "58c3-4e14-bc1a-318b",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Hurricane bolter",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "18\"",
+            "a": "3",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Rapid Fire 3, Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "df80-bbdc-bd0a-3428",
+      "name": "Sentinel Guard Sodality",
+      "type": "unit",
+      "targetId": "df80-bbdc-bd0a-3428",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 240
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Stand Vigil",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's attacks have [**LETHAL HITS: non-MONSTER/VEHICLE] if any of the following apply:\n- This unit is within range of an objective.\n- The target of those attacks is within range of an objective."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "59ef-1bf3-f681-c8ae",
+      "name": "Vexilla",
+      "type": "upgrade",
+      "targetId": "59ef-1bf3-f681-c8ae",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Vexilla",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "- This unit has +1 OC.\n- This unit can ignore modifiers to this unit's Ld."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "94b3-ef7f-f71f-c86e",
+      "name": "Castellan Axe",
+      "type": "upgrade",
+      "targetId": "94b3-ef7f-f71f-c86e",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Castellan axe",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "2+",
+            "s": "10",
+            "ap": "-2",
+            "d": "4",
+            "keywords": ""
+          }
+        },
+        {
+          "name": "Castellan axe",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Assault, Rapid Fire 2"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ab4a-1a4f-5898-70db",
+      "name": "Guardian Spear",
+      "type": "upgrade",
+      "targetId": "ab4a-1a4f-5898-70db",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Guardian Spear",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "6",
+            "ws": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "keywords": ""
+          }
+        },
+        {
+          "name": "Guardian Spear",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Assault, Rapid Fire 2"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9d57-6156-aebd-73e9",
+      "name": "Aquilon Terminators with Solarite Power Gauntlets",
+      "type": "unit",
+      "targetId": "9d57-6156-aebd-73e9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 285
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Dread Foe",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's melee attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 AP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "67a7-0ebe-3c5f-c0f9",
+      "name": "Aquilon Terminators with Solarite Power Talons",
+      "type": "unit",
+      "targetId": "67a7-0ebe-3c5f-c0f9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 275
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Reap a Terrible Tally",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit’s attacks that target an Infantry unit can:\n- Re‑roll hit rolls of 1.\n- Re‑roll wound rolls of 1."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5ebc-7aca-d7c4-1c4d",
+      "name": "Venatari with Verutum Lances",
+      "type": "unit",
+      "targetId": "5ebc-7aca-d7c4-1c4d",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 270
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Swift Ruin",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per phase, per army)\nYou can target this unit with the **Rapid Ingress stratagem** regardless of any other uses of that **stratagem** this phase. If you do:\n- That use is -1CP.\n- That use does not prevent any uses of that **stratagem** on other units this phase."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9f43-3691-5be1-8623",
+      "name": "Twin Neutronium Cascade Projectors",
+      "type": "upgrade",
+      "targetId": "9f43-3691-5be1-8623",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Twin Neutronium Cascade Projectors",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "3",
+            "bs": "-",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "keywords": "Blast 1, Torrent, Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "72c5-8bd0-19f5-f246",
+      "name": "Caestus Fist",
+      "type": "upgrade",
+      "targetId": "72c5-8bd0-19f5-f246",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Caestus Fist",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "5",
+            "ws": "2+",
+            "s": "14",
+            "ap": "-3",
+            "d": "4",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "62a1-1fa7-70b7-614d",
+      "name": "Twin Lastrum Bolt Cannon",
+      "type": "upgrade",
+      "targetId": "62a1-1fa7-70b7-614d",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Twin Lastrum Bolt Cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "36\"",
+            "a": "3",
+            "bs": "2+",
+            "s": "6",
+            "ap": "-2",
+            "d": "2",
+            "keywords": "Sustained Hits 1, Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "dca3-638e-52a2-b1b8",
+      "name": "Armoured hull",
+      "type": "upgrade",
+      "targetId": "dca3-638e-52a2-b1b8",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Armoured hull",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "4",
+            "ws": "4+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "dbf0-5211-463c-40ec",
+      "name": "Caladius Annihilator Grav-tank",
+      "type": "model",
+      "targetId": "dbf0-5211-463c-40ec",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 250
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Caladius Annihilator Grav-tank",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "11",
+            "sv": "2+",
+            "w": "14",
+            "ld": "5+",
+            "oc": "4",
+            "insv": "5+",
+            "base": "150x95mm Oval"
+          }
+        },
+        {
+          "name": "Advanced Firepower",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit's ranged attacks that target a MONSTER/VEHICLE unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**."
+          }
+        },
+        {
+          "name": "Flare Shields",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has a 4+ **InSv** against ranged attacks."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2693-63bf-611f-37fe",
+      "name": "Twin Arachnus Blaze Cannon",
+      "type": "upgrade",
+      "targetId": "2693-63bf-611f-37fe",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Twin Arachnus Blaze Cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "2+",
+            "s": "10",
+            "ap": "-3",
+            "d": "D3+2",
+            "keywords": "Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "77b6-41ee-7952-e94d",
+      "name": "Gun Stock",
+      "type": "upgrade",
+      "targetId": "77b6-41ee-7952-e94d",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Gun Stock",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "3+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "50dc-1775-467d-be20",
+      "name": "Custodian Guard Sodality with Pyrithite Spears [Legends]",
+      "type": "unit",
+      "targetId": "50dc-1775-467d-be20",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 215
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "No Foe Shall Stand",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per unit)\nThis unit's ranged attacks have [LETHAL HITS] and [IGNORES COVER]."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9f10-d8db-a7b3-5784",
+      "name": "Allarus Custodians",
+      "type": "selectionEntry",
+      "targetId": "c8a6-a4c5-703e-b717",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "d0ce-f2d3-358f-4530",
+      "name": "Custodian Guard Sodality",
+      "type": "selectionEntry",
+      "targetId": "91b3-2e1c-e642-d213",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "718c-e2b1-4ba5-28a7",
+      "name": "Aleya [Legends]",
+      "type": "selectionEntry",
+      "targetId": "9e42-7207-9c30-6122",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2139-e547-edf5-74ce",
+      "name": "Anathema Psykana Rhino",
+      "type": "selectionEntry",
+      "targetId": "d7cb-7d30-715b-50d2",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "473-b72d-a70b-e3aa",
+      "name": "Blade Champion",
+      "type": "selectionEntry",
+      "targetId": "48b7-e713-d5b1-f11c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2bbd-2d61-e435-d902",
+      "name": "Custodian Wardens",
+      "type": "selectionEntry",
+      "targetId": "9610-b148-8433-93b8",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ac28-f8a6-1d06-6f5e",
+      "name": "Knight-Centura",
+      "type": "selectionEntry",
+      "targetId": "7099-71b-56e8-7191",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "71c0-19d8-f88b-c89",
+      "name": "Prosecutor Squad",
+      "type": "selectionEntry",
+      "targetId": "3ec3-a4df-fdbf-5507",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "3ab2-181b-28a4-6978",
+      "name": "Shield-Captain",
+      "type": "selectionEntry",
+      "targetId": "b61c-b815-65c0-b1cc",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "afa2-9ab7-5385-547d",
+      "name": "Shield-Captain in Allarus Terminator Armour",
+      "type": "selectionEntry",
+      "targetId": "6319-eeba-b717-bd86",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ad15-ddf2-9dd4-71a",
+      "name": "Shield-Captain on Dawneagle Jetbike",
+      "type": "selectionEntry",
+      "targetId": "58fa-4a25-a5af-1144",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "87ec-de53-6df9-9c22",
+      "name": "Trajann Valoris",
+      "type": "selectionEntry",
+      "targetId": "7d7c-c212-47a3-38e4",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1fd5-8cf0-bef3-3970",
+      "name": "Valerian [Legends]",
+      "type": "selectionEntry",
+      "targetId": "8103-2e01-5d6a-b761",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2744-e5a2-79e2-2b4f",
+      "name": "Venerable Contemptor Dreadnought [Legends]",
+      "type": "selectionEntry",
+      "targetId": "188b-e48b-29f-1456",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "9efe-c8e5-7da-3ae0",
+      "name": "Venerable Land Raider [Legends]",
+      "type": "selectionEntry",
+      "targetId": "76be-3bcb-cf4-bcbd",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "6c75-afbb-c482-7e3e",
+      "name": "Vertus Praetors",
+      "type": "selectionEntry",
+      "targetId": "918b-c9ed-7af7-74df",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "3f7-9ca6-48fe-fb11",
+      "name": "Vigilator Squad",
+      "type": "selectionEntry",
+      "targetId": "dd2d-568a-9c56-1b6e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "23ec-128a-efbe-797f",
+      "name": "Witchseeker Squad",
+      "type": "selectionEntry",
+      "targetId": "503b-f7be-eeeb-9e31",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "dee1-2f23-d810-23dd",
+      "name": "Custodian Guard Sodality with Adrasite Spears [Legends]",
+      "type": "selectionEntry",
+      "targetId": "af0f-5212-907e-7125",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "a6f7-e352-b6b3-dfe8",
+      "name": "Sagittarum Custodians Sodality [Legends]",
+      "type": "selectionEntry",
+      "targetId": "6f9f-e6aa-ba13-aab1",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "28a9-923b-c230-bc66",
+      "name": "Gyrfalcon Jetbike Sodality",
+      "type": "selectionEntry",
+      "targetId": "00ab-41c4-cf52-4ad2",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "15e2-1903-8d94-f574",
+      "name": "Venatari with Kinetic Destroyers",
+      "type": "selectionEntry",
+      "targetId": "201e-e502-a8d1-3974",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "fccb-aa74-dcb9-5209",
+      "name": "Contemptor-Galatus Dreadnought",
+      "type": "selectionEntry",
+      "targetId": "4988-d93e-5034-2b3c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "c755-0afd-5fca-c92c",
+      "name": "Contemptor-Achillus Dreadnought",
+      "type": "selectionEntry",
+      "targetId": "db3b-02cd-87a2-3b52",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7b13-004f-1fb5-97f8",
+      "name": "Pallas Grav-attack",
+      "type": "selectionEntry",
+      "targetId": "06df-2fb2-8dfa-2fce",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "a772-f94f-b612-8976",
+      "name": "Caladius Grav-tank",
+      "type": "selectionEntry",
+      "targetId": "3ee2-62a9-af84-1a90",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "be63-e831-bd3f-8209",
+      "name": "Telemon Heavy Dreadnought",
+      "type": "selectionEntry",
+      "targetId": "e7d8-1c73-7d03-8b62",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "f5c8-476c-06ad-22c7",
+      "name": "Coronus Grav-carrier",
+      "type": "selectionEntry",
+      "targetId": "f35e-ef9c-9ef4-77e1",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "bf30-1e72-7097-5cc3",
+      "name": "Ares Gunship",
+      "type": "selectionEntry",
+      "targetId": "9335-74d9-ad68-3ff7",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "729a-c007-5f89-c2f6",
+      "name": "Orion Assault Dropship",
+      "type": "selectionEntry",
+      "targetId": "9c1a-7efd-ed36-440e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "9d4f-c524-e432-f877",
+      "name": "Detachment",
+      "type": "selectionEntry",
+      "targetId": "5218-339c-eb34-9ac0",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "3458-3cff-ef5f-a7c5",
+      "name": "Show/Hide Options",
+      "type": "selectionEntry",
+      "targetId": "e8ef-836a-a9d1-901d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "3a31-7ba2-5400-1642",
+      "name": "Order of Battle",
+      "type": "selectionEntry",
+      "targetId": "eda7-8b4b-3719-af36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "4610-a6b4-41ea-d2a9",
+      "name": "Guardian of the Throne [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "de0b-37e9-b9f5-d3a6",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "f8ae-e6a1-48f0-56f8",
+      "name": "Null Maiden [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "e58d-17d4-71f8-4137",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1450-9fae-5e76-1f91",
+      "name": "Kataphraktoi Exemplar [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "c11a-f70a-2877-ed27",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "dc83-9680-c6e7-d451",
+      "name": "Sentinel Guard Sodality",
+      "type": "selectionEntry",
+      "targetId": "df80-bbdc-bd0a-3428",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7474-dad2-f999-2a9e",
+      "name": "Aquilon Terminators with Solarite Power Gauntlets",
+      "type": "selectionEntry",
+      "targetId": "9d57-6156-aebd-73e9",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "de9a-cd58-f9c4-f80d",
+      "name": "Aquilon Terminators with Solarite Power Talons",
+      "type": "selectionEntry",
+      "targetId": "67a7-0ebe-3c5f-c0f9",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "355e-c317-d03c-44e0",
+      "name": "Venatari with Verutum Lances",
+      "type": "selectionEntry",
+      "targetId": "5ebc-7aca-d7c4-1c4d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "118f-de5c-439a-766f",
+      "name": "Caladius Annihilator Grav-tank",
+      "type": "selectionEntry",
+      "targetId": "dbf0-5211-463c-40ec",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "94e1-835d-0a12-6eae",
+      "name": "Custodian Guard Sodality with Pyrithite Spears [Legends]",
+      "type": "selectionEntry",
+      "targetId": "50dc-1775-467d-be20",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ]
 }

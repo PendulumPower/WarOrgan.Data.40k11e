@@ -10,6 +10,134 @@
     }
   ],
   "detachments": [],
-  "units": [],
-  "datasheets": []
+  "units": [
+    {
+      "id": "a618-aeb9-f07d-5ed5",
+      "name": "Warlord",
+      "type": "upgrade",
+      "targetId": "a618-aeb9-f07d-5ed5",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e20a-8101-443d-6ae8",
+      "name": "Reaver Titan",
+      "type": "selectionEntry",
+      "targetId": "b7e8-f3ae-be53-9ba5",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7f3f-35da-b7ac-a188",
+      "name": "Warbringer Nemesis Titan",
+      "type": "selectionEntry",
+      "targetId": "8e6f-4e09-12d5-fafd",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7465-ac9-b438-7b03",
+      "name": "Warhound Titan",
+      "type": "selectionEntry",
+      "targetId": "8eb5-a990-6eb0-9b41",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "37ec-de9e-1d3b-a4ae",
+      "name": "Warlord Titan",
+      "type": "selectionEntry",
+      "targetId": "eafa-cd47-1c2f-61ee",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "4feb-117a-4193-bc4a",
+      "name": "Show/Hide Options",
+      "type": "selectionEntry",
+      "targetId": "e8ef-836a-a9d1-901d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "9905-e153-dad7-c0c2",
+      "name": "Order of Battle",
+      "type": "selectionEntry",
+      "targetId": "eda7-8b4b-3719-af36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "a618-aeb9-f07d-5ed5",
+      "name": "Warlord",
+      "type": "upgrade",
+      "targetId": "a618-aeb9-f07d-5ed5",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e20a-8101-443d-6ae8",
+      "name": "Reaver Titan",
+      "type": "selectionEntry",
+      "targetId": "b7e8-f3ae-be53-9ba5",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7f3f-35da-b7ac-a188",
+      "name": "Warbringer Nemesis Titan",
+      "type": "selectionEntry",
+      "targetId": "8e6f-4e09-12d5-fafd",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7465-ac9-b438-7b03",
+      "name": "Warhound Titan",
+      "type": "selectionEntry",
+      "targetId": "8eb5-a990-6eb0-9b41",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "37ec-de9e-1d3b-a4ae",
+      "name": "Warlord Titan",
+      "type": "selectionEntry",
+      "targetId": "eafa-cd47-1c2f-61ee",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "4feb-117a-4193-bc4a",
+      "name": "Show/Hide Options",
+      "type": "selectionEntry",
+      "targetId": "e8ef-836a-a9d1-901d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "9905-e153-dad7-c0c2",
+      "name": "Order of Battle",
+      "type": "selectionEntry",
+      "targetId": "eda7-8b4b-3719-af36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ]
 }

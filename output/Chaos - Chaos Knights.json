@@ -5,6 +5,368 @@
   "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
-  "units": [],
-  "datasheets": []
+  "units": [
+    {
+      "id": "c62d-6a62-3548-b76e",
+      "name": "Detachment",
+      "type": "selectionEntry",
+      "targetId": "a435-b94a-eb7b-7c0c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "d6b9-36a1-6ef5-a028",
+      "name": "Show/Hide Options",
+      "type": "selectionEntry",
+      "targetId": "e8ef-836a-a9d1-901d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "b981-a2ac-86d0-1cbe",
+      "name": "Dark Commune",
+      "type": "selectionEntry",
+      "targetId": "1780-25b8-ce0b-898d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1a9d-4e67-9d1f-cb91",
+      "name": "Traitor Enforcer",
+      "type": "selectionEntry",
+      "targetId": "f69d-2171-5f95-9c88",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "5e6c-178c-92b1-2de6",
+      "name": "Traitor Guardsmen Squad",
+      "type": "selectionEntry",
+      "targetId": "8dc5-4dcb-d77f-7d23",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e8d2-106a-e195-ae23",
+      "name": "Gellerpox Infected [Legends]",
+      "type": "selectionEntry",
+      "targetId": "e1c2-8417-403a-68",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "46d0-40d6-adfb-db29",
+      "name": "Fellgor Beastmen",
+      "type": "selectionEntry",
+      "targetId": "6bf7-888c-7aa6-6831",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8c6e-1ee5-2c50-d61d",
+      "name": "Cultist Firebrand",
+      "type": "selectionEntry",
+      "targetId": "cb66-af7-2cca-1c85",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "affe-d1e3-0377-f6f5",
+      "name": "Cultist Mob",
+      "type": "selectionEntry",
+      "targetId": "1267-78f1-7774-859",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7613-f941-5829-876a",
+      "name": "Cultist Mob with Firearms [Legends]",
+      "type": "selectionEntry",
+      "targetId": "478-9d24-e5c8-c6f7",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "f018-ea7f-b4a1-cf2f",
+      "name": "Mutoid Vermin [Legends]",
+      "type": "selectionEntry",
+      "targetId": "afed-8173-a1e0-cbae",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "998c-ff18-9548-783b",
+      "name": "Negavolt Cultists [Legends]",
+      "type": "selectionEntry",
+      "targetId": "9238-473a-54ee-6b0e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "f200-6a81-b355-eeff",
+      "name": "Renegade Enforcer [Legends]",
+      "type": "selectionEntry",
+      "targetId": "5b66-39e6-aeb5-8011",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "847f-5171-f508-4397",
+      "name": "Renegade Heavy Weapons Squad [Legends]",
+      "type": "selectionEntry",
+      "targetId": "9df-7c70-84d2-e095",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "c47c-1579-9a09-1eda",
+      "name": "Renegade Ogryn Beast Handler [Legends]",
+      "type": "selectionEntry",
+      "targetId": "658e-a63f-bac7-6201",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "072c-80c6-b7a3-f0e7",
+      "name": "Accursed Cultists",
+      "type": "selectionEntry",
+      "targetId": "23aa-b45a-6d5d-e92b",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "05d7-76a6-c285-af97",
+      "name": "Renegade Ogryn Brutes [Legends]",
+      "type": "selectionEntry",
+      "targetId": "24c4-fa24-67ff-eef",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "d8f6-58e4-bac7-6a12",
+      "name": "Renegade Plague Ogryns [Legends]",
+      "type": "selectionEntry",
+      "targetId": "a7bb-ec24-40e6-5b8c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7df5-0ddc-5a83-0252",
+      "name": "Rogue Psyker [Legends]",
+      "type": "selectionEntry",
+      "targetId": "c0f9-d16c-6caf-5b95",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "4359-e886-5b7e-952b",
+      "name": "Order of Battle",
+      "type": "selectionEntry",
+      "targetId": "eda7-8b4b-3719-af36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "c62d-6a62-3548-b76e",
+      "name": "Detachment",
+      "type": "selectionEntry",
+      "targetId": "a435-b94a-eb7b-7c0c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "d6b9-36a1-6ef5-a028",
+      "name": "Show/Hide Options",
+      "type": "selectionEntry",
+      "targetId": "e8ef-836a-a9d1-901d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "b981-a2ac-86d0-1cbe",
+      "name": "Dark Commune",
+      "type": "selectionEntry",
+      "targetId": "1780-25b8-ce0b-898d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "1a9d-4e67-9d1f-cb91",
+      "name": "Traitor Enforcer",
+      "type": "selectionEntry",
+      "targetId": "f69d-2171-5f95-9c88",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "5e6c-178c-92b1-2de6",
+      "name": "Traitor Guardsmen Squad",
+      "type": "selectionEntry",
+      "targetId": "8dc5-4dcb-d77f-7d23",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e8d2-106a-e195-ae23",
+      "name": "Gellerpox Infected [Legends]",
+      "type": "selectionEntry",
+      "targetId": "e1c2-8417-403a-68",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "46d0-40d6-adfb-db29",
+      "name": "Fellgor Beastmen",
+      "type": "selectionEntry",
+      "targetId": "6bf7-888c-7aa6-6831",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8c6e-1ee5-2c50-d61d",
+      "name": "Cultist Firebrand",
+      "type": "selectionEntry",
+      "targetId": "cb66-af7-2cca-1c85",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "affe-d1e3-0377-f6f5",
+      "name": "Cultist Mob",
+      "type": "selectionEntry",
+      "targetId": "1267-78f1-7774-859",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7613-f941-5829-876a",
+      "name": "Cultist Mob with Firearms [Legends]",
+      "type": "selectionEntry",
+      "targetId": "478-9d24-e5c8-c6f7",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "f018-ea7f-b4a1-cf2f",
+      "name": "Mutoid Vermin [Legends]",
+      "type": "selectionEntry",
+      "targetId": "afed-8173-a1e0-cbae",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "998c-ff18-9548-783b",
+      "name": "Negavolt Cultists [Legends]",
+      "type": "selectionEntry",
+      "targetId": "9238-473a-54ee-6b0e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "f200-6a81-b355-eeff",
+      "name": "Renegade Enforcer [Legends]",
+      "type": "selectionEntry",
+      "targetId": "5b66-39e6-aeb5-8011",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "847f-5171-f508-4397",
+      "name": "Renegade Heavy Weapons Squad [Legends]",
+      "type": "selectionEntry",
+      "targetId": "9df-7c70-84d2-e095",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "c47c-1579-9a09-1eda",
+      "name": "Renegade Ogryn Beast Handler [Legends]",
+      "type": "selectionEntry",
+      "targetId": "658e-a63f-bac7-6201",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "072c-80c6-b7a3-f0e7",
+      "name": "Accursed Cultists",
+      "type": "selectionEntry",
+      "targetId": "23aa-b45a-6d5d-e92b",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "05d7-76a6-c285-af97",
+      "name": "Renegade Ogryn Brutes [Legends]",
+      "type": "selectionEntry",
+      "targetId": "24c4-fa24-67ff-eef",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "d8f6-58e4-bac7-6a12",
+      "name": "Renegade Plague Ogryns [Legends]",
+      "type": "selectionEntry",
+      "targetId": "a7bb-ec24-40e6-5b8c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7df5-0ddc-5a83-0252",
+      "name": "Rogue Psyker [Legends]",
+      "type": "selectionEntry",
+      "targetId": "c0f9-d16c-6caf-5b95",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "4359-e886-5b7e-952b",
+      "name": "Order of Battle",
+      "type": "selectionEntry",
+      "targetId": "eda7-8b4b-3719-af36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ]
 }

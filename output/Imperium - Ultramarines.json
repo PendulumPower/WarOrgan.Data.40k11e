@@ -5,6 +5,2756 @@
   "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
-  "units": [],
-  "datasheets": []
+  "units": [
+    {
+      "id": "2ae8-40ec-ba34-dfe5",
+      "name": "Captain Sicarius",
+      "type": "model",
+      "targetId": "2ae8-40ec-ba34-dfe5",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Lead From the Front",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, models in that unit have the Scouts 6\" ability and ranged weapons equipped by models in that unit have the [ASSAULT] ability."
+          }
+        },
+        {
+          "name": "Captain Sicarius",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "2+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Knight Champion of Macragge",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\"."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\n\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Company Heroes\n■ Sternguard Veteran Squad\n■ Tactical Squad"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b180-3cac-9124-b818",
+      "name": "Chaplain Cassius [Legends]",
+      "type": "model",
+      "targetId": "b180-3cac-9124-b818",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 80
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Chaplain Cassius",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "3+",
+            "w": "4",
+            "ld": "5+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "~40mm"
+          }
+        },
+        {
+          "name": "Catechism of Death",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+          }
+        },
+        {
+          "name": "Inspired Retribution",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\n\n■ Assault Squad\n■ Command Squad\n■ Sternguard Veteran Squad\n■ Tactical Squad\n■ Tyrannic War Veterans\n■ Vanguard Veteran Squad"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3ef1-1647-cd7b-a40b",
+      "name": "Chief Librarian Tigurius",
+      "type": "model",
+      "targetId": "3ef1-1647-cd7b-a40b",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 115
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Chief Librarian Tigurius",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Hood of Hellfire",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has Feel No Pain 4+ against psychic attacks and mortal wounds."
+          }
+        },
+        {
+          "name": "Prescience (Psychic level 2)",
+          "type": "Psychic Abilities",
+          "characteristics": {
+            "descriptions": "In your Movement phase, if this unit is not battle-shocked, you can make a psychic roll for this unit by rolling one D6. If you do:\n\n\n- On a 1, this unit is battle-shocked.\n- This unit has +1 Sv until the start of your next turn."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, DESOLATION SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
+          }
+        },
+        {
+          "name": "Telepathic Assault (Psychic level 1)",
+          "type": "Psychic Abilities",
+          "characteristics": {
+            "descriptions": "In your Shooting phase, if this unit is not battle-shocked, you can make a psychic roll for this unit by rolling one D6. If you do:\n\n\n- On a 1, this unit is battle-shocked.\n- Select one visible enemy unit within 24\" of this unit. That enemy unit suffers 2D3 mortal wounds."
+          }
+        },
+        {
+          "name": "Chief Librarian (psyker level 3)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model has the psychic abilities listed in the Psychic Abilities section."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5380-5757-2c46-31cc",
+      "name": "Marneus Calgar",
+      "type": "unit",
+      "targetId": "5380-5757-2c46-31cc",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 200
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Marneus Calgar",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "6",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "50mm"
+          }
+        },
+        {
+          "name": "Victrix Honour Guard",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "2+",
+            "w": "3",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Inspiring Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back."
+          }
+        },
+        {
+          "name": "Master Tactician",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the start of your Command phase, if this unit’s Marneus Calgar model is your WARLORD and is on the battlefield, you gain 1CP."
+          }
+        },
+        {
+          "name": "Honour Guard of Macragge",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this unit contains one or more Victrix Honour Guard models, this unit’s Marneus Calgar model has the Feel No Pain 4+ ability."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit can be attached to the following units:\n\n■ Aggressor Squad\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Company Heroes\n■ Eradicator Squad\n■ Heavy Intercessor Squad\n■ Infernus Squad\n■ Intercessor Squad\n■ Sternguard Veteran Squad\n■ Tactical Squad"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "4aea-b1cc-6c69-1c44",
+      "name": "Roboute Guilliman",
+      "type": "model",
+      "targetId": "4aea-b1cc-6c69-1c44",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 415
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Roboute Guilliman",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "10",
+            "sv": "2+",
+            "w": "16",
+            "ld": "5+",
+            "oc": "4",
+            "insv": "4+",
+            "base": "60mm"
+          }
+        },
+        {
+          "name": "Author of the Codex",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12\" of this model, and select one Combat Doctrine. That Combat Doctrine is active for that unit in addition to any other Combat Doctrines that are active for that unit until the start of your next Command phase. "
+          }
+        },
+        {
+          "name": "Leader of Astartes",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this unit is within 3\" of a friendly ^^**Adeptus Astartes Infantry**^^ unit, this unit has Lone Operative."
+          }
+        },
+        {
+          "name": "Supreme Commander",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this model is in your army, it must be your Warlord."
+          }
+        },
+        {
+          "name": "Primarch of the XIII (Aura)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While a Friendly ADEPTUS ASTARTES unit is within 6\" of this unit, that unit's attacks can: \n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2263-82ee-3db6-8be9",
+      "name": "Sergeant Chronus [Legends]",
+      "type": "model",
+      "targetId": "2263-82ee-3db6-8be9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 75
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Sergeant Chronus",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "2+",
+            "w": "3",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Tank Commander",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is commanding a Vehicle model (see reverse):\n\n■ Ranged weapons equipped by that Vehicle model have a Ballistic Skill characteristic of 2+.\n■ Each time that Vehicle model is selected to shoot, you can re-roll one Wound roll when resolving those attacks.\n\nIf your army includes one or more of the Vehicle models listed below, Sergeant Chronus must start the battle embarked within one of those models as if it were a Transport. Sergeant Chronus can only disembark from that Vehicle if it is destroyed. While embarked in this way, Sergeant Chronus is said to be commanding that Vehicle.\n\n■ Hunter\n■ Land Raider\n■ Land Raider Crusader\n■ Land Raider Redeemer\n■ Predator Annihilator\n■ Predator Destructor\n■ Stalker\n■ Vindicator\n■ Whirlwind"
+          }
+        },
+        {
+          "name": "Chronus",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "When this model disembarks from a Vehicle model it was commanding, it has the Lone Operative ability until the end of the battle."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "696a-899e-514b-4a04",
+      "name": "Sergeant Telion [Legends]",
+      "type": "model",
+      "targetId": "696a-899e-514b-4a04",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Sergeant Telion",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "4+",
+            "w": "3",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "28.5mm"
+          }
+        },
+        {
+          "name": "Voice of Experience",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, improve the Objective Control characteristic of models in that unit by 1 and each time a model in that unit makes an attack, add 1 to the Hit roll."
+          }
+        },
+        {
+          "name": "Guiding Hand",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, each time that unit is selected to shoot or fight, select one of the following abilities to apply to weapons equipped by models in that unit until the end of the phase:\n\n\n■ [LETHAL HITS]\n■ [PRECISION]\n■ [SUSTAINED HITS 1]"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\n\n■ Scout Squad\n■ Scout Sniper Squad"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8770-b0eb-f430-1dda",
+      "name": "Tyrannic War Veterans [Legends]",
+      "type": "unit",
+      "targetId": "8770-b0eb-f430-1dda",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Tyrannic War Veterans",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability when targeting Tyranids units."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "169a-7229-ea50-1c4f",
+      "name": "Uriel Ventris",
+      "type": "model",
+      "targetId": "169a-7229-ea50-1c4f",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 105
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Uriel Ventris",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Unorthodox Strategist [Aura]",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time your opponent targets a unit from their army with a  stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP (this is not cumulative with any other rules that would increase the CP cost of that Stratagem)."
+          }
+        },
+        {
+          "name": "Master of the Fleet",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "During the Declare Battle Formations step, if your army includes this model, select one Phobos, Gravis, or Tacticus Adeptus Astartes Infantry unit from your army.  That unit gains the Deep Strike ability."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, COMMAND SQUAD, COMPANY HEROES, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "f4a3-1616-2f8e-59a3",
+      "name": "Ultramarines Honour Guard [Legends]",
+      "type": "unit",
+      "targetId": "f4a3-1616-2f8e-59a3",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 155
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Honour Guard",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While a Captain or Chapter Master model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll."
+          }
+        },
+        {
+          "name": "Honour Guard of Macragge",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "MARNEUS CALGAR can be attached to this unit. If a CAPTAIN model from your army with the Leader ability can be attached to a COMMAND SQUAD, it can be attached to this unit instead."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b07a-c1e9-24e5-09ee",
+      "name": "Lieutenant Titus",
+      "type": "model",
+      "targetId": "b07a-c1e9-24e5-09ee",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Lieutenant Titus",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Press the Attack",
+          "type": "Abilities",
+          "characteristics": {
+            "description": ": Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability."
+          }
+        },
+        {
+          "name": "Honour of the Chapter",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\n\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Hellblaster Squad\n■ Infernus Squad\n■ Intercessor Squad\n■ Sternguard Veteran Squad"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "a136-76f7-34d1-8035",
+      "name": "Marneus Calgar",
+      "type": "model",
+      "targetId": "a136-76f7-34d1-8035",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 180
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Marneus Calgar",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "6",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "~50mm"
+          }
+        },
+        {
+          "name": "Master Tactician",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Movement phase, you can select one visible friendly ^^**Adeptus Astartes**^^ unit within 9\" of this model, and select one combat doctrine. That combat doctrine is active for that unit until the start of your next Command phase."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: AGGRESSOR SQUAD, ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, ERADICATOR SQUAD WITH HEAVY BOLTERS, ERADICATOR SQUAD WITH MELTA RIFLES, HEAVY INTERCESSOR SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD, VANGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD"
+          }
+        },
+        {
+          "name": "Thunderhawk Insertion",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In the Declare Battle Formations step, you can select one friendly ^^**Gravis/Phobos/Tacticus**^^ unit. That unit has Deep Strike."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b014-911d-271a-5b8e",
+      "name": "Cato Sicarius",
+      "type": "model",
+      "targetId": "b014-911d-271a-5b8e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 115
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Cato Sicarius",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "2+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Knight Champion of Macragge",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per phase, per army)\nIn your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of up to 6\"."
+          }
+        },
+        {
+          "name": "Honour or Death",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "When you target this unit with the Heroic Intervention stratagem, that use is -1 CP."
+          }
+        },
+        {
+          "name": "Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: \nVICTRIX HONOUR GUARD\n"
+          }
+        },
+        {
+          "name": "Captain of the Honour Guard",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If your army includes a Marneus Calgar unit, replace this unit’s Leader ability with the Support ability (this unit can still be attached to the same units)."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9b89-f132-4fef-8e51",
+      "name": "Victrix Honour Guard",
+      "type": "unit",
+      "targetId": "9b89-f132-4fef-8e51",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 120
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Honour Guard of Macragge",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Attacks that target this unit have -1 to wound rolls."
+          }
+        },
+        {
+          "name": "Glory of Ultramar",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed by those attacks, this unit can make a surge move of up to D6\"."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "596f-dbdc-41e7-088a",
+      "name": "Captain Titus",
+      "type": "model",
+      "targetId": "596f-dbdc-41e7-088a",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 115
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Captain Titus",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "6",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Press the Attack",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit’s melee attacks have:\n\n\n- [Sustained Hits 1: non-Monster/Vehicle].\n- Or: If the assault doctrine is active for this unit, [Sustained Hits 1]."
+          }
+        },
+        {
+          "name": "Honour of Ultramar",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "n the fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: \nASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, HELLBLASTER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
+          }
+        },
+        {
+          "name": "Righteous Fury",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per army)\nIn the Fight phase, you can use this ability. If you do, this unit’s melee attacks have +1 S, and when this unit has fought:\n- This model heals D3 wounds.\n- Or: If this model destroyed an enemy model this phase, this model heals 2D3 wounds"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b793-b77e-9e49-d397",
+      "name": "Wardens of Ultramar",
+      "type": "unit",
+      "targetId": "b793-b77e-9e49-d397",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 115
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Raise the  Banner",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your Movement phase, if this unit is controlling an objective, that objective is secured."
+          }
+        },
+        {
+          "name": "Strategium Command",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "When both players have deployed their armies, you can redeploy up to three friendly Adeptus Astartes units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves."
+          }
+        },
+        {
+          "name": "Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9415-965c-37e9-d374",
+      "name": "Archeotech Laspistol",
+      "type": "upgrade",
+      "targetId": "9415-965c-37e9-d374",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Archeotech Laspistol",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "1",
+            "bs": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Close-quarters"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "6dc0-a9d5-a111-daf2",
+      "name": "Power Weapon",
+      "type": "upgrade",
+      "targetId": "6dc0-a9d5-a111-daf2",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Power Weapon",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "4",
+            "ws": "2+",
+            "s": "4",
+            "ap": "-2",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3a3c-2481-fcc6-41cb",
+      "name": "Kaius Konorius",
+      "type": "model",
+      "targetId": "3a3c-2481-fcc6-41cb",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 100
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: \nASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD"
+          }
+        },
+        {
+          "name": "Kaius Konorius",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "2+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "-"
+          }
+        },
+        {
+          "name": "Veteran Bodyguard",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is attached to a unit, other Character models in this unit have Feel No Pain 4+."
+          }
+        },
+        {
+          "name": "Calgar’s Champion",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model’s attacks that target a Character unit can:\n\n\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7740-af66-ac4f-68b6",
+      "name": "Captain Sicarius",
+      "type": "selectionEntry",
+      "targetId": "2ae8-40ec-ba34-dfe5",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e1e-1c6b-bb62-f9c8",
+      "name": "Chaplain Cassius [Legends]",
+      "type": "selectionEntry",
+      "targetId": "b180-3cac-9124-b818",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "5909-4c97-aba1-e481",
+      "name": "Chief Librarian Tigurius",
+      "type": "selectionEntry",
+      "targetId": "3ef1-1647-cd7b-a40b",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "388d-198a-29f-d03e",
+      "name": "Marneus Calgar",
+      "type": "selectionEntry",
+      "targetId": "5380-5757-2c46-31cc",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "49fb-cb39-f830-9ee",
+      "name": "Roboute Guilliman",
+      "type": "selectionEntry",
+      "targetId": "4aea-b1cc-6c69-1c44",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "64be-7146-5008-3e1d",
+      "name": "Sergeant Chronus [Legends]",
+      "type": "selectionEntry",
+      "targetId": "2263-82ee-3db6-8be9",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e77f-29fb-5f25-9bed",
+      "name": "Sergeant Telion [Legends]",
+      "type": "selectionEntry",
+      "targetId": "696a-899e-514b-4a04",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8561-6da9-fb56-15f",
+      "name": "Tyrannic War Veterans [Legends]",
+      "type": "selectionEntry",
+      "targetId": "8770-b0eb-f430-1dda",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "22c4-3e9d-987f-d338",
+      "name": "Uriel Ventris",
+      "type": "selectionEntry",
+      "targetId": "169a-7229-ea50-1c4f",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "35b8-60b6-a5ab-9318",
+      "name": "Ultramarines Honour Guard [Legends]",
+      "type": "selectionEntry",
+      "targetId": "f4a3-1616-2f8e-59a3",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "0cfa-3fc7-6548-dbb3",
+      "name": "Lieutenant Titus",
+      "type": "selectionEntry",
+      "targetId": "b07a-c1e9-24e5-09ee",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "984d-c25b-86dd-9970",
+      "name": "Marneus Calgar",
+      "type": "selectionEntry",
+      "targetId": "a136-76f7-34d1-8035",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "4796-e4e0-774f-6785",
+      "name": "Cato Sicarius",
+      "type": "selectionEntry",
+      "targetId": "b014-911d-271a-5b8e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7f97-8d4d-477d-3b35",
+      "name": "Victrix Honour Guard",
+      "type": "selectionEntry",
+      "targetId": "9b89-f132-4fef-8e51",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "69f6-bff7-d28a-e0c3",
+      "name": "Captain Titus",
+      "type": "selectionEntry",
+      "targetId": "596f-dbdc-41e7-088a",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "67b4-7b11-a48e-1791",
+      "name": "Wardens of Ultramar",
+      "type": "selectionEntry",
+      "targetId": "b793-b77e-9e49-d397",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ba2d-0015-b7d1-2f60",
+      "name": "Kaius Konorius",
+      "type": "selectionEntry",
+      "targetId": "3a3c-2481-fcc6-41cb",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "2ae8-40ec-ba34-dfe5",
+      "name": "Captain Sicarius",
+      "type": "model",
+      "targetId": "2ae8-40ec-ba34-dfe5",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Lead From the Front",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, models in that unit have the Scouts 6\" ability and ranged weapons equipped by models in that unit have the [ASSAULT] ability."
+          }
+        },
+        {
+          "name": "Captain Sicarius",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "2+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Knight Champion of Macragge",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\"."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\n\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Company Heroes\n■ Sternguard Veteran Squad\n■ Tactical Squad"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b180-3cac-9124-b818",
+      "name": "Chaplain Cassius [Legends]",
+      "type": "model",
+      "targetId": "b180-3cac-9124-b818",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 80
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Chaplain Cassius",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "3+",
+            "w": "4",
+            "ld": "5+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "~40mm"
+          }
+        },
+        {
+          "name": "Catechism of Death",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+          }
+        },
+        {
+          "name": "Inspired Retribution",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\n\n■ Assault Squad\n■ Command Squad\n■ Sternguard Veteran Squad\n■ Tactical Squad\n■ Tyrannic War Veterans\n■ Vanguard Veteran Squad"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3ef1-1647-cd7b-a40b",
+      "name": "Chief Librarian Tigurius",
+      "type": "model",
+      "targetId": "3ef1-1647-cd7b-a40b",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 115
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Chief Librarian Tigurius",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Hood of Hellfire",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has Feel No Pain 4+ against psychic attacks and mortal wounds."
+          }
+        },
+        {
+          "name": "Prescience (Psychic level 2)",
+          "type": "Psychic Abilities",
+          "characteristics": {
+            "descriptions": "In your Movement phase, if this unit is not battle-shocked, you can make a psychic roll for this unit by rolling one D6. If you do:\n\n\n- On a 1, this unit is battle-shocked.\n- This unit has +1 Sv until the start of your next turn."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, DESOLATION SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
+          }
+        },
+        {
+          "name": "Telepathic Assault (Psychic level 1)",
+          "type": "Psychic Abilities",
+          "characteristics": {
+            "descriptions": "In your Shooting phase, if this unit is not battle-shocked, you can make a psychic roll for this unit by rolling one D6. If you do:\n\n\n- On a 1, this unit is battle-shocked.\n- Select one visible enemy unit within 24\" of this unit. That enemy unit suffers 2D3 mortal wounds."
+          }
+        },
+        {
+          "name": "Chief Librarian (psyker level 3)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model has the psychic abilities listed in the Psychic Abilities section."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5380-5757-2c46-31cc",
+      "name": "Marneus Calgar",
+      "type": "unit",
+      "targetId": "5380-5757-2c46-31cc",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 200
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Marneus Calgar",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "6",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "50mm"
+          }
+        },
+        {
+          "name": "Victrix Honour Guard",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "2+",
+            "w": "3",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Inspiring Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back."
+          }
+        },
+        {
+          "name": "Master Tactician",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the start of your Command phase, if this unit’s Marneus Calgar model is your WARLORD and is on the battlefield, you gain 1CP."
+          }
+        },
+        {
+          "name": "Honour Guard of Macragge",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this unit contains one or more Victrix Honour Guard models, this unit’s Marneus Calgar model has the Feel No Pain 4+ ability."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit can be attached to the following units:\n\n■ Aggressor Squad\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Company Heroes\n■ Eradicator Squad\n■ Heavy Intercessor Squad\n■ Infernus Squad\n■ Intercessor Squad\n■ Sternguard Veteran Squad\n■ Tactical Squad"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "4aea-b1cc-6c69-1c44",
+      "name": "Roboute Guilliman",
+      "type": "model",
+      "targetId": "4aea-b1cc-6c69-1c44",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 415
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Roboute Guilliman",
+          "type": "Unit",
+          "characteristics": {
+            "m": "8\"",
+            "t": "10",
+            "sv": "2+",
+            "w": "16",
+            "ld": "5+",
+            "oc": "4",
+            "insv": "4+",
+            "base": "60mm"
+          }
+        },
+        {
+          "name": "Author of the Codex",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12\" of this model, and select one Combat Doctrine. That Combat Doctrine is active for that unit in addition to any other Combat Doctrines that are active for that unit until the start of your next Command phase. "
+          }
+        },
+        {
+          "name": "Leader of Astartes",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this unit is within 3\" of a friendly ^^**Adeptus Astartes Infantry**^^ unit, this unit has Lone Operative."
+          }
+        },
+        {
+          "name": "Supreme Commander",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this model is in your army, it must be your Warlord."
+          }
+        },
+        {
+          "name": "Primarch of the XIII (Aura)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While a Friendly ADEPTUS ASTARTES unit is within 6\" of this unit, that unit's attacks can: \n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2263-82ee-3db6-8be9",
+      "name": "Sergeant Chronus [Legends]",
+      "type": "model",
+      "targetId": "2263-82ee-3db6-8be9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 75
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Sergeant Chronus",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "2+",
+            "w": "3",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Tank Commander",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is commanding a Vehicle model (see reverse):\n\n■ Ranged weapons equipped by that Vehicle model have a Ballistic Skill characteristic of 2+.\n■ Each time that Vehicle model is selected to shoot, you can re-roll one Wound roll when resolving those attacks.\n\nIf your army includes one or more of the Vehicle models listed below, Sergeant Chronus must start the battle embarked within one of those models as if it were a Transport. Sergeant Chronus can only disembark from that Vehicle if it is destroyed. While embarked in this way, Sergeant Chronus is said to be commanding that Vehicle.\n\n■ Hunter\n■ Land Raider\n■ Land Raider Crusader\n■ Land Raider Redeemer\n■ Predator Annihilator\n■ Predator Destructor\n■ Stalker\n■ Vindicator\n■ Whirlwind"
+          }
+        },
+        {
+          "name": "Chronus",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "When this model disembarks from a Vehicle model it was commanding, it has the Lone Operative ability until the end of the battle."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "696a-899e-514b-4a04",
+      "name": "Sergeant Telion [Legends]",
+      "type": "model",
+      "targetId": "696a-899e-514b-4a04",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Sergeant Telion",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "4+",
+            "w": "3",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "28.5mm"
+          }
+        },
+        {
+          "name": "Voice of Experience",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, improve the Objective Control characteristic of models in that unit by 1 and each time a model in that unit makes an attack, add 1 to the Hit roll."
+          }
+        },
+        {
+          "name": "Guiding Hand",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, each time that unit is selected to shoot or fight, select one of the following abilities to apply to weapons equipped by models in that unit until the end of the phase:\n\n\n■ [LETHAL HITS]\n■ [PRECISION]\n■ [SUSTAINED HITS 1]"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\n\n■ Scout Squad\n■ Scout Sniper Squad"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8770-b0eb-f430-1dda",
+      "name": "Tyrannic War Veterans [Legends]",
+      "type": "unit",
+      "targetId": "8770-b0eb-f430-1dda",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Tyrannic War Veterans",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability when targeting Tyranids units."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "169a-7229-ea50-1c4f",
+      "name": "Uriel Ventris",
+      "type": "model",
+      "targetId": "169a-7229-ea50-1c4f",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 105
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Uriel Ventris",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Unorthodox Strategist [Aura]",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time your opponent targets a unit from their army with a  stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP (this is not cumulative with any other rules that would increase the CP cost of that Stratagem)."
+          }
+        },
+        {
+          "name": "Master of the Fleet",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "During the Declare Battle Formations step, if your army includes this model, select one Phobos, Gravis, or Tacticus Adeptus Astartes Infantry unit from your army.  That unit gains the Deep Strike ability."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, COMMAND SQUAD, COMPANY HEROES, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "f4a3-1616-2f8e-59a3",
+      "name": "Ultramarines Honour Guard [Legends]",
+      "type": "unit",
+      "targetId": "f4a3-1616-2f8e-59a3",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 155
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Honour Guard",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While a Captain or Chapter Master model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll."
+          }
+        },
+        {
+          "name": "Honour Guard of Macragge",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "MARNEUS CALGAR can be attached to this unit. If a CAPTAIN model from your army with the Leader ability can be attached to a COMMAND SQUAD, it can be attached to this unit instead."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b07a-c1e9-24e5-09ee",
+      "name": "Lieutenant Titus",
+      "type": "model",
+      "targetId": "b07a-c1e9-24e5-09ee",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Lieutenant Titus",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "4",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Press the Attack",
+          "type": "Abilities",
+          "characteristics": {
+            "description": ": Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability."
+          }
+        },
+        {
+          "name": "Honour of the Chapter",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:\n\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Hellblaster Squad\n■ Infernus Squad\n■ Intercessor Squad\n■ Sternguard Veteran Squad"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "a136-76f7-34d1-8035",
+      "name": "Marneus Calgar",
+      "type": "model",
+      "targetId": "a136-76f7-34d1-8035",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 180
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Marneus Calgar",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "6",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "~50mm"
+          }
+        },
+        {
+          "name": "Master Tactician",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Movement phase, you can select one visible friendly ^^**Adeptus Astartes**^^ unit within 9\" of this model, and select one combat doctrine. That combat doctrine is active for that unit until the start of your next Command phase."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: AGGRESSOR SQUAD, ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, ERADICATOR SQUAD WITH HEAVY BOLTERS, ERADICATOR SQUAD WITH MELTA RIFLES, HEAVY INTERCESSOR SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD, VANGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD"
+          }
+        },
+        {
+          "name": "Thunderhawk Insertion",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In the Declare Battle Formations step, you can select one friendly ^^**Gravis/Phobos/Tacticus**^^ unit. That unit has Deep Strike."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b014-911d-271a-5b8e",
+      "name": "Cato Sicarius",
+      "type": "model",
+      "targetId": "b014-911d-271a-5b8e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 115
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Cato Sicarius",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "2+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Knight Champion of Macragge",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per phase, per army)\nIn your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of up to 6\"."
+          }
+        },
+        {
+          "name": "Honour or Death",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "When you target this unit with the Heroic Intervention stratagem, that use is -1 CP."
+          }
+        },
+        {
+          "name": "Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: \nVICTRIX HONOUR GUARD\n"
+          }
+        },
+        {
+          "name": "Captain of the Honour Guard",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If your army includes a Marneus Calgar unit, replace this unit’s Leader ability with the Support ability (this unit can still be attached to the same units)."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9b89-f132-4fef-8e51",
+      "name": "Victrix Honour Guard",
+      "type": "unit",
+      "targetId": "9b89-f132-4fef-8e51",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 120
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Honour Guard of Macragge",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Attacks that target this unit have -1 to wound rolls."
+          }
+        },
+        {
+          "name": "Glory of Ultramar",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed by those attacks, this unit can make a surge move of up to D6\"."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "596f-dbdc-41e7-088a",
+      "name": "Captain Titus",
+      "type": "model",
+      "targetId": "596f-dbdc-41e7-088a",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 115
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Captain Titus",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "6",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Press the Attack",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit’s melee attacks have:\n\n\n- [Sustained Hits 1: non-Monster/Vehicle].\n- Or: If the assault doctrine is active for this unit, [Sustained Hits 1]."
+          }
+        },
+        {
+          "name": "Honour of Ultramar",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "n the fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: \nASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, HELLBLASTER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
+          }
+        },
+        {
+          "name": "Righteous Fury",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "(Once per battle, per army)\nIn the Fight phase, you can use this ability. If you do, this unit’s melee attacks have +1 S, and when this unit has fought:\n- This model heals D3 wounds.\n- Or: If this model destroyed an enemy model this phase, this model heals 2D3 wounds"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b793-b77e-9e49-d397",
+      "name": "Wardens of Ultramar",
+      "type": "unit",
+      "targetId": "b793-b77e-9e49-d397",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 115
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Raise the  Banner",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your Movement phase, if this unit is controlling an objective, that objective is secured."
+          }
+        },
+        {
+          "name": "Strategium Command",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "When both players have deployed their armies, you can redeploy up to three friendly Adeptus Astartes units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves."
+          }
+        },
+        {
+          "name": "Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9415-965c-37e9-d374",
+      "name": "Archeotech Laspistol",
+      "type": "upgrade",
+      "targetId": "9415-965c-37e9-d374",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Archeotech Laspistol",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "1",
+            "bs": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Close-quarters"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "6dc0-a9d5-a111-daf2",
+      "name": "Power Weapon",
+      "type": "upgrade",
+      "targetId": "6dc0-a9d5-a111-daf2",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Power Weapon",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "4",
+            "ws": "2+",
+            "s": "4",
+            "ap": "-2",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3a3c-2481-fcc6-41cb",
+      "name": "Kaius Konorius",
+      "type": "model",
+      "targetId": "3a3c-2481-fcc6-41cb",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 100
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: \nASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD"
+          }
+        },
+        {
+          "name": "Kaius Konorius",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "2+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "-"
+          }
+        },
+        {
+          "name": "Veteran Bodyguard",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is attached to a unit, other Character models in this unit have Feel No Pain 4+."
+          }
+        },
+        {
+          "name": "Calgar’s Champion",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model’s attacks that target a Character unit can:\n\n\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7740-af66-ac4f-68b6",
+      "name": "Captain Sicarius",
+      "type": "selectionEntry",
+      "targetId": "2ae8-40ec-ba34-dfe5",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e1e-1c6b-bb62-f9c8",
+      "name": "Chaplain Cassius [Legends]",
+      "type": "selectionEntry",
+      "targetId": "b180-3cac-9124-b818",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "5909-4c97-aba1-e481",
+      "name": "Chief Librarian Tigurius",
+      "type": "selectionEntry",
+      "targetId": "3ef1-1647-cd7b-a40b",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "388d-198a-29f-d03e",
+      "name": "Marneus Calgar",
+      "type": "selectionEntry",
+      "targetId": "5380-5757-2c46-31cc",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "49fb-cb39-f830-9ee",
+      "name": "Roboute Guilliman",
+      "type": "selectionEntry",
+      "targetId": "4aea-b1cc-6c69-1c44",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "64be-7146-5008-3e1d",
+      "name": "Sergeant Chronus [Legends]",
+      "type": "selectionEntry",
+      "targetId": "2263-82ee-3db6-8be9",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e77f-29fb-5f25-9bed",
+      "name": "Sergeant Telion [Legends]",
+      "type": "selectionEntry",
+      "targetId": "696a-899e-514b-4a04",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8561-6da9-fb56-15f",
+      "name": "Tyrannic War Veterans [Legends]",
+      "type": "selectionEntry",
+      "targetId": "8770-b0eb-f430-1dda",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "22c4-3e9d-987f-d338",
+      "name": "Uriel Ventris",
+      "type": "selectionEntry",
+      "targetId": "169a-7229-ea50-1c4f",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "35b8-60b6-a5ab-9318",
+      "name": "Ultramarines Honour Guard [Legends]",
+      "type": "selectionEntry",
+      "targetId": "f4a3-1616-2f8e-59a3",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "0cfa-3fc7-6548-dbb3",
+      "name": "Lieutenant Titus",
+      "type": "selectionEntry",
+      "targetId": "b07a-c1e9-24e5-09ee",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "984d-c25b-86dd-9970",
+      "name": "Marneus Calgar",
+      "type": "selectionEntry",
+      "targetId": "a136-76f7-34d1-8035",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "4796-e4e0-774f-6785",
+      "name": "Cato Sicarius",
+      "type": "selectionEntry",
+      "targetId": "b014-911d-271a-5b8e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7f97-8d4d-477d-3b35",
+      "name": "Victrix Honour Guard",
+      "type": "selectionEntry",
+      "targetId": "9b89-f132-4fef-8e51",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "69f6-bff7-d28a-e0c3",
+      "name": "Captain Titus",
+      "type": "selectionEntry",
+      "targetId": "596f-dbdc-41e7-088a",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "67b4-7b11-a48e-1791",
+      "name": "Wardens of Ultramar",
+      "type": "selectionEntry",
+      "targetId": "b793-b77e-9e49-d397",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ba2d-0015-b7d1-2f60",
+      "name": "Kaius Konorius",
+      "type": "selectionEntry",
+      "targetId": "3a3c-2481-fcc6-41cb",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ]
 }

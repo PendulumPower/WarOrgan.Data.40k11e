@@ -3,8 +3,4737 @@
   "name": "Xenos - Leagues of Votann",
   "revision": 8,
   "gameSystemId": "sys-352e-adc2-7639-d610",
-  "factionTraits": [],
+  "factionTraits": [
+    {
+      "name": "Prioritised Efficiency",
+      "description": "If your Army Faction is ^^**Leagues of Votann^^**, ^^**Leagues of Votann^^** units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those ^^**Leagues of Votann^^** units have will change depending on how many Yield points (YP) you currently have:\n- At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase.\n\n- At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase.\n\n- At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase.\n\n**Hostile Acquisition**\n- Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll.\n\n- You can re‑roll Advance and Charge rolls made for this unit.\n\n**Fortify Takeover**\n- Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll.\n\n- Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll.\n\n\n**Yield Points**\nAt the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy:\nYou control one or more objective markers not within your deployment zone.\nYou control two or more objective markers not within your deployment zone.\nYou control more objective markers than your opponent.\n\n\nIn your turn, YP gained in this way are always gained before checking which ability ^^**Leagues of Votann**^^ units from your army have.\n\n\nWhenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+    },
+    {
+      "name": "Conversion (Thunderkyn)",
+      "description": "Each time an attack made with this weapon targets an enemy unit that is not within 12\", an unmodified Hit roll of 4+ scores a Critical Hit."
+    }
+  ],
   "detachments": [],
-  "units": [],
-  "datasheets": []
+  "units": [
+    {
+      "id": "5914-3326-fac9-bf29",
+      "name": "Detachment",
+      "type": "upgrade",
+      "targetId": "5914-3326-fac9-bf29",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2e6e-95a1-60ad-7b1c",
+      "name": "Ûthar the Destined",
+      "type": "model",
+      "targetId": "2e6e-95a1-60ad-7b1c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 100
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Ûthar the Destined",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Ancestral Fortune",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per turn, you can spend 1YP to change one Hit roll, one Wound roll or one saving throw made for this model to an unmodified 6."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: EINHYR HEARTHGUARD, HEARTHKYN WARRIORS"
+          }
+        },
+        {
+          "name": "Grim Efficiency",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per battle round, when a friendly ^^**Leagues of Votann**^^ unit within 12\" of this model is targeted with a Stratagem, this model can use this ability. If it does, reduce the CP cost of that Stratagem by 1CP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ba4f-c3f9-6925-af0c",
+      "name": "Hearthkyn Warriors",
+      "type": "unit",
+      "targetId": "ba4f-c3f9-6925-af0c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 90
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Luck Has, Need Keeps, Toil Earns",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, until your opponent's Level of Control over that is greater than yours at the end of a phase."
+          }
+        },
+        {
+          "name": "Hearthkyn Warriors",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "4+",
+            "w": "1",
+            "ld": "7+",
+            "oc": "2",
+            "insv": "5+",
+            "base": "28.5mm"
+          }
+        },
+        {
+          "name": "Pan-spectral Scanning",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a model in this unit makes a ranged attack, re-roll a Hit roll of 1."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "0369-3c56-a9d1-307d",
+      "name": "Rampart crest",
+      "type": "upgrade",
+      "targetId": "0369-3c56-a9d1-307d",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Rampart crest",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While the bearer is leading a unit, models in that unit have a 5+ invulnerable save."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "1b00-2abb-718f-def6",
+      "name": "Kâhl",
+      "type": "model",
+      "targetId": "1b00-2abb-718f-def6",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 65
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Kâhl",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "4",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Kindred Hero",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: EINHYR HEARTHGUARD, HEARTHKYN WARRIORS"
+          }
+        },
+        {
+          "name": "Seized Opportunity",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per phase, one model from your army with this ability can use it when its unit destroys an enemy unit. If it does, gain 1YP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "6a0b-0a93-2494-57f9",
+      "name": "Autoch-pattern combi-bolter",
+      "type": "upgrade",
+      "targetId": "6a0b-0a93-2494-57f9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Autoch-pattern combi-bolter",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "4",
+            "bs": "2+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c675-e98e-8cfd-c5b4",
+      "name": "Volkanite disintegrator",
+      "type": "upgrade",
+      "targetId": "c675-e98e-8cfd-c5b4",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Volkanite disintegrator",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "3",
+            "bs": "2+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "keywords": "Devastating Wounds"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "92b3-11ff-2a27-cd0c",
+      "name": "Warlord",
+      "type": "upgrade",
+      "targetId": "92b3-11ff-2a27-cd0c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "0a19-2550-9aad-a268",
+      "name": "Teleport crest",
+      "type": "upgrade",
+      "targetId": "0a19-2550-9aad-a268",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Teleport crest",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While the bearer is leading a unit, models in that unit have the Deep Strike ability."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2cc6-e2bf-635f-1260",
+      "name": "Einhyr Champion",
+      "type": "model",
+      "targetId": "2cc6-e2bf-635f-1260",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 65
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following unit: EINHYR HEARTHGUARD"
+          }
+        },
+        {
+          "name": "Einhyr Champion",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "2+",
+            "w": "5",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Exemplar of the Einhyr",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit."
+          }
+        },
+        {
+          "name": "Mass Driver Accelerators",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model ends a Charge move, you can select one enemy unit within Engagement Range of this model and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7133-f7e4-5925-8200",
+      "name": "Weavefield crest",
+      "type": "upgrade",
+      "targetId": "7133-f7e4-5925-8200",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Weavefield crest",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Models in the bearer's unit have a 5+ invulnerable save."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "d3a3-2d20-bd7e-6778",
+      "name": "Grimnyr",
+      "type": "unit",
+      "targetId": "d3a3-2d20-bd7e-6778",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 65
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following unit: HEARTHKYN WARRIORS"
+          }
+        },
+        {
+          "name": "Fortify (Psychic)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
+          }
+        },
+        {
+          "name": "Grimnyr's Regard",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per battle, at the start of any phase, you can select one friendly ^^**Leagues of Votann**^^ unit that is Battle-shocked and within 12\" of this unit's ^^**Grimnyr**^^ model. That unit is no longer Battle-shocked."
+          }
+        },
+        {
+          "name": "Unit Composition",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this unit’s Grimnyr model is ever destroyed, all of this unit’s remaining CORV models are also destroyed. While embarking within a ^^**Transport^^** and while embarked within a ^^**Transport^^**, each CORV model takes up the space of 0 models.’"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3bb3-2054-8746-01ca",
+      "name": "Autoch-pattern bolter",
+      "type": "upgrade",
+      "targetId": "3bb3-2054-8746-01ca",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "keywords": "Pistol"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8f33-5601-3707-78f4",
+      "name": "Brôkhyr Iron-master",
+      "type": "unit",
+      "targetId": "8f33-5601-3707-78f4",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Multi-spectral visor",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1."
+          }
+        },
+        {
+          "name": "Brôkhyr Guild Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this unit is within 3\" of one or more friendly ^^**Leagues of Votann Vehicle**^^ or ^^**Ironkin Steeljacks**^^ units, if this unit is not an attached unit, it has the Lone Operative ability."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:BRÔKHYR THUNDERKYN, HEARTHKYN WARRIORS"
+          }
+        },
+        {
+          "name": "Unit Composition",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this unit’s Brôkhyr Iron‑master model is ever destroyed, all of this unit’s remaining E‑COG models are also destroyed. While embarking within a ^^**Transport^^** and while embarked within a ^^**Transport^^**, each E‑COG model takes up the space of 0 models."
+          }
+        },
+        {
+          "name": "Forgewrought Expertise",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your Movement phase, this model can repair one friendly ^^**Leagues of Votann Vehicle, Exoframe^^** or ^^**Ironkin Steeljacks^^** unit within 3\" of it. One model in that unit regains up to D3 lost wounds, or up to 3 lost wounds if this unit contains an Ironkin Assistant model. Each unit can only be repaired once per turn."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "09d3-6357-7888-00d9",
+      "name": "Einhyr Hearthguard",
+      "type": "unit",
+      "targetId": "09d3-6357-7888-00d9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 130
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Decisive Destruction",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a model in this unit makes a ranged attack that targets the closest eligible target, re-roll a Hit roll of 1."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "415a-e6f6-d17f-d700",
+      "name": "Cthonian Beserks",
+      "type": "unit",
+      "targetId": "415a-e6f6-d17f-d700",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 90
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Cyberstimms",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6, adding one to the result if units from your army have Fortify Takeover: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9086-5272-398b-bbce",
+      "name": "Hernkyn Pioneers",
+      "type": "unit",
+      "targetId": "9086-5272-398b-bbce",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Outflanking Mag-Riders",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your opponent’s turn, if this unit is wholly within 9\" of one or more battlefield edges and not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves."
+          }
+        },
+        {
+          "name": "Hernkyn Pioneer",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "6",
+            "sv": "4+",
+            "w": "3",
+            "ld": "7+",
+            "oc": "2",
+            "insv": "",
+            "base": "90x52.5mm"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "4a84-915b-cfe5-a091",
+      "name": "Bolt revolver",
+      "type": "upgrade",
+      "targetId": "4a84-915b-cfe5-a091",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Bolt revolver",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "1",
+            "bs": "4+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "keywords": "Pistol"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "76f7-42ea-6b10-b6cf",
+      "name": "Bolt shotgun",
+      "type": "upgrade",
+      "targetId": "76f7-42ea-6b10-b6cf",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Bolt shotgun",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "18\"",
+            "a": "2",
+            "bs": "4+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "keywords": "Assault"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "cb8c-f3cd-d4a8-de89",
+      "name": "Magna-coil autocannon",
+      "type": "upgrade",
+      "targetId": "cb8c-f3cd-d4a8-de89",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Magna-coil autocannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "3",
+            "bs": "4+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "a3cc-6145-2fad-5f97",
+      "name": "Plasma knife",
+      "type": "upgrade",
+      "targetId": "a3cc-6145-2fad-5f97",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Plasma knife",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "2",
+            "ws": "4+",
+            "s": "4",
+            "ap": "-2",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9655-8367-7467-9e6e",
+      "name": "Sagitaur",
+      "type": "model",
+      "targetId": "9655-8367-7467-9e6e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Sagitaur",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "9",
+            "sv": "3+",
+            "w": "9",
+            "ld": "7+",
+            "oc": "2",
+            "insv": "",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Blistering Advance",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Units can disembark from this ^^**Transport^^** after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally in the remainder of the turn."
+          }
+        },
+        {
+          "name": "Sagitaur",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 6 **LEAGUES OF VOTANN INFANTRY **models. It cannot transport **ARTILLERY, EXOARMOUR, EXOFRAME** or **IRONKIN STEELJACKS** models.\n\nAt the start of the Declare Battle Formations step, you can select one ^^**Hearthkyn Warriors^^** unit from your army that has not been split. If you do, that unit is split into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units). One of these units must start the battle embarked within this ^^**Transport^^**; the other can start the battle embarked within another ^^**Transport^^**, or it can be deployed as a separate unit."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ea1b-99f6-c398-06b1",
+      "name": "Brôkhyr Thunderkyn",
+      "type": "unit",
+      "targetId": "ea1b-99f6-c398-06b1",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 80
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Brôkhyr Thunderkyn",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "6",
+            "sv": "3+",
+            "w": "2",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Breaching Fire",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next Shooting phase, that enemy unit cannot have the Benefit of Cover."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "a110-e538-4e85-159b",
+      "name": "Hekaton Land Fortress",
+      "type": "model",
+      "targetId": "a110-e538-4e85-159b",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 250
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Hekaton Land Fortress",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "12",
+            "sv": "2+",
+            "w": "16",
+            "ld": "7+",
+            "oc": "5",
+            "insv": "",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "MultiCOG Targeting",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes a ranged attack, you can ignore any or all modifiers to the following: that attack's Ballistic Skill characteristic, the Hit roll."
+          }
+        },
+        {
+          "name": "Damaged: 1-5 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Hekaton Land Fortress",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 14 **LEAGUES OF VOTANN INFANTRY **models. Each **EXOARMOUR, EXOFRAME** or **IRONKIN STEELJACKS** model takes up the space of 2 models. It cannot transport **ARTILLERY** models."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "43cd-5e9f-e550-83e0",
+      "name": "Twin bolt cannon",
+      "type": "upgrade",
+      "targetId": "43cd-5e9f-e550-83e0",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Twin bolt cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "36\"",
+            "a": "3",
+            "bs": "4+",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Sustained Hits 2, Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8d16-a849-dd95-997f",
+      "name": "MATR autocannon",
+      "type": "upgrade",
+      "targetId": "8d16-a849-dd95-997f",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "MATR autocannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "6",
+            "bs": "4+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Assault, Sustained Hits 1"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5b0b-c18d-1470-44bb",
+      "name": "Hernkyn Yaegirs",
+      "type": "unit",
+      "targetId": "5b0b-c18d-1470-44bb",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 90
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Pragmatic Hunters",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6”.'"
+          }
+        },
+        {
+          "name": "Hernkyn Yaegirs",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "5+",
+            "w": "1",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "28.5mm"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b7e1-55fd-9aae-b690",
+      "name": "Buri Aegnirssen",
+      "type": "model",
+      "targetId": "b7e1-55fd-9aae-b690",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Buri Aegnirssen",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "6",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Grudge-fuelled Fortitude",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with its full wounds remaining."
+          }
+        },
+        {
+          "name": "Unhinged Vengeance",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your opponent’s Shooting phase, when an enemy unit has shot, if this model lost one or more wounds as a result of those attacks, this unit can make a **surge move** of up to D6+2\"."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7932-6aac-cd01-3181",
+      "name": "Memnyr Strategist",
+      "type": "model",
+      "targetId": "7932-6aac-cd01-3181",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 45
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Memnyr Strategist",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "4+",
+            "w": "4",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Computational Mastermind",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your Command phase, before you determine if units from your army have Hostile Acquisition or Fortify Takeover, for each objective marker you control that has one or more models with this ability in range of it, you can spend 1YP or gain 1YP."
+          }
+        },
+        {
+          "name": "Predictive Guidance",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per battle round, when you target this unit with the **Fire Overwatch/Heroic Intervention** stratagem, you can use this ability. If you do, that use of that stratagem is ‑1 CP."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: IRONKIN STEELJACKS WITH HEAVY VOLKANITE DISINTEGRATORS, IRONKIN STEELJACKS WITH MELEE WEAPONS"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "e5c2-d1a0-b54d-65df",
+      "name": "Arkanyst Evaluator",
+      "type": "model",
+      "targetId": "e5c2-d1a0-b54d-65df",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Arkanyst Evaluator",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "4",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Science Guild Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is within 3\" of one or more other friendly ^^**Leagues of Votann Infantry**^^ units (excluding units with the Lone Operative ability), this model has the Lone Operative ability."
+          }
+        },
+        {
+          "name": "Resource Transmutation",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per turn, in your Shooting phase, one model with this ability can choose to use it when it is selected to shoot. If it does, you must spend 1YP and, until the end of the phase, ranged weapons equipped by that model have the [^^**Sustained Hits 1**^^] ability and, after that model has shot this phase, if one or more enemy units were destroyed by those attacks, you can gain up to 2YP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "f788-ecf2-9b2e-bc23",
+      "name": "Kapricus Defenders",
+      "type": "unit",
+      "targetId": "f788-ecf2-9b2e-bc23",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 75
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Opportunistic Manoeuvre",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this unit has shot, it can make a Normal Move of up to D6\". If it does, until the end of the turn, this unit is not eligible to declare a charge."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9767-47cb-3455-140e",
+      "name": "Twin magna-coil autocannon",
+      "type": "upgrade",
+      "targetId": "9767-47cb-3455-140e",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Twin magna-coil autocannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "3",
+            "bs": "4+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "cfbc-9eeb-badb-b28c",
+      "name": "Kapricus Carrier",
+      "type": "model",
+      "targetId": "cfbc-9eeb-badb-b28c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Kapricus Carrier",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "7",
+            "sv": "4+",
+            "w": "7",
+            "ld": "7+",
+            "oc": "2",
+            "insv": "",
+            "base": "105x70mm"
+          }
+        },
+        {
+          "name": "Scanner Uplinks",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your shooting phase, after this model has shot, select one enemy unit (excluding ^^**Monsters^^** and ^^**Vehicles^^**) hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Kapricus Carrier",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 5 ^^**Hernkyn Yaegir**^^ models.\n\nAt the start of the Declare Battle Formations step, you can select one ^^**Hernkyn Yaegir^^** unit from your army that has not been split. If you do, that unit is split into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units). One of these units must start the battle embarked within this ^^**Transport^^**; the other can start the battle embarked within another ^^**Transport^^**, or it can be deployed as a separate unit."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "1e3f-209d-798f-3a42",
+      "name": "Ironkin Steeljacks with Heavy Volkanite Disintegrators",
+      "type": "unit",
+      "targetId": "1e3f-209d-798f-3a42",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 80
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Ironkin Steeljacks with Heavy Volkanite Disintegrators",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "3",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Purge Response",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time you target this unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ while resolving that Stratagem. If units from your army have Fortify Takeover, hits are scored on unmodified Hit rolls of 4+ while resolving that Stratagem instead."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3909-7f26-8361-4746",
+      "name": "Heavy volkanite disintegrator",
+      "type": "upgrade",
+      "targetId": "3909-7f26-8361-4746",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Heavy volkanite disintegrator",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "6",
+            "bs": "4+",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Devastating Wounds"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "d428-e12a-3448-2113",
+      "name": "Plasma knife",
+      "type": "upgrade",
+      "targetId": "d428-e12a-3448-2113",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Plasma knife",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "2",
+            "ws": "3+",
+            "s": "6",
+            "ap": "-2",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2add-0a08-fbef-8f5e",
+      "name": "Ironkin Steeljacks with Melee Weapons",
+      "type": "unit",
+      "targetId": "2add-0a08-fbef-8f5e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 75
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Ironkin Steeljacks with Melee Weapons",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "3",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "~40mm"
+          }
+        },
+        {
+          "name": "Merciless Eradication",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time an enemy unit (excluding ^^**Monsters^^** and ^^**Vehicles^^**) that is within Engagement Range of this unit Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2ced-2cf6-7ef8-5430",
+      "name": "Preymark crest",
+      "type": "upgrade",
+      "targetId": "2ced-2cf6-7ef8-5430",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Preymark crest",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a model in the bearer's unit makes an attack that targets an enemy unit within range of one or more objective markers, on a Critical Wound, that attack has the [Precision] ability."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c867-1c31-b019-febb",
+      "name": "Plasma sword",
+      "type": "upgrade",
+      "targetId": "c867-1c31-b019-febb",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Plasma sword",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "6",
+            "ws": "3+",
+            "s": "6",
+            "ap": "-2",
+            "d": "1",
+            "keywords": "Sustained Hits 1"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "1625-bb6a-9990-094c",
+      "name": "Concussion gauntlet",
+      "type": "upgrade",
+      "targetId": "1625-bb6a-9990-094c",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Concussion gauntlet",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "4+",
+            "s": "10",
+            "ap": "-2",
+            "d": "2",
+            "keywords": "Lethal Hits"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "595a-cfac-3b40-710d",
+      "name": "Cthonian Earthshakers",
+      "type": "unit",
+      "targetId": "595a-cfac-3b40-710d",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 100
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ad15-fc45-03eb-59ac",
+      "name": "Close combat weapon",
+      "type": "upgrade",
+      "targetId": "ad15-fc45-03eb-59ac",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Close combat weapon",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "1",
+            "ws": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "0039-5b91-2e96-0e08",
+      "name": "Living Ancestor [Crucible]",
+      "type": "model",
+      "targetId": "0039-5b91-2e96-0e08",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Living Ancestor",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "4+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ^^**Hearthkyn Warriors**^^"
+          }
+        },
+        {
+          "name": "Grimnyr's Regard",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per battle, at the start of any phase, you can select one friendly ^^**Leagues of Votann**^^ unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "05b6-7622-edbe-7a9a",
+      "name": "Kinhost Commander [Crucible]",
+      "type": "model",
+      "targetId": "05b6-7622-edbe-7a9a",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 65
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Kinhost Commander",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "4",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ^^**Einhyr Hearthguard, Hearthkyn Warriors**^^"
+          }
+        },
+        {
+          "name": "Seized Opportunity",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per phase, one model from your army with this ability can use it when its unit destroys an enemy unit. If it does, you gain 1YP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "4eaf-78d5-9195-0e36",
+      "name": "Steeljack Elder [Crucible]",
+      "type": "model",
+      "targetId": "4eaf-78d5-9195-0e36",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 80
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Steeljack Elder",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "5",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ^^**Ironkin Steeljacks with Heavy Volkanite Disintegrators, Ironkin Steeljacks with Melee Weapons**^^"
+          }
+        },
+        {
+          "name": "Forgewrought Skill",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes an attack, you can re-roll the Hit roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c7ea-1b76-c8c1-4786",
+      "name": "Berehk Stornbröw",
+      "type": "model",
+      "targetId": "c7ea-1b76-c8c1-4786",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Berehk Stornbröw",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "6",
+            "sv": "5+",
+            "w": "5",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "5+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Break the Foe",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Melee weapons equipped by models in this unit have the [^^Sustained Hits 1^^] ability."
+          }
+        },
+        {
+          "name": "Relentless Avalanche",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "You can target this model's unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: CTHONIAN BESERKS"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "0ec6-9ba0-eef0-b5b9",
+      "name": "Detachment",
+      "type": "selectionEntry",
+      "targetId": "5914-3326-fac9-bf29",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "34a3-1b3f-4c56-c27a",
+      "name": "Hearthkyn Warriors",
+      "type": "selectionEntry",
+      "targetId": "ba4f-c3f9-6925-af0c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "95dc-990b-2a93-5e83",
+      "name": "Ûthar the Destined",
+      "type": "selectionEntry",
+      "targetId": "2e6e-95a1-60ad-7b1c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2c9c-869f-d3a9-a264",
+      "name": "Kâhl",
+      "type": "selectionEntry",
+      "targetId": "1b00-2abb-718f-def6",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "af26-0d4c-e9c1-22ed",
+      "name": "Einhyr Champion",
+      "type": "selectionEntry",
+      "targetId": "2cc6-e2bf-635f-1260",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "13f1-69b9-ca69-5b33",
+      "name": "Grimnyr",
+      "type": "selectionEntry",
+      "targetId": "d3a3-2d20-bd7e-6778",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "4e9a-b459-0e51-a548",
+      "name": "Brôkhyr Iron-master",
+      "type": "selectionEntry",
+      "targetId": "8f33-5601-3707-78f4",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "70ac-ee9a-7ee4-b58a",
+      "name": "Einhyr Hearthguard",
+      "type": "selectionEntry",
+      "targetId": "09d3-6357-7888-00d9",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7ae6-5074-5aed-9b38",
+      "name": "Cthonian Beserks",
+      "type": "selectionEntry",
+      "targetId": "415a-e6f6-d17f-d700",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "d809-c5ea-553a-b5c3",
+      "name": "Hernkyn Pioneers",
+      "type": "selectionEntry",
+      "targetId": "9086-5272-398b-bbce",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "41df-f0bf-c93b-7985",
+      "name": "Sagitaur",
+      "type": "selectionEntry",
+      "targetId": "9655-8367-7467-9e6e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2703-84c8-ac20-8fe2",
+      "name": "Brôkhyr Thunderkyn",
+      "type": "selectionEntry",
+      "targetId": "ea1b-99f6-c398-06b1",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "91d8-e4b4-36db-2a90",
+      "name": "Hekaton Land Fortress",
+      "type": "selectionEntry",
+      "targetId": "a110-e538-4e85-159b",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "d10f-df25-9eb8-59cb",
+      "name": "Show/Hide Options",
+      "type": "selectionEntry",
+      "targetId": "e8ef-836a-a9d1-901d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "0cd5-244a-7f7c-54d2",
+      "name": "Hernkyn Yaegirs",
+      "type": "selectionEntry",
+      "targetId": "5b0b-c18d-1470-44bb",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8d46-ac16-26c2-5070",
+      "name": "Order of Battle",
+      "type": "selectionEntry",
+      "targetId": "eda7-8b4b-3719-af36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "aa33-6170-7f3a-e9a4",
+      "name": "Buri Aegnirssen",
+      "type": "selectionEntry",
+      "targetId": "b7e1-55fd-9aae-b690",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "0488-7b45-6b67-5d97",
+      "name": "Memnyr Strategist",
+      "type": "selectionEntry",
+      "targetId": "7932-6aac-cd01-3181",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "51fd-73c3-d503-6045",
+      "name": "Arkanyst Evaluator",
+      "type": "selectionEntry",
+      "targetId": "e5c2-d1a0-b54d-65df",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e49d-ee2d-8886-071d",
+      "name": "Kapricus Defenders",
+      "type": "selectionEntry",
+      "targetId": "f788-ecf2-9b2e-bc23",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "903d-bf87-3869-2de1",
+      "name": "Kapricus Carrier",
+      "type": "selectionEntry",
+      "targetId": "cfbc-9eeb-badb-b28c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8d40-2f83-62b8-2ecb",
+      "name": "Ironkin Steeljacks with Heavy Volkanite Disintegrators",
+      "type": "selectionEntry",
+      "targetId": "1e3f-209d-798f-3a42",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ecd1-ec07-60b7-cec3",
+      "name": "Ironkin Steeljacks with Melee Weapons",
+      "type": "selectionEntry",
+      "targetId": "2add-0a08-fbef-8f5e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "65b1-0764-a678-d9c7",
+      "name": "Cthonian Earthshakers",
+      "type": "selectionEntry",
+      "targetId": "595a-cfac-3b40-710d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "5758-4d10-96fb-0e51",
+      "name": "Living Ancestor [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "0039-5b91-2e96-0e08",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "85f1-9376-99ae-7570",
+      "name": "Kinhost Commander [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "05b6-7622-edbe-7a9a",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "fbd6-8200-928b-b1df",
+      "name": "Steeljack Elder [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "4eaf-78d5-9195-0e36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "584a-3716-67bf-fb8f",
+      "name": "Berehk Stornbröw",
+      "type": "selectionEntry",
+      "targetId": "c7ea-1b76-c8c1-4786",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "5914-3326-fac9-bf29",
+      "name": "Detachment",
+      "type": "upgrade",
+      "targetId": "5914-3326-fac9-bf29",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2e6e-95a1-60ad-7b1c",
+      "name": "Ûthar the Destined",
+      "type": "model",
+      "targetId": "2e6e-95a1-60ad-7b1c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 100
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Ûthar the Destined",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Ancestral Fortune",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per turn, you can spend 1YP to change one Hit roll, one Wound roll or one saving throw made for this model to an unmodified 6."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: EINHYR HEARTHGUARD, HEARTHKYN WARRIORS"
+          }
+        },
+        {
+          "name": "Grim Efficiency",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per battle round, when a friendly ^^**Leagues of Votann**^^ unit within 12\" of this model is targeted with a Stratagem, this model can use this ability. If it does, reduce the CP cost of that Stratagem by 1CP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ba4f-c3f9-6925-af0c",
+      "name": "Hearthkyn Warriors",
+      "type": "unit",
+      "targetId": "ba4f-c3f9-6925-af0c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 90
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Luck Has, Need Keeps, Toil Earns",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, until your opponent's Level of Control over that is greater than yours at the end of a phase."
+          }
+        },
+        {
+          "name": "Hearthkyn Warriors",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "4+",
+            "w": "1",
+            "ld": "7+",
+            "oc": "2",
+            "insv": "5+",
+            "base": "28.5mm"
+          }
+        },
+        {
+          "name": "Pan-spectral Scanning",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a model in this unit makes a ranged attack, re-roll a Hit roll of 1."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "0369-3c56-a9d1-307d",
+      "name": "Rampart crest",
+      "type": "upgrade",
+      "targetId": "0369-3c56-a9d1-307d",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Rampart crest",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While the bearer is leading a unit, models in that unit have a 5+ invulnerable save."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "1b00-2abb-718f-def6",
+      "name": "Kâhl",
+      "type": "model",
+      "targetId": "1b00-2abb-718f-def6",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 65
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Kâhl",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "4",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Kindred Hero",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: EINHYR HEARTHGUARD, HEARTHKYN WARRIORS"
+          }
+        },
+        {
+          "name": "Seized Opportunity",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per phase, one model from your army with this ability can use it when its unit destroys an enemy unit. If it does, gain 1YP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "6a0b-0a93-2494-57f9",
+      "name": "Autoch-pattern combi-bolter",
+      "type": "upgrade",
+      "targetId": "6a0b-0a93-2494-57f9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Autoch-pattern combi-bolter",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "4",
+            "bs": "2+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c675-e98e-8cfd-c5b4",
+      "name": "Volkanite disintegrator",
+      "type": "upgrade",
+      "targetId": "c675-e98e-8cfd-c5b4",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Volkanite disintegrator",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "3",
+            "bs": "2+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "keywords": "Devastating Wounds"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "92b3-11ff-2a27-cd0c",
+      "name": "Warlord",
+      "type": "upgrade",
+      "targetId": "92b3-11ff-2a27-cd0c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "0a19-2550-9aad-a268",
+      "name": "Teleport crest",
+      "type": "upgrade",
+      "targetId": "0a19-2550-9aad-a268",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Teleport crest",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While the bearer is leading a unit, models in that unit have the Deep Strike ability."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2cc6-e2bf-635f-1260",
+      "name": "Einhyr Champion",
+      "type": "model",
+      "targetId": "2cc6-e2bf-635f-1260",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 65
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following unit: EINHYR HEARTHGUARD"
+          }
+        },
+        {
+          "name": "Einhyr Champion",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "2+",
+            "w": "5",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Exemplar of the Einhyr",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit."
+          }
+        },
+        {
+          "name": "Mass Driver Accelerators",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model ends a Charge move, you can select one enemy unit within Engagement Range of this model and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7133-f7e4-5925-8200",
+      "name": "Weavefield crest",
+      "type": "upgrade",
+      "targetId": "7133-f7e4-5925-8200",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Weavefield crest",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Models in the bearer's unit have a 5+ invulnerable save."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "d3a3-2d20-bd7e-6778",
+      "name": "Grimnyr",
+      "type": "unit",
+      "targetId": "d3a3-2d20-bd7e-6778",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 65
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following unit: HEARTHKYN WARRIORS"
+          }
+        },
+        {
+          "name": "Fortify (Psychic)",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
+          }
+        },
+        {
+          "name": "Grimnyr's Regard",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per battle, at the start of any phase, you can select one friendly ^^**Leagues of Votann**^^ unit that is Battle-shocked and within 12\" of this unit's ^^**Grimnyr**^^ model. That unit is no longer Battle-shocked."
+          }
+        },
+        {
+          "name": "Unit Composition",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this unit’s Grimnyr model is ever destroyed, all of this unit’s remaining CORV models are also destroyed. While embarking within a ^^**Transport^^** and while embarked within a ^^**Transport^^**, each CORV model takes up the space of 0 models.’"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3bb3-2054-8746-01ca",
+      "name": "Autoch-pattern bolter",
+      "type": "upgrade",
+      "targetId": "3bb3-2054-8746-01ca",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "2",
+            "bs": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "keywords": "Pistol"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8f33-5601-3707-78f4",
+      "name": "Brôkhyr Iron-master",
+      "type": "unit",
+      "targetId": "8f33-5601-3707-78f4",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Multi-spectral visor",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1."
+          }
+        },
+        {
+          "name": "Brôkhyr Guild Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this unit is within 3\" of one or more friendly ^^**Leagues of Votann Vehicle**^^ or ^^**Ironkin Steeljacks**^^ units, if this unit is not an attached unit, it has the Lone Operative ability."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units:BRÔKHYR THUNDERKYN, HEARTHKYN WARRIORS"
+          }
+        },
+        {
+          "name": "Unit Composition",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "If this unit’s Brôkhyr Iron‑master model is ever destroyed, all of this unit’s remaining E‑COG models are also destroyed. While embarking within a ^^**Transport^^** and while embarked within a ^^**Transport^^**, each E‑COG model takes up the space of 0 models."
+          }
+        },
+        {
+          "name": "Forgewrought Expertise",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your Movement phase, this model can repair one friendly ^^**Leagues of Votann Vehicle, Exoframe^^** or ^^**Ironkin Steeljacks^^** unit within 3\" of it. One model in that unit regains up to D3 lost wounds, or up to 3 lost wounds if this unit contains an Ironkin Assistant model. Each unit can only be repaired once per turn."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "09d3-6357-7888-00d9",
+      "name": "Einhyr Hearthguard",
+      "type": "unit",
+      "targetId": "09d3-6357-7888-00d9",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 130
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Decisive Destruction",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a model in this unit makes a ranged attack that targets the closest eligible target, re-roll a Hit roll of 1."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "415a-e6f6-d17f-d700",
+      "name": "Cthonian Beserks",
+      "type": "unit",
+      "targetId": "415a-e6f6-d17f-d700",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 90
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Cyberstimms",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6, adding one to the result if units from your army have Fortify Takeover: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9086-5272-398b-bbce",
+      "name": "Hernkyn Pioneers",
+      "type": "unit",
+      "targetId": "9086-5272-398b-bbce",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Outflanking Mag-Riders",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your opponent’s turn, if this unit is wholly within 9\" of one or more battlefield edges and not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves."
+          }
+        },
+        {
+          "name": "Hernkyn Pioneer",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "6",
+            "sv": "4+",
+            "w": "3",
+            "ld": "7+",
+            "oc": "2",
+            "insv": "",
+            "base": "90x52.5mm"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "4a84-915b-cfe5-a091",
+      "name": "Bolt revolver",
+      "type": "upgrade",
+      "targetId": "4a84-915b-cfe5-a091",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Bolt revolver",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "12\"",
+            "a": "1",
+            "bs": "4+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "keywords": "Pistol"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "76f7-42ea-6b10-b6cf",
+      "name": "Bolt shotgun",
+      "type": "upgrade",
+      "targetId": "76f7-42ea-6b10-b6cf",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Bolt shotgun",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "18\"",
+            "a": "2",
+            "bs": "4+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "keywords": "Assault"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "cb8c-f3cd-d4a8-de89",
+      "name": "Magna-coil autocannon",
+      "type": "upgrade",
+      "targetId": "cb8c-f3cd-d4a8-de89",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Magna-coil autocannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "3",
+            "bs": "4+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "a3cc-6145-2fad-5f97",
+      "name": "Plasma knife",
+      "type": "upgrade",
+      "targetId": "a3cc-6145-2fad-5f97",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Plasma knife",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "2",
+            "ws": "4+",
+            "s": "4",
+            "ap": "-2",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9655-8367-7467-9e6e",
+      "name": "Sagitaur",
+      "type": "model",
+      "targetId": "9655-8367-7467-9e6e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Sagitaur",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "9",
+            "sv": "3+",
+            "w": "9",
+            "ld": "7+",
+            "oc": "2",
+            "insv": "",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "Blistering Advance",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Units can disembark from this ^^**Transport^^** after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally in the remainder of the turn."
+          }
+        },
+        {
+          "name": "Sagitaur",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 6 **LEAGUES OF VOTANN INFANTRY **models. It cannot transport **ARTILLERY, EXOARMOUR, EXOFRAME** or **IRONKIN STEELJACKS** models.\n\nAt the start of the Declare Battle Formations step, you can select one ^^**Hearthkyn Warriors^^** unit from your army that has not been split. If you do, that unit is split into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units). One of these units must start the battle embarked within this ^^**Transport^^**; the other can start the battle embarked within another ^^**Transport^^**, or it can be deployed as a separate unit."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ea1b-99f6-c398-06b1",
+      "name": "Brôkhyr Thunderkyn",
+      "type": "unit",
+      "targetId": "ea1b-99f6-c398-06b1",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 80
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Brôkhyr Thunderkyn",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "6",
+            "sv": "3+",
+            "w": "2",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Breaching Fire",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next Shooting phase, that enemy unit cannot have the Benefit of Cover."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "a110-e538-4e85-159b",
+      "name": "Hekaton Land Fortress",
+      "type": "model",
+      "targetId": "a110-e538-4e85-159b",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 250
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Hekaton Land Fortress",
+          "type": "Unit",
+          "characteristics": {
+            "m": "10\"",
+            "t": "12",
+            "sv": "2+",
+            "w": "16",
+            "ld": "7+",
+            "oc": "5",
+            "insv": "",
+            "base": "Hull"
+          }
+        },
+        {
+          "name": "MultiCOG Targeting",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes a ranged attack, you can ignore any or all modifiers to the following: that attack's Ballistic Skill characteristic, the Hit roll."
+          }
+        },
+        {
+          "name": "Damaged: 1-5 wounds remaining",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Hekaton Land Fortress",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 14 **LEAGUES OF VOTANN INFANTRY **models. Each **EXOARMOUR, EXOFRAME** or **IRONKIN STEELJACKS** model takes up the space of 2 models. It cannot transport **ARTILLERY** models."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "43cd-5e9f-e550-83e0",
+      "name": "Twin bolt cannon",
+      "type": "upgrade",
+      "targetId": "43cd-5e9f-e550-83e0",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Twin bolt cannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "36\"",
+            "a": "3",
+            "bs": "4+",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Sustained Hits 2, Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "8d16-a849-dd95-997f",
+      "name": "MATR autocannon",
+      "type": "upgrade",
+      "targetId": "8d16-a849-dd95-997f",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "MATR autocannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "6",
+            "bs": "4+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Assault, Sustained Hits 1"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "5b0b-c18d-1470-44bb",
+      "name": "Hernkyn Yaegirs",
+      "type": "unit",
+      "targetId": "5b0b-c18d-1470-44bb",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 90
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Pragmatic Hunters",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6”.'"
+          }
+        },
+        {
+          "name": "Hernkyn Yaegirs",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "5+",
+            "w": "1",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "28.5mm"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "b7e1-55fd-9aae-b690",
+      "name": "Buri Aegnirssen",
+      "type": "model",
+      "targetId": "b7e1-55fd-9aae-b690",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Buri Aegnirssen",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "6",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Grudge-fuelled Fortitude",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with its full wounds remaining."
+          }
+        },
+        {
+          "name": "Unhinged Vengeance",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your opponent’s Shooting phase, when an enemy unit has shot, if this model lost one or more wounds as a result of those attacks, this unit can make a **surge move** of up to D6+2\"."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "7932-6aac-cd01-3181",
+      "name": "Memnyr Strategist",
+      "type": "model",
+      "targetId": "7932-6aac-cd01-3181",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 45
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Memnyr Strategist",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "4+",
+            "w": "4",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Computational Mastermind",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "At the end of your Command phase, before you determine if units from your army have Hostile Acquisition or Fortify Takeover, for each objective marker you control that has one or more models with this ability in range of it, you can spend 1YP or gain 1YP."
+          }
+        },
+        {
+          "name": "Predictive Guidance",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per battle round, when you target this unit with the **Fire Overwatch/Heroic Intervention** stratagem, you can use this ability. If you do, that use of that stratagem is ‑1 CP."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: IRONKIN STEELJACKS WITH HEAVY VOLKANITE DISINTEGRATORS, IRONKIN STEELJACKS WITH MELEE WEAPONS"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "e5c2-d1a0-b54d-65df",
+      "name": "Arkanyst Evaluator",
+      "type": "model",
+      "targetId": "e5c2-d1a0-b54d-65df",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Arkanyst Evaluator",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "4",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "32mm"
+          }
+        },
+        {
+          "name": "Science Guild Support",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "While this model is within 3\" of one or more other friendly ^^**Leagues of Votann Infantry**^^ units (excluding units with the Lone Operative ability), this model has the Lone Operative ability."
+          }
+        },
+        {
+          "name": "Resource Transmutation",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per turn, in your Shooting phase, one model with this ability can choose to use it when it is selected to shoot. If it does, you must spend 1YP and, until the end of the phase, ranged weapons equipped by that model have the [^^**Sustained Hits 1**^^] ability and, after that model has shot this phase, if one or more enemy units were destroyed by those attacks, you can gain up to 2YP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "f788-ecf2-9b2e-bc23",
+      "name": "Kapricus Defenders",
+      "type": "unit",
+      "targetId": "f788-ecf2-9b2e-bc23",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 75
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Opportunistic Manoeuvre",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your Shooting phase, after this unit has shot, it can make a Normal Move of up to D6\". If it does, until the end of the turn, this unit is not eligible to declare a charge."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "9767-47cb-3455-140e",
+      "name": "Twin magna-coil autocannon",
+      "type": "upgrade",
+      "targetId": "9767-47cb-3455-140e",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Twin magna-coil autocannon",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "3",
+            "bs": "4+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "keywords": "Twin-linked"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "cfbc-9eeb-badb-b28c",
+      "name": "Kapricus Carrier",
+      "type": "model",
+      "targetId": "cfbc-9eeb-badb-b28c",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Kapricus Carrier",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "7",
+            "sv": "4+",
+            "w": "7",
+            "ld": "7+",
+            "oc": "2",
+            "insv": "",
+            "base": "105x70mm"
+          }
+        },
+        {
+          "name": "Scanner Uplinks",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "In your shooting phase, after this model has shot, select one enemy unit (excluding ^^**Monsters^^** and ^^**Vehicles^^**) hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+          }
+        },
+        {
+          "name": "Kapricus Carrier",
+          "type": "Transport",
+          "characteristics": {
+            "capacity": "This model has a transport capacity of 5 ^^**Hernkyn Yaegir**^^ models.\n\nAt the start of the Declare Battle Formations step, you can select one ^^**Hernkyn Yaegir^^** unit from your army that has not been split. If you do, that unit is split into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units). One of these units must start the battle embarked within this ^^**Transport^^**; the other can start the battle embarked within another ^^**Transport^^**, or it can be deployed as a separate unit."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "1e3f-209d-798f-3a42",
+      "name": "Ironkin Steeljacks with Heavy Volkanite Disintegrators",
+      "type": "unit",
+      "targetId": "1e3f-209d-798f-3a42",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 80
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Ironkin Steeljacks with Heavy Volkanite Disintegrators",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "3",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Purge Response",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time you target this unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ while resolving that Stratagem. If units from your army have Fortify Takeover, hits are scored on unmodified Hit rolls of 4+ while resolving that Stratagem instead."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "3909-7f26-8361-4746",
+      "name": "Heavy volkanite disintegrator",
+      "type": "upgrade",
+      "targetId": "3909-7f26-8361-4746",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Heavy volkanite disintegrator",
+          "type": "Ranged Weapons",
+          "characteristics": {
+            "range": "24\"",
+            "a": "6",
+            "bs": "4+",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "keywords": "Devastating Wounds"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "d428-e12a-3448-2113",
+      "name": "Plasma knife",
+      "type": "upgrade",
+      "targetId": "d428-e12a-3448-2113",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Plasma knife",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "2",
+            "ws": "3+",
+            "s": "6",
+            "ap": "-2",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2add-0a08-fbef-8f5e",
+      "name": "Ironkin Steeljacks with Melee Weapons",
+      "type": "unit",
+      "targetId": "2add-0a08-fbef-8f5e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 75
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Ironkin Steeljacks with Melee Weapons",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "3",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "~40mm"
+          }
+        },
+        {
+          "name": "Merciless Eradication",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time an enemy unit (excluding ^^**Monsters^^** and ^^**Vehicles^^**) that is within Engagement Range of this unit Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "2ced-2cf6-7ef8-5430",
+      "name": "Preymark crest",
+      "type": "upgrade",
+      "targetId": "2ced-2cf6-7ef8-5430",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Preymark crest",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time a model in the bearer's unit makes an attack that targets an enemy unit within range of one or more objective markers, on a Critical Wound, that attack has the [Precision] ability."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c867-1c31-b019-febb",
+      "name": "Plasma sword",
+      "type": "upgrade",
+      "targetId": "c867-1c31-b019-febb",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Plasma sword",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "6",
+            "ws": "3+",
+            "s": "6",
+            "ap": "-2",
+            "d": "1",
+            "keywords": "Sustained Hits 1"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "1625-bb6a-9990-094c",
+      "name": "Concussion gauntlet",
+      "type": "upgrade",
+      "targetId": "1625-bb6a-9990-094c",
+      "costs": [],
+      "profiles": [
+        {
+          "name": "Concussion gauntlet",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "3",
+            "ws": "4+",
+            "s": "10",
+            "ap": "-2",
+            "d": "2",
+            "keywords": "Lethal Hits"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "595a-cfac-3b40-710d",
+      "name": "Cthonian Earthshakers",
+      "type": "unit",
+      "targetId": "595a-cfac-3b40-710d",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 100
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ad15-fc45-03eb-59ac",
+      "name": "Close combat weapon",
+      "type": "upgrade",
+      "targetId": "ad15-fc45-03eb-59ac",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Close combat weapon",
+          "type": "Melee Weapons",
+          "characteristics": {
+            "range": "Melee",
+            "a": "1",
+            "ws": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "keywords": ""
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "0039-5b91-2e96-0e08",
+      "name": "Living Ancestor [Crucible]",
+      "type": "model",
+      "targetId": "0039-5b91-2e96-0e08",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 70
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Living Ancestor",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "4+",
+            "w": "4",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ^^**Hearthkyn Warriors**^^"
+          }
+        },
+        {
+          "name": "Grimnyr's Regard",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per battle, at the start of any phase, you can select one friendly ^^**Leagues of Votann**^^ unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "05b6-7622-edbe-7a9a",
+      "name": "Kinhost Commander [Crucible]",
+      "type": "model",
+      "targetId": "05b6-7622-edbe-7a9a",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 65
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Kinhost Commander",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "4",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ^^**Einhyr Hearthguard, Hearthkyn Warriors**^^"
+          }
+        },
+        {
+          "name": "Seized Opportunity",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Once per phase, one model from your army with this ability can use it when its unit destroys an enemy unit. If it does, you gain 1YP."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "4eaf-78d5-9195-0e36",
+      "name": "Steeljack Elder [Crucible]",
+      "type": "model",
+      "targetId": "4eaf-78d5-9195-0e36",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 80
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Steeljack Elder",
+          "type": "Unit",
+          "characteristics": {
+            "m": "5\"",
+            "t": "6",
+            "sv": "2+",
+            "w": "5",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ^^**Ironkin Steeljacks with Heavy Volkanite Disintegrators, Ironkin Steeljacks with Melee Weapons**^^"
+          }
+        },
+        {
+          "name": "Forgewrought Skill",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Each time this model makes an attack, you can re-roll the Hit roll."
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "c7ea-1b76-c8c1-4786",
+      "name": "Berehk Stornbröw",
+      "type": "model",
+      "targetId": "c7ea-1b76-c8c1-4786",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 85
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Berehk Stornbröw",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "6",
+            "sv": "5+",
+            "w": "5",
+            "ld": "7+",
+            "oc": "1",
+            "insv": "5+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "Break the Foe",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "Melee weapons equipped by models in this unit have the [^^Sustained Hits 1^^] ability."
+          }
+        },
+        {
+          "name": "Relentless Avalanche",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "You can target this model's unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: CTHONIAN BESERKS"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "0ec6-9ba0-eef0-b5b9",
+      "name": "Detachment",
+      "type": "selectionEntry",
+      "targetId": "5914-3326-fac9-bf29",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "34a3-1b3f-4c56-c27a",
+      "name": "Hearthkyn Warriors",
+      "type": "selectionEntry",
+      "targetId": "ba4f-c3f9-6925-af0c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "95dc-990b-2a93-5e83",
+      "name": "Ûthar the Destined",
+      "type": "selectionEntry",
+      "targetId": "2e6e-95a1-60ad-7b1c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2c9c-869f-d3a9-a264",
+      "name": "Kâhl",
+      "type": "selectionEntry",
+      "targetId": "1b00-2abb-718f-def6",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "af26-0d4c-e9c1-22ed",
+      "name": "Einhyr Champion",
+      "type": "selectionEntry",
+      "targetId": "2cc6-e2bf-635f-1260",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "13f1-69b9-ca69-5b33",
+      "name": "Grimnyr",
+      "type": "selectionEntry",
+      "targetId": "d3a3-2d20-bd7e-6778",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "4e9a-b459-0e51-a548",
+      "name": "Brôkhyr Iron-master",
+      "type": "selectionEntry",
+      "targetId": "8f33-5601-3707-78f4",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "70ac-ee9a-7ee4-b58a",
+      "name": "Einhyr Hearthguard",
+      "type": "selectionEntry",
+      "targetId": "09d3-6357-7888-00d9",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "7ae6-5074-5aed-9b38",
+      "name": "Cthonian Beserks",
+      "type": "selectionEntry",
+      "targetId": "415a-e6f6-d17f-d700",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "d809-c5ea-553a-b5c3",
+      "name": "Hernkyn Pioneers",
+      "type": "selectionEntry",
+      "targetId": "9086-5272-398b-bbce",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "41df-f0bf-c93b-7985",
+      "name": "Sagitaur",
+      "type": "selectionEntry",
+      "targetId": "9655-8367-7467-9e6e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "2703-84c8-ac20-8fe2",
+      "name": "Brôkhyr Thunderkyn",
+      "type": "selectionEntry",
+      "targetId": "ea1b-99f6-c398-06b1",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "91d8-e4b4-36db-2a90",
+      "name": "Hekaton Land Fortress",
+      "type": "selectionEntry",
+      "targetId": "a110-e538-4e85-159b",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "d10f-df25-9eb8-59cb",
+      "name": "Show/Hide Options",
+      "type": "selectionEntry",
+      "targetId": "e8ef-836a-a9d1-901d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "0cd5-244a-7f7c-54d2",
+      "name": "Hernkyn Yaegirs",
+      "type": "selectionEntry",
+      "targetId": "5b0b-c18d-1470-44bb",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8d46-ac16-26c2-5070",
+      "name": "Order of Battle",
+      "type": "selectionEntry",
+      "targetId": "eda7-8b4b-3719-af36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "aa33-6170-7f3a-e9a4",
+      "name": "Buri Aegnirssen",
+      "type": "selectionEntry",
+      "targetId": "b7e1-55fd-9aae-b690",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "0488-7b45-6b67-5d97",
+      "name": "Memnyr Strategist",
+      "type": "selectionEntry",
+      "targetId": "7932-6aac-cd01-3181",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "51fd-73c3-d503-6045",
+      "name": "Arkanyst Evaluator",
+      "type": "selectionEntry",
+      "targetId": "e5c2-d1a0-b54d-65df",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "e49d-ee2d-8886-071d",
+      "name": "Kapricus Defenders",
+      "type": "selectionEntry",
+      "targetId": "f788-ecf2-9b2e-bc23",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "903d-bf87-3869-2de1",
+      "name": "Kapricus Carrier",
+      "type": "selectionEntry",
+      "targetId": "cfbc-9eeb-badb-b28c",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8d40-2f83-62b8-2ecb",
+      "name": "Ironkin Steeljacks with Heavy Volkanite Disintegrators",
+      "type": "selectionEntry",
+      "targetId": "1e3f-209d-798f-3a42",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "ecd1-ec07-60b7-cec3",
+      "name": "Ironkin Steeljacks with Melee Weapons",
+      "type": "selectionEntry",
+      "targetId": "2add-0a08-fbef-8f5e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "65b1-0764-a678-d9c7",
+      "name": "Cthonian Earthshakers",
+      "type": "selectionEntry",
+      "targetId": "595a-cfac-3b40-710d",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "5758-4d10-96fb-0e51",
+      "name": "Living Ancestor [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "0039-5b91-2e96-0e08",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "85f1-9376-99ae-7570",
+      "name": "Kinhost Commander [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "05b6-7622-edbe-7a9a",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "fbd6-8200-928b-b1df",
+      "name": "Steeljack Elder [Crucible]",
+      "type": "selectionEntry",
+      "targetId": "4eaf-78d5-9195-0e36",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "584a-3716-67bf-fb8f",
+      "name": "Berehk Stornbröw",
+      "type": "selectionEntry",
+      "targetId": "c7ea-1b76-c8c1-4786",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ]
 }

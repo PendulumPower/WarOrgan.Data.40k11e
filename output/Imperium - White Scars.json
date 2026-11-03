@@ -5,6 +5,388 @@
   "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
-  "units": [],
-  "datasheets": []
+  "units": [
+    {
+      "id": "63f3-6aeb-c9ed-abfc",
+      "name": "Kor'sarro Khan",
+      "type": "model",
+      "targetId": "63f3-6aeb-c9ed-abfc",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 80
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Kor'sarro Khan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "For the Khan!",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "- This unit’s ranged attacks have [ASSAULT]\n- This unit’s melee attacks have [LANCE]."
+          }
+        },
+        {
+          "name": "Trophy Taker",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit’s attacks that target a Character unit can:\n\n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "d72d-b930-9849-924e",
+      "name": "Suboden Khan",
+      "type": "model",
+      "targetId": "d72d-b930-9849-924e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 105
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Suboden Khan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "6",
+            "sv": "3+",
+            "w": "8",
+            "ld": "6+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "90x52.5mm"
+          }
+        },
+        {
+          "name": "Spear of Chogoris",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "- This unit’s ranged attacks have [Assault].\n- When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.\n- If the assault doctrine is active for this unit, this unit has +1 to advance rolls and charge rolls."
+          }
+        },
+        {
+          "name": "Skilled Riders",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has Mobile."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: OUTRIDER SQUAD"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ed84-3c2a-5346-ca97",
+      "name": "Kor'sarro Khan",
+      "type": "selectionEntry",
+      "targetId": "63f3-6aeb-c9ed-abfc",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8960-af71-0dcb-747e",
+      "name": "Suboden Khan",
+      "type": "selectionEntry",
+      "targetId": "d72d-b930-9849-924e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ],
+  "datasheets": [
+    {
+      "id": "63f3-6aeb-c9ed-abfc",
+      "name": "Kor'sarro Khan",
+      "type": "model",
+      "targetId": "63f3-6aeb-c9ed-abfc",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 80
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Kor'sarro Khan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "6\"",
+            "t": "5",
+            "sv": "3+",
+            "w": "5",
+            "ld": "6+",
+            "oc": "1",
+            "insv": "4+",
+            "base": "40mm"
+          }
+        },
+        {
+          "name": "For the Khan!",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "- This unit’s ranged attacks have [ASSAULT]\n- This unit’s melee attacks have [LANCE]."
+          }
+        },
+        {
+          "name": "Trophy Taker",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit’s attacks that target a Character unit can:\n\n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "d72d-b930-9849-924e",
+      "name": "Suboden Khan",
+      "type": "model",
+      "targetId": "d72d-b930-9849-924e",
+      "costs": [
+        {
+          "name": "pts",
+          "value": 105
+        },
+        {
+          "name": "Crusade Points",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Battle Honours",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Experience",
+          "value": 0
+        },
+        {
+          "name": "Crusade: Weapon Modifications",
+          "value": 0
+        },
+        {
+          "name": "Blackstone Fragments",
+          "value": 0
+        },
+        {
+          "name": "Detachment Points",
+          "value": 0
+        },
+        {
+          "name": "Enhancements",
+          "value": 0
+        },
+        {
+          "name": "Honour Points",
+          "value": 0
+        },
+        {
+          "name": "Relic Fragments",
+          "value": 0
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Suboden Khan",
+          "type": "Unit",
+          "characteristics": {
+            "m": "12\"",
+            "t": "6",
+            "sv": "3+",
+            "w": "8",
+            "ld": "6+",
+            "oc": "2",
+            "insv": "4+",
+            "base": "90x52.5mm"
+          }
+        },
+        {
+          "name": "Spear of Chogoris",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "- This unit’s ranged attacks have [Assault].\n- When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.\n- If the assault doctrine is active for this unit, this unit has +1 to advance rolls and charge rolls."
+          }
+        },
+        {
+          "name": "Skilled Riders",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This unit has Mobile."
+          }
+        },
+        {
+          "name": "Leader",
+          "type": "Abilities",
+          "characteristics": {
+            "description": "This model can be attached to the following units: OUTRIDER SQUAD"
+          }
+        }
+      ],
+      "rules": []
+    },
+    {
+      "id": "ed84-3c2a-5346-ca97",
+      "name": "Kor'sarro Khan",
+      "type": "selectionEntry",
+      "targetId": "63f3-6aeb-c9ed-abfc",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    },
+    {
+      "id": "8960-af71-0dcb-747e",
+      "name": "Suboden Khan",
+      "type": "selectionEntry",
+      "targetId": "d72d-b930-9849-924e",
+      "costs": [],
+      "profiles": [],
+      "rules": []
+    }
+  ]
 }
