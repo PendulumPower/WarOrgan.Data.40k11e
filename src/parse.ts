@@ -56,7 +56,11 @@ function parseCatalogue(filePath: string): { factionName: string; units: Unit[] 
     }
   }
 
-  const parser = new XMLParser({ attributeNamePrefix: '@_', ignoreAttributes: false } as any);
+  const parser = new XMLParser({ 
+    attributeNamePrefix: '@_', 
+    ignoreAttributes: false 
+  } as any);
+  
   const result = parser.parse(fileContent);
   const catalogue = result.catalogue;
   if (!catalogue) return { factionName: 'Unknown', units: [] };
