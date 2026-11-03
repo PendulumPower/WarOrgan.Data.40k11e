@@ -4,14 +4,10 @@ on:
   push:
     branches: [ main, master ]
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * 0' # Weekly update check
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # Required to create GitHub releases
 
     steps:
       - name: Checkout Repository
@@ -25,30 +21,24 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Clone Upstream BSData Repository
+      - name: Clean Previous Builds
         run: |
-          git clone --depth 1 https://github.com/BSData/wh40k-10e.git upstream-data
+          rm -rf Assets/MyGame
+          rm -f MyGame.zip
 
-      - name: Run Dataset Parser Pipeline
-        run: npm run build-data
+      - name: Run Parser Script
+        run: npx ts-node src/parse.ts
         env:
           INPUT_DIR: ./upstream-data
           OUTPUT_DIR: ./Assets/MyGame
-
-      - name: Validate Generated Dataset
-        run: npm run validate
 
       - name: Package Dataset Zip
         run: |
           cd Assets/MyGame
           zip -r ../../MyGame.zip .
 
-      - name: Create Release and Upload Asset
-        uses: softprops/action-gh-release@v2
+      - name: Upload Dataset Artifact
+        uses: actions/upload-artifact@v4
         with:
-          files: MyGame.zip
-          tag_name: v1.${{ github.run_number }}.0
-          name: Dataset Release v1.${{ github.run_number }}.0
-          body: Automated dataset update compiled from upstream BSData and validated against schema.
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: war-organ-dataset
+          path: MyGame.zip
