@@ -29,10 +29,20 @@ async function runParser() {
     process.exit(1);
   }
 
-  const catFiles = await glob('**/*.cat', { cwd: INPUT_DIR });
+  // Debug: List top-level contents of INPUT_DIR to inspect repo structure
+  console.log('📂 Contents of upstream/bsdata root:');
+  try {
+    const topLevelFiles = fs.readdirSync(INPUT_DIR);
+    console.log(topLevelFiles);
+  } catch (e) {
+    console.error('Could not read directory:', e);
+  }
+
+  // Search recursively for any .cat files
+  const catFiles = await glob('**/*.cat', { cwd: INPUT_DIR, nocase: true });
 
   if (catFiles.length === 0) {
-    console.error('❌ Error: No .cat files found inside upstream/bsdata!');
+    console.error('❌ Error: No .cat files found inside upstream/bsdata using glob!');
     process.exit(1);
   }
 
