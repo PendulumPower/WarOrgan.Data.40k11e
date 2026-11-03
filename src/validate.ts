@@ -10,8 +10,8 @@ const FactionSchema = z.object({
   gameSystemId: z.any().optional(),
   factionTraits: z.any().optional(),
   detachments: z.any().optional(),
-  units: z.array(z.any()),
-  datasheets: z.array(z.any()),
+  units: z.array(z.any()).default([]),
+  datasheets: z.array(z.any()).default([]),
 });
 
 async function validateOutput() {
@@ -25,8 +25,13 @@ async function validateOutput() {
 
   for (const file of files) {
     const fullPath = path.resolve(file);
-    const content = JSON.parse(fs.readFileSync(fullPath, 'utf-8'));
-    FactionSchema.parse(content);
+    try {
+      const content = JSON.parse(fs.readFileSync(fullPath, 'utf-8'));
+      FactionSchema.parse(content);
+    } catch (err) {
+      console.error(`❌ Validation error in file: ${file}`, err);
+      throw err;
+    }
   }
 
   console.log('✅ Validation passed cleanly!');
