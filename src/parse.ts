@@ -15,6 +15,16 @@ const xmlParser = new XMLParser({
 async function runParser() {
   console.log('⚡ Starting dataset build from upstream XML...');
 
+  if (!fs.existsSync(INPUT_DIR) || fs.readdirSync(INPUT_DIR).length === 0) {
+    console.warn('⚠️ Warning: upstream/bsdata directory is empty or missing. Skipping parse until submodule is initialized.');
+    // Create a dummy output file so the build step doesn't fail on first run
+    if (!fs.existsSync(OUTPUT_DIR)) {
+      fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+    }
+    fs.writeFileSync(path.join(OUTPUT_DIR, 'placeholder.json'), JSON.stringify({ id: 'placeholder', name: 'Placeholder', units: [] }, null, 2));
+    return;
+  }
+
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   }
@@ -46,7 +56,7 @@ async function runParser() {
     );
   }
 
-  console.log('SUCCESS! Parsing complete! Files saved to output/');
+  console.log('✅ Parsing complete! Files saved to output/');
 }
 
 function extractUnits(catalogue: any) {
