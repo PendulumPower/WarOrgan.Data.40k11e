@@ -2,16 +2,6 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { XMLParser } from 'fast-xml-parser';
 
-interface Stat {
-  Id: string;
-  Value: string;
-}
-
-interface StatLine {
-  StatName: string;
-  Stats: Stat[];
-}
-
 interface Unit {
   Id: string;
   DisplayName: string;
@@ -25,23 +15,36 @@ interface Unit {
     }>;
   };
   Points: Array<{ ModelCount: number; Cost: number }>;
-  StatLines: StatLine[];
+  StatLines: Array<{
+    StatName: string;
+    Stats: Array<{ Id: string; Value: string }>;
+  }>;
   Weapons: any[];
 }
 
 const inputDir = process.env.INPUT_DIR || './upstream-data';
 const outputDir = process.env.OUTPUT_DIR || './Assets/MyGame';
 
-function parseCatalogue(filePath: string): Unit[] {
-  const xmlData = fs.readFileSync(filePath, 'utf-8');
+function parseCatalogue(filePath: string): { factionName: string; units: Unit[] } {
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  
+  // Handle both XML (.cat) and any JSON inputs safely
+  if (filePath.endsWith('.json')) {
+    try {
+      const data = JSON.parse(fileContent);
+      return { factionName: data.name || path.basename(filePath, '.json'), units: data.units || [] };
+    } catch {
+      return { factionName: 'Unknown', units: [] };
+    }
+  }
+
   const parser = new XMLParser({ attrNodeName: "@_", ignoreAttributes: false });
-  const result = parser.parse(xmlData);
-
-  const units: Unit[] = [];
+  const result = parser.parse(fileContent);
   const catalogue = result.catalogue;
-  if (!catalogue) return units;
+  if (!catalogue) return { factionName: 'Unknown', units: [] };
 
-  // Extract shared selection entries or profiles from BattleScribe XML structure
+  const factionName = catalogue["@_name"] || "Unknown Faction";
+  const units: Unit[] = [];
   const selectionEntries = catalogue.sharedSelectionEntries?.selectionEntry || [];
   const entriesArray = Array.isArray(selectionEntries) ? selectionEntries : [selectionEntries];
 
@@ -50,11 +53,10 @@ function parseCatalogue(filePath: string): Unit[] {
       const unitName = entry["@_name"];
       const unitId = unitName.toUpperCase().replace(/[^A-Z0-9]/g, '_');
 
-      // Extract profiles (Statlines)
       const profiles = entry.profiles?.profile || [];
       const profilesArray = Array.isArray(profiles) ? profiles : [profiles];
       
-      const stats: Stat[] = [];
+      const stats: Array<{ Id: string; Value: string }> = [];
       for (const profile of profilesArray) {
         if (profile["@_typeName"] === "Unit") {
           const characteristics = profile.characteristics?.characteristic || [];
@@ -71,7 +73,7 @@ function parseCatalogue(filePath: string): Unit[] {
       units.push({
         Id: unitId,
         DisplayName: unitName,
-        FactionKeywords: [catalogue["@_name"] || "Aeldari"],
+        FactionKeywords: [factionName],
         UnitComposition: {
           ModelCompositions: [
             {
@@ -82,66 +84,64 @@ function parseCatalogue(filePath: string): Unit[] {
             }
           ]
         },
-        Points: [{ ModelCount: 1, Cost: 100 }], // Default fallback or parsed cost
-        StatLines: [
-          {
-            StatName: unitName,
-            Stats: stats
-          }
-        ],
+        Points: [{ ModelCount: 1, Cost: 100 }],
+        StatLines: [{ StatName: unitName, Stats: stats }],
         Weapons: []
       });
     }
   }
 
-  return units;
+  return { factionName, units };
 }
 
 function main() {
-  console.log(`Scanning input directory: ${inputDir}`);
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(path.join(outputDir, 'Rosters'), { recursive: true });
   }
 
-  // Find all .cat files in upstream repo
-  const findCatFiles = (dir: string): string[] => {
+  const findFiles = (dir: string, ext: string): string[] => {
     let results: string[] = [];
-    const list = fs.readdirSync(dir);
-    for (const file of list) {
+    if (!fs.existsSync(dir)) return results;
+    for (const file of fs.readdirSync(dir)) {
       const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      if (stat && stat.isDirectory()) {
-        results = results.concat(findCatFiles(filePath));
-      } else if (file.endsWith('.cat')) {
+      if (fs.statSync(filePath).isDirectory()) {
+        results = results.concat(findFiles(filePath, ext));
+      } else if (file.endsWith(ext)) {
         results.push(filePath);
       }
     }
     return results;
   };
 
-  const catFiles = findCatFiles(inputDir);
-  const allUnits: Unit[] = [];
+  // Search upstream repo for catalog files (.cat or .json)
+  const catFiles = [...findFiles(inputDir, '.cat'), ...findFiles(inputDir, '.json')];
+  const factionsMap: { [key: string]: Unit[] } = {};
+  const factionList: Array<{ Name: string; FactionKeyword: string; MainColor: string; DarkColor: string }> = [];
 
   for (const file of catFiles) {
     try {
-      const units = parseCatalogue(file);
-      allUnits.push(...units);
+      const { factionName, units } = parseCatalogue(file);
+      if (units.length > 0) {
+        if (!factionsMap[factionName]) {
+          factionsMap[factionName] = [];
+          factionList.push({
+            Name: factionName,
+            FactionKeyword: factionName,
+            MainColor: "#315C91",
+            DarkColor: "#6FA4D9"
+          });
+        }
+        factionsMap[factionName].push(...units);
+      }
     } catch (err) {
-      console.error(`Error parsing ${file}:`, err);
+      console.error(`Failed parsing ${file}:`, err);
     }
   }
 
-  // Write DatasetDefinition.json
+  // 1. Generate DataSetDefinition.json
   const datasetDef = {
     Features: "None",
-    Factions: [
-      {
-        Name: "Aeldari",
-        FactionKeyword: "Aeldari",
-        MainColor: "#315C91",
-        DarkColor: "#6FA4D9"
-      }
-    ],
+    Factions: factionList.length > 0 ? factionList : [{ Name: "Aeldari", FactionKeyword: "Aeldari", MainColor: "#315C91", DarkColor: "#6FA4D9" }],
     BattleSizeDefinitions: [
       { Name: "Incursion", PointsTotal: 1000, DetachmentPoints: 0, EnhancementLimit: 0, UnitLimit: 0 },
       { Name: "Strike Force", PointsTotal: 2000, DetachmentPoints: 0, EnhancementLimit: 0, UnitLimit: 0 },
@@ -154,18 +154,20 @@ function main() {
     JSON.stringify(datasetDef, null, 2)
   );
 
-  // Write Faction Roster JSON
-  const rosterData = {
-    Name: "Aeldari",
-    Units: allUnits
-  };
+  // 2. Generate individual faction JSONs in the Rosters/ folder
+  for (const [factionName, units] of Object.entries(factionsMap)) {
+    const safeFileName = factionName.replace(/[^a-zA-Z0-9-_]/g, '_') + '.json';
+    const rosterData = {
+      Name: factionName,
+      Units: units
+    };
+    fs.writeFileSync(
+      path.join(outputDir, 'Rosters', safeFileName),
+      JSON.stringify(rosterData, null, 2)
+    );
+  }
 
-  fs.writeFileSync(
-    path.join(outputDir, 'Rosters', 'Aeldari.json'),
-    JSON.stringify(rosterData, null, 2)
-  );
-
-  console.log(`Dataset generated successfully in ${outputDir}`);
+  console.log("Dataset normalization complete.");
 }
 
 main();
