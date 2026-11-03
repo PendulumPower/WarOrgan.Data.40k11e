@@ -90,7 +90,10 @@ jobs:
           ZIP=$(find . -name '*.zip' -not -path './node_modules/*' -not -path './bsdata/*' -not -path '*/obj/*' | head -n1)
           if [ -z "$ZIP" ]; then
             echo "No dataset zip produced. The builder log above/below shows why (usually validation errors):"
-            tail -n 60 build.log
+            echo "--- error categories (count, message with names removed) ---"
+            grep -E ': ' build.log | sed -E "s/^[^:]*: //; s/'[^']*'/'...'/g" | sort | uniq -c | sort -rn | head -n 20
+            echo "--- first 40 raw lines ---"
+            head -n 40 build.log
             exit 1
           fi
           echo "ZIP=$ZIP" >> "$GITHUB_ENV"
