@@ -126,7 +126,11 @@ function parseCatalogue(filePath: string): { factionName: string; units: Unit[] 
 }
 
 function main() {
-  console.log(`Scanning input directory: ${inputDir}`);
+  console.log(`Scanning input directory: ${path.resolve(inputDir)}`);
+  if (!fs.existsSync(inputDir)) {
+    throw new Error(`CRITICAL: Input directory '${inputDir}' does not exist! Check where your data files are located.`);
+  }
+
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
   }
@@ -147,6 +151,10 @@ function main() {
 
   const catFiles = [...findFiles(inputDir, '.cat'), ...findFiles(inputDir, '.json')];
   console.log(`Found ${catFiles.length} catalog files to process.`);
+
+  if (catFiles.length === 0) {
+    throw new Error(`CRITICAL: No catalog files (.cat or .json) found in ${inputDir}. Parser halted.`);
+  }
 
   const cataloguesIndex: CatalogueIndexItem[] = [];
 
