@@ -5,14 +5,8 @@ import { glob } from 'glob';
 const INPUT_DIR = path.join(__dirname, '../upstream/bsdata');
 const OUTPUT_DIR = path.join(__dirname, '../output');
 
-function ensureArray(val: any): any[] {
-  if (!val) return [];
-  if (Array.isArray(val)) return val;
-  return [val];
-}
-
 async function runParser() {
-  console.log('⚡ Starting deep War Organ dataset conversion...');
+  console.log('⚡ Starting full-fidelity War Organ dataset compilation...');
 
   if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -30,9 +24,10 @@ async function runParser() {
     process.exit(1);
   }
 
-  console.log(`📂 Processing ${jsonFiles.length} upstream JSON files...`);
+  console.log(`📂 Processing ${jsonFiles.length} upstream JSON files with 100% data retention...`);
 
   let processedCount = 0;
+  const catalogueIndex: any[] = [];
 
   for (const file of jsonFiles) {
     try {
@@ -40,98 +35,46 @@ async function runParser() {
       const rawContent = fs.readFileSync(fullPath, 'utf-8');
       const data = JSON.parse(rawContent);
 
-      const root = data.catalogue || data;
-
-      // Extract entries from all possible nested keys
-      const rawEntries = [
-        ...ensureArray(root.selectionEntries),
-        ...ensureArray(root.selectionEntries?.selectionEntry),
-        ...ensureArray(root.sharedSelectionEntries),
-        ...ensureArray(root.sharedSelectionEntries?.selectionEntry),
-        ...ensureArray(root.entryLinks),
-        ...ensureArray(root.entryLinks?.entryLink),
-        ...ensureArray(root.units),
-        ...ensureArray(root.datasheets)
-      ];
-
-      const datasheetsList = rawEntries.map((item: any) => {
-        const itemProfiles = [
-          ...ensureArray(item.profiles),
-          ...ensureArray(item.profiles?.profile)
-        ];
-
-        return {
-          id: item.id || item.targetId || '',
-          name: item.name || 'Unnamed Datasheet',
-          type: item.type || 'unit',
-          targetId: item.targetId || item.id || '',
-          costs: ensureArray(item.costs || item.costs?.cost).map((c: any) => ({
-            name: c.name || 'pts',
-            value: c.value ?? c.costVal ?? 0
-          })),
-          profiles: itemProfiles.map((p: any) => ({
-            name: p.name || '',
-            type: p.typeName || p.type || '',
-            characteristics: extractCharacteristics(p)
-          })),
-          rules: ensureArray(item.rules || item.rules?.rule).map((r: any) => ({
-            name: r.name || '',
-            description: r.description || ''
-          }))
-        };
-      });
-
-      const detachmentsList = ensureArray(root.detachments || root.detachmentRules).map((d: any) => ({
-        id: d.id || '',
-        name: d.name || 'Detachment',
-        description: d.description || ''
-      }));
-
-      const factionTraits = ensureArray(root.factionTraits || root.sharedRules || root.rules).map((r: any) => ({
-        name: r.name || '',
-        description: r.description || ''
-      }));
-
-      const warOrganFaction = {
-        id: root.id || file.replace('.json', ''),
-        name: root.name || path.basename(file, '.json'),
-        revision: root.revision || 1,
-        gameSystemId: root.gameSystemId || 'wh40k-11e',
-        factionTraits: factionTraits,
-        detachments: detachmentsList,
-        units: datasheetsList,
-        datasheets: datasheetsList
+      // Preserve the entire upstream object structure while ensuring War Organ core properties exist
+      const factionDataset = {
+        ...data,
+        id: data.id || file.replace('.json', ''),
+        name: data.name || path.basename(file, '.json'),
+        revision: data.revision || 1,
+        gameSystemId: data.gameSystemId || 'wh40k-11e',
       };
+
+      // Add to index manifest if War Organ requires index tracking
+      catalogueIndex.push({
+        id: factionDataset.id,
+        name: factionDataset.name,
+        fileName: file,
+        revision: factionDataset.revision
+      });
 
       fs.writeFileSync(
         path.join(OUTPUT_DIR, file),
-        JSON.stringify(warOrganFaction, null, 2)
+        JSON.stringify(factionDataset, null, 2)
       );
-
+      
       processedCount++;
     } catch (err) {
       console.warn(`⚠️ Warning: Skipped file due to parse error (${file}):`, err);
     }
   }
 
-  console.log(`✅ Successfully transformed ${processedCount} faction datasets for War Organ!`);
-}
+  // Write a master index.json file in output/ in case War Organ reads a manifest
+  fs.writeFileSync(
+    path.join(OUTPUT_DIR, 'index.json'),
+    JSON.stringify({
+      gameSystemId: 'wh40k-11e',
+      name: 'Warhammer 40k 11th Edition - War Organ Dataset',
+      revision: Date.now(),
+      catalogues: catalogueIndex
+    }, null, 2)
+  );
 
-function extractCharacteristics(profile: any) {
-  const chars = [
-    ...ensureArray(profile?.characteristics),
-    ...ensureArray(profile?.characteristics?.characteristic)
-  ];
-
-  const charMap: Record<string, any> = {};
-
-  for (const c of chars) {
-    if (!c) continue;
-    const key = c.name ? c.name.toLowerCase().replace(/[^a-z0-9]/g, '_') : 'value';
-    charMap[key] = c['#text'] !== undefined ? c['#text'] : (c.value || c.$text || '');
-  }
-
-  return charMap;
+  console.log(`✅ Successfully compiled ${processedCount} full-fidelity datasets + index.json into output/!`);
 }
 
 runParser().catch((err) => {
