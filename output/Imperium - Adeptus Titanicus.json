@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Adeptus Titanicus.json",
+  "id": "Imperium - Adeptus Titanicus",
   "name": "Imperium - Adeptus Titanicus",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

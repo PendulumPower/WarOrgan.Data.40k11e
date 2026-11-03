@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Black Templars.json",
+  "id": "Imperium - Black Templars",
   "name": "Imperium - Black Templars",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

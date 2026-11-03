@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Grey Knights.json",
+  "id": "Imperium - Grey Knights",
   "name": "Imperium - Grey Knights",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Space Wolves.json",
+  "id": "Imperium - Space Wolves",
   "name": "Imperium - Space Wolves",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

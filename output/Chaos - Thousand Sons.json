@@ -1,7 +1,10 @@
 {
-  "id": "Chaos - Thousand Sons.json",
+  "id": "Chaos - Thousand Sons",
   "name": "Chaos - Thousand Sons",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

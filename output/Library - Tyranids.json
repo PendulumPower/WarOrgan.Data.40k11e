@@ -1,7 +1,10 @@
 {
-  "id": "Library - Tyranids.json",
+  "id": "Library - Tyranids",
   "name": "Library - Tyranids",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

@@ -1,7 +1,10 @@
 {
-  "id": "Chaos - Emperor's Children.json",
+  "id": "Chaos - Emperor's Children",
   "name": "Chaos - Emperor's Children",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

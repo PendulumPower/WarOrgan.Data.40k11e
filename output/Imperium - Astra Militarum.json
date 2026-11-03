@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Astra Militarum.json",
+  "id": "Imperium - Astra Militarum",
   "name": "Imperium - Astra Militarum",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

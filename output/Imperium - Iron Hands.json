@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Iron Hands.json",
+  "id": "Imperium - Iron Hands",
   "name": "Imperium - Iron Hands",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

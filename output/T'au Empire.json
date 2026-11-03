@@ -1,7 +1,10 @@
 {
-  "id": "T'au Empire.json",
+  "id": "T'au Empire",
   "name": "T'au Empire",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

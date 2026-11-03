@@ -1,7 +1,10 @@
 {
-  "id": "Chaos - Chaos Knights Library.json",
+  "id": "Chaos - Chaos Knights Library",
   "name": "Chaos - Chaos Knights Library",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

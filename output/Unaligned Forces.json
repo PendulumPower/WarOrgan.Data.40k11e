@@ -1,7 +1,10 @@
 {
-  "id": "Unaligned Forces.json",
+  "id": "Unaligned Forces",
   "name": "Unaligned Forces",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

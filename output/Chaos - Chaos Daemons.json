@@ -1,7 +1,10 @@
 {
-  "id": "Chaos - Chaos Daemons.json",
+  "id": "Chaos - Chaos Daemons",
   "name": "Chaos - Chaos Daemons",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

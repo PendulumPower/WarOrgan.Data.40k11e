@@ -1,7 +1,10 @@
 {
-  "id": "Chaos - Death Guard.json",
+  "id": "Chaos - Death Guard",
   "name": "Chaos - Death Guard",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

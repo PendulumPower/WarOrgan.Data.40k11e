@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Deathwatch.json",
+  "id": "Imperium - Deathwatch",
   "name": "Imperium - Deathwatch",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

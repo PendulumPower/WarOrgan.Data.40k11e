@@ -1,7 +1,10 @@
 {
-  "id": "Genestealer Cults.json",
+  "id": "Genestealer Cults",
   "name": "Genestealer Cults",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

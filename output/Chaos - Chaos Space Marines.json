@@ -1,7 +1,10 @@
 {
-  "id": "Chaos - Chaos Space Marines.json",
+  "id": "Chaos - Chaos Space Marines",
   "name": "Chaos - Chaos Space Marines",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Blood Angels.json",
+  "id": "Imperium - Blood Angels",
   "name": "Imperium - Blood Angels",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

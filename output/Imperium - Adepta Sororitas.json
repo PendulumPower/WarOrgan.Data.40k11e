@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Adepta Sororitas.json",
+  "id": "Imperium - Adepta Sororitas",
   "name": "Imperium - Adepta Sororitas",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

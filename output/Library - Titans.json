@@ -1,7 +1,10 @@
 {
-  "id": "Library - Titans.json",
+  "id": "Library - Titans",
   "name": "Library - Titans",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

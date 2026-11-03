@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Agents of the Imperium.json",
+  "id": "Imperium - Agents of the Imperium",
   "name": "Imperium - Agents of the Imperium",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

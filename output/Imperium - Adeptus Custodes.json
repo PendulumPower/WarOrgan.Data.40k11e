@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Adeptus Custodes.json",
+  "id": "Imperium - Adeptus Custodes",
   "name": "Imperium - Adeptus Custodes",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

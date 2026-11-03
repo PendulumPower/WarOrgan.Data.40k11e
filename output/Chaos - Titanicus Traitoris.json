@@ -1,7 +1,10 @@
 {
-  "id": "Chaos - Titanicus Traitoris.json",
+  "id": "Chaos - Titanicus Traitoris",
   "name": "Chaos - Titanicus Traitoris",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

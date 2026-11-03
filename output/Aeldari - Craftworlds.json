@@ -1,7 +1,10 @@
 {
-  "id": "Aeldari - Craftworlds.json",
+  "id": "Aeldari - Craftworlds",
   "name": "Aeldari - Craftworlds",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

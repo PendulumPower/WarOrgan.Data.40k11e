@@ -1,7 +1,10 @@
 {
-  "id": "Warhammer 40,000.json",
+  "id": "Warhammer 40,000",
   "name": "Warhammer 40,000",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

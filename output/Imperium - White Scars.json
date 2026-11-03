@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - White Scars.json",
+  "id": "Imperium - White Scars",
   "name": "Imperium - White Scars",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

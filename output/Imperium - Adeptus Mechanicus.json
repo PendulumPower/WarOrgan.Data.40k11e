@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Adeptus Mechanicus.json",
+  "id": "Imperium - Adeptus Mechanicus",
   "name": "Imperium - Adeptus Mechanicus",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

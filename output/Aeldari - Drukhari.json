@@ -1,7 +1,10 @@
 {
-  "id": "Aeldari - Drukhari.json",
+  "id": "Aeldari - Drukhari",
   "name": "Aeldari - Drukhari",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

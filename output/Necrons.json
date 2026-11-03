@@ -1,7 +1,10 @@
 {
-  "id": "Necrons.json",
+  "id": "Necrons",
   "name": "Necrons",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

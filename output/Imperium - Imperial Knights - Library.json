@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Imperial Knights - Library.json",
+  "id": "Imperium - Imperial Knights - Library",
   "name": "Imperium - Imperial Knights - Library",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

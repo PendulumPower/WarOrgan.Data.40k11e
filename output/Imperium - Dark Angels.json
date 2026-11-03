@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Dark Angels.json",
+  "id": "Imperium - Dark Angels",
   "name": "Imperium - Dark Angels",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

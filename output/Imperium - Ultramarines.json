@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Ultramarines.json",
+  "id": "Imperium - Ultramarines",
   "name": "Imperium - Ultramarines",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }

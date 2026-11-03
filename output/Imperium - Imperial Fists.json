@@ -1,7 +1,10 @@
 {
-  "id": "Imperium - Imperial Fists.json",
+  "id": "Imperium - Imperial Fists",
   "name": "Imperium - Imperial Fists",
   "revision": 1,
   "gameSystemId": "wh40k-11e",
-  "units": []
+  "factionTraits": [],
+  "detachments": [],
+  "units": [],
+  "datasheets": []
 }
