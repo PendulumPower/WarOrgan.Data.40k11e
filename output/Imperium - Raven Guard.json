@@ -1,8 +1,8 @@
 {
-  "id": "Imperium - Raven Guard",
-  "name": "Imperium - Raven Guard",
-  "revision": 1,
-  "gameSystemId": "wh40k-11e",
+  "id": "6e59-e1ee-47ad-6ce5",
+  "name": "Imperium - Adeptus Astartes - Raven Guard",
+  "revision": 5,
+  "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
   "units": [],

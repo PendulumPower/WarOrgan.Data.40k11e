@@ -1,8 +1,8 @@
 {
-  "id": "Imperium - Black Templars",
-  "name": "Imperium - Black Templars",
-  "revision": 1,
-  "gameSystemId": "wh40k-11e",
+  "id": "36d3-36bc-68dd-40ac",
+  "name": "Imperium - Adeptus Astartes - Black Templars",
+  "revision": 6,
+  "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
   "units": [],

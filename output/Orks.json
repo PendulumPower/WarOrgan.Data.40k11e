@@ -1,9 +1,18 @@
 {
-  "id": "Orks",
-  "name": "Orks",
-  "revision": 1,
-  "gameSystemId": "wh40k-11e",
-  "factionTraits": [],
+  "id": "a55f-b7b3-6c65-a05f",
+  "name": "Xenos - Orks",
+  "revision": 8,
+  "gameSystemId": "sys-352e-adc2-7639-d610",
+  "factionTraits": [
+    {
+      "name": "Waaagh!",
+      "description": "Friendly **ORKS** with this ability can:\n- Re-roll **advance rolls**.\n- Become **riled up**, as stated in other rules.\nWhile a unit is **riled up**:\n    - That unit has 5+ **InSv**.\n    - That unit's ranged attacks have **[ASSAULT]**.\n    - When that unit is selected to make an **advance move**, that **advance move** does not prevent that unit from being **eligible to declare a charge**."
+    },
+    {
+      "name": "War Cry (Once per battle, per army)",
+      "description": "At the start of the Command phase, you can use this ability. If you do, friendly **ORKS** units with the **Waaagh!** ability are **riled up** until the end of the next turn."
+    }
+  ],
   "detachments": [],
   "units": [],
   "datasheets": []

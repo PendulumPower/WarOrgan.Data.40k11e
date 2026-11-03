@@ -1,8 +1,8 @@
 {
-  "id": "Imperium - Astra Militarum",
+  "id": "b0ae-12a5-c84-ea45",
   "name": "Imperium - Astra Militarum",
-  "revision": 1,
-  "gameSystemId": "wh40k-11e",
+  "revision": 2,
+  "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
   "units": [],

@@ -1,9 +1,14 @@
 {
-  "id": "Chaos - Titanicus Traitoris",
+  "id": "880c-c7e-4a43-a0c1",
   "name": "Chaos - Titanicus Traitoris",
-  "revision": 1,
-  "gameSystemId": "wh40k-11e",
-  "factionTraits": [],
+  "revision": 2,
+  "gameSystemId": "sys-352e-adc2-7639-d610",
+  "factionTraits": [
+    {
+      "name": "Towering Example",
+      "description": "When mustering your army, if your Army Faction is **^^Titanicus Traitoris^^**, ignore the Select Detachment Rules step. In the Select Warlord step, select one **^^Titanicus Traitoris^^** model from your army to be your **^^Warlord^^**, even though that model does not have the **^^Character^^** keyword. Your army has the Take and Hold force disposition."
+    }
+  ],
   "detachments": [],
   "units": [],
   "datasheets": []

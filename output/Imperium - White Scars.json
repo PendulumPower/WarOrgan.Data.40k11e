@@ -1,8 +1,8 @@
 {
-  "id": "Imperium - White Scars",
-  "name": "Imperium - White Scars",
-  "revision": 1,
-  "gameSystemId": "wh40k-11e",
+  "id": "67c1-fc13-f9a1-cbbf",
+  "name": "Imperium - Adeptus Astartes - White Scars",
+  "revision": 5,
+  "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
   "units": [],

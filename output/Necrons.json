@@ -1,8 +1,8 @@
 {
-  "id": "Necrons",
-  "name": "Necrons",
-  "revision": 1,
-  "gameSystemId": "wh40k-11e",
+  "id": "b654-a18a-ea1-3bf2",
+  "name": "Xenos - Necrons",
+  "revision": 28,
+  "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
   "units": [],

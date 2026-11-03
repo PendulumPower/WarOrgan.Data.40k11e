@@ -1,8 +1,8 @@
 {
-  "id": "Imperium - Deathwatch",
-  "name": "Imperium - Deathwatch",
-  "revision": 1,
-  "gameSystemId": "wh40k-11e",
+  "id": "f89b-84e0-6e3b-f1e2",
+  "name": "Imperium - Adeptus Astartes - Deathwatch",
+  "revision": 11,
+  "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
   "units": [],

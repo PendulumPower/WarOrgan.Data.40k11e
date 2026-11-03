@@ -1,8 +1,8 @@
 {
-  "id": "Imperium - Salamanders",
-  "name": "Imperium - Salamanders",
-  "revision": 1,
-  "gameSystemId": "wh40k-11e",
+  "id": "2261-79a5-19d9-1668",
+  "name": "Imperium - Adeptus Astartes - Salamanders",
+  "revision": 6,
+  "gameSystemId": "sys-352e-adc2-7639-d610",
   "factionTraits": [],
   "detachments": [],
   "units": [],
