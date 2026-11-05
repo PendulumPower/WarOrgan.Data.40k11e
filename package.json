@@ -1,0 +1,15 @@
+{
+  "name": "waroran-data-40k11e-pipeline",
+  "private": true,
+  "type": "module",
+  "description": "Converts BSData/wh40k-11e into War Organ dataset assets; the .NET builder validates and zips them.",
+  "scripts": {
+    "convert": "tsx src/parse.ts bsdata WarOrgan.Data.BuildDataset/Assets/WH40K11e",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
