@@ -10,3 +10,9 @@ Staging/
 *.user
 *.suo
 *.userosscache
+node_modules/
+bsdata/
+build*.log
+build-report.json
+release-notes.md
+WarOrgan.Data.BuildDataset/Assets/WH40K11e/
