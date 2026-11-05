@@ -1,0 +1,169 @@
+name: Build War Organ dataset
+
+on:
+  push:
+    branches: [master]
+    paths-ignore: ["**.md"]
+  schedule:
+    - cron: "17 5 * * *"        # daily; scheduled runs only build when BSData/wh40k-11e has changed
+  workflow_dispatch:
+
+permissions:
+  contents: write                # needed to publish releases
+
+concurrency:
+  group: build-dataset
+  cancel-in-progress: false
+
+env:
+  DATASET_FOLDER: WH40K11e       # Assets/<folder>; must match assetsFolder in WarOrgan.Data.BuildDataset/Program.cs
+  UPSTREAM_REPO: BSData/wh40k-11e
+  UPSTREAM_BRANCH: main
+  VERSION_MAJOR: "1"
+  VERSION_MINOR: "1"             # War Organ reads only minor + build; build = BUILD_OFFSET + run number
+  BUILD_OFFSET: "100"
+  KEEP_RELEASES: "10"            # older releases from this pipeline are deleted
+  ALLOW_FACTION_DROP: "true"     # last-resort: drop a faction that has a faction-level error pruning cannot fix
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.up.outputs.sha }}
+      skip: ${{ steps.up.outputs.skip }}
+    steps:
+      - name: Find the upstream commit and decide whether a build is needed
+        id: up
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          SHA=$(git ls-remote "https://github.com/${UPSTREAM_REPO}.git" "refs/heads/${UPSTREAM_BRANCH}" | cut -f1)
+          if [ -z "$SHA" ]; then echo "::error::Could not read ${UPSTREAM_REPO}@${UPSTREAM_BRANCH}"; exit 1; fi
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+
+          SKIP=false
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            LAST=$(gh release view --repo "${{ github.repository }}" --json body -q .body 2>/dev/null || true)
+            case "$LAST" in *"$SHA"*) SKIP=true ;; esac
+          fi
+          echo "skip=$SKIP" >> "$GITHUB_OUTPUT"
+          echo "Upstream ${UPSTREAM_REPO}@${SHA} (skip=$SKIP)"
+
+  build:
+    needs: check
+    if: needs.check.outputs.skip != 'true'
+    runs-on: ubuntu-latest
+    env:
+      UPSTREAM_SHA: ${{ needs.check.outputs.sha }}
+      REPORT_PATH: build-report.json
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+
+      - name: Checkout BSData (pinned to the commit found above)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.UPSTREAM_REPO }}
+          ref: ${{ needs.check.outputs.sha }}
+          path: bsdata
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Work out the version
+        run: |
+          BUILD=$(( BUILD_OFFSET + GITHUB_RUN_NUMBER ))
+          echo "BUILD=$BUILD" >> "$GITHUB_ENV"
+          echo "VERSION_TAG=${VERSION_MAJOR}.${VERSION_MINOR}.${BUILD}" >> "$GITHUB_ENV"
+          echo "VERSION=${VERSION_MAJOR}.${VERSION_MINOR}.${BUILD}.0" >> "$GITHUB_ENV"
+          echo "ASSETS=WarOrgan.Data.BuildDataset/Assets/${DATASET_FOLDER}" >> "$GITHUB_ENV"
+
+      - name: Install converter dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Convert BSData to War Organ assets
+        run: npx tsx src/parse.ts bsdata "$ASSETS"
+
+      - name: Prepare the builder (version and assets-folder check)
+        run: npx tsx src/configure-builder.ts WarOrgan.Data.BuildDataset/Program.cs "$DATASET_FOLDER" "$BUILD" "$VERSION_MAJOR" "$VERSION_MINOR"
+
+      - name: Validate and package (removes units War Organ rejects, then retries)
+        run: |
+          set +e
+          ZIP=""
+          for round in 1 2 3 4 5 6; do
+            echo "::group::Build round $round"
+            # Make the builder re-copy the (possibly pruned) assets and forget any earlier zip.
+            find WarOrgan.Data.BuildDataset/bin -type d -path "*/Assets/${DATASET_FOLDER}" -prune -exec rm -rf {} + 2>/dev/null
+            find WarOrgan.Data.BuildDataset -name '*.zip' -not -path '*/obj/*' -delete 2>/dev/null
+            dotnet run --project WarOrgan.Data.BuildDataset -c Release 2>&1 | tee "build-round-${round}.log"
+            ZIP=$(find WarOrgan.Data.BuildDataset -name '*.zip' -not -path '*/obj/*' | head -n1)
+            echo "::endgroup::"
+            if [ -n "$ZIP" ]; then echo "Built $ZIP in round $round"; break; fi
+
+            cp "build-round-${round}.log" build.log
+            FLAGS=""
+            if [ "$ALLOW_FACTION_DROP" = "true" ]; then FLAGS="--drop-factions"; fi
+            npx tsx src/prune.ts build.log "$ASSETS" $FLAGS || { echo "Nothing more can be removed automatically."; break; }
+          done
+
+          if [ -z "$ZIP" ]; then
+            echo "::error::No dataset zip was produced. See the error summary below and the uploaded build logs."
+            grep -hE '^[^:]+: ' build.log 2>/dev/null | sed -E "s/^[^:]*: //; s/'[^']*'/'...'/g" | sort | uniq -c | sort -rn | head -n 25
+            exit 1
+          fi
+          echo "ZIP=$ZIP" >> "$GITHUB_ENV"
+
+      - name: Check the zip
+        run: |
+          unzip -l "$ZIP"
+          unzip -l "$ZIP" | grep -q "DataSetInfo.json" || { echo "::error::DataSetInfo.json missing from $ZIP"; exit 1; }
+
+      - name: Write release notes
+        run: |
+          {
+            echo "## Warhammer 40,000 11th Edition dataset for War Organ"
+            echo
+            echo "**Install:** download \`$(basename "$ZIP")\` below, then in War Organ open **Data Sets → Import from file** and choose the ZIP (do not extract it)."
+            echo
+            echo "- Dataset version: \`${VERSION}\`"
+            echo "- Source: [${UPSTREAM_REPO}](https://github.com/${UPSTREAM_REPO}) at commit \`${UPSTREAM_SHA}\`"
+            echo "- Built: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            echo
+            npx tsx src/prune.ts --summary build-report.json
+          } > release-notes.md
+          cat release-notes.md
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.VERSION_TAG }}
+          name: 40k 11e dataset v${{ env.VERSION_TAG }}
+          body_path: release-notes.md
+          files: ${{ env.ZIP }}
+          make_latest: true
+
+      - name: Delete old releases from this pipeline
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release list --limit 200 --json tagName -q '.[].tagName' \
+            | grep -E "^v${VERSION_MAJOR}\.${VERSION_MINOR}\." \
+            | tail -n +$(( KEEP_RELEASES + 1 )) \
+            | while read -r tag; do echo "Deleting $tag"; gh release delete "$tag" --cleanup-tag --yes; done || true
+
+      - name: Keep build logs and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: |
+            build*.log
+            build-report.json
+            release-notes.md
+          if-no-files-found: ignore
