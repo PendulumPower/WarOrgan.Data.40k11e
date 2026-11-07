@@ -239,7 +239,7 @@ function extractUnits(cat: any, index: Map<string, any>, keyword: string, warn: 
 
   const units: WoUnit[] = [];
   const seenEntries = new Set<any>();
-  const usedIds = new Map<string, number>();
+  const byName = new Map<string, WoUnit[]>();
 
   for (const entry of entries) {
     if (seenEntries.has(entry) || get(entry, 'type') !== 'unit') continue;
@@ -265,6 +265,7 @@ function extractUnits(cat: any, index: Map<string, any>, keyword: string, warn: 
     const weaponNames = new Map<string, string>();   // weapon key -> display name
     const defs = new Map<string, any>();             // WargearDefinitions by key
     const compositions: ModelComposition[] = [];
+    const compSigs = new Map<string, string>();   // model name -> content signature
     const abilities = new Map<string, TitledText>();
 
     const addWeapon = (p: any): string => {
@@ -357,9 +358,20 @@ function extractUnits(cat: any, index: Map<string, any>, keyword: string, warn: 
       }
 
       const { min, max } = isUnit ? { min: 1, max: 1 } : minMax(src);
+      // War Organ requires unique model names within a unit. The same model reached through two paths is dropped;
+      // a different model that happens to share a name gets a numeric suffix.
+      let modelName = nameOf(src) || name;
+      const sig = JSON.stringify([statName, initial, options]);
+      if (compSigs.get(modelName) === sig) continue;
+      if (compSigs.has(modelName)) {
+        let n = 2;
+        while (compSigs.has(`${modelName} (${n})`)) n++;
+        modelName = `${modelName} (${n})`;
+      }
+      compSigs.set(modelName, sig);
       compositions.push({
         Limit: { Min: min, Max: max },
-        ModelName: nameOf(src) || name,
+        ModelName: modelName,
         StatlineRef: statName,
         Keywords: [],
         Wargear: [{ InitialWargear: initial, Options: options }],
@@ -389,16 +401,12 @@ function extractUnits(cat: any, index: Map<string, any>, keyword: string, warn: 
     // TODO(phase 2): per-model-count tiers. For now: one tier at the minimum unit size.
     const modelCount = Math.max(1, compositions.reduce((n, c) => n + c.Limit.Min, 0));
 
-    const keywords = kids(entry, 'categoryLinks', 'categoryLink')
-      .map(nameOf).filter(k => k && !/^(faction|configuration)/i.test(k));
+    const keywords = [...new Set(
+      kids(entry, 'categoryLinks', 'categoryLink').map(nameOf).filter(k => k && !/^(faction|configuration)/i.test(k)),
+    )];
 
-    let id = name.toUpperCase();
-    const seen = usedIds.get(id) ?? 0;
-    usedIds.set(id, seen + 1);
-    if (seen) id = `${id} (${seen + 1})`;
-
-    units.push({
-      Id: id,
+    const candidate: WoUnit = {
+      Id: name.toUpperCase(),
       DisplayName: name,
       Flags: 0,
       UnitComposition: { ModelCompositions: compositions, WargearDefinitions: [...defs.values()] },
@@ -411,7 +419,20 @@ function extractUnits(cat: any, index: Map<string, any>, keyword: string, warn: 
       Weapons: [...weaponSets.values()],
       Upgrades: [],
       Points: [{ ModelCount: modelCount, Cost: cost }],
-    });
+    };
+
+    // War Organ requires unique unit IDs and names within a roster. BSData often lists a unit twice (own entry plus
+    // a link): an identical copy is ignored, a genuinely different one with the same name gets a numeric suffix.
+    const unitSig = (u: WoUnit) => JSON.stringify({ ...u, Id: '', DisplayName: '' });
+    const prior = byName.get(name) ?? [];
+    if (prior.some(p => unitSig(p) === unitSig(candidate))) { warn(`duplicate "${name}" ignored`); continue; }
+    if (prior.length) {
+      candidate.DisplayName = `${name} (${prior.length + 1})`;
+      candidate.Id = `${name.toUpperCase()} (${prior.length + 1})`;
+    }
+    prior.push(candidate);
+    byName.set(name, prior);
+    units.push(candidate);
   }
   return units;
 }
