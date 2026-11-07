@@ -82,6 +82,14 @@ for (const f of (fs.readdirSync(rostersDir) as string[]).filter(f => f.endsWith(
 }
 const factionNames = [...rosters.keys()].sort((a, b) => b.length - a.length); // longest first
 
+/** Every identifier or name a unit contains, used to attribute errors whose scope is not the unit ID. */
+const namesIn = (u: any): string[] => [
+  u.Id, u.DisplayName,
+  ...(u.UnitComposition?.ModelCompositions ?? []).map((m: any) => m.ModelName),
+  ...(u.Weapons ?? []).flatMap((w: any) => (w.Weapons ?? []).flatMap((x: any) => [x.Id, x.DisplayName])),
+  ...(u.UnitComposition?.WargearDefinitions ?? []).map((d: any) => d.Key),
+].filter(Boolean).map(String);
+
 const stripAnsi = (s: string) => s.replace(/\x1b\[[0-9;]*m/g, '');
 const badUnits = new Map<string, Removed>();          // "faction\tunit" -> first message
 const badFactions = new Map<string, string>();        // faction -> first message
@@ -106,13 +114,28 @@ for (const raw of fs.readFileSync(logPath, 'utf-8').split(/\r?\n/)) {
   if (unit) {
     const key = `${faction}\t${unit}`;
     if (!badUnits.has(key)) badUnits.set(key, { faction, unit, message });
-  } else {
-    unattributed.push(line);
+    continue;
+  }
+
+  // The scope is not a unit ID (for example a model or weapon name). Find the units that mention any name in the
+  // line. For "duplicate" errors keep the first such unit and remove the rest; otherwise remove every match.
+  const tokens = [rest, ...rest.split('.'), ...[...message.matchAll(/["']([^"']+)["']/g)].map(m => m[1])]
+    .map(t => t.trim()).filter(Boolean);
+  const hits = (rosters.get(faction)!.data.Units as any[]).filter(u => namesIn(u).some(n => tokens.includes(n)));
+  if (!hits.length) { unattributed.push(line); continue; }
+  const victims = /duplicate/i.test(message) && hits.length > 1 ? hits.slice(1) : hits;
+  for (const u of victims) {
+    const key = `${faction}\t${u.Id}`;
+    if (!badUnits.has(key)) badUnits.set(key, { faction, unit: String(u.Id), message });
   }
 }
 
 console.log(`Validation log: ${badUnits.size} units and ${badFactions.size} factions with errors` +
   (unattributed.length ? `, ${unattributed.length} lines not attributable to a unit` : ''));
+if (unattributed.length) {
+  console.log('Lines that could not be attributed (first 15):');
+  for (const l of unattributed.slice(0, 15)) console.log(`  ${l}`);
+}
 if (!badUnits.size && !badFactions.size) {
   console.log('No removable errors found.');
   process.exit(unattributed.length ? 2 : 3);
