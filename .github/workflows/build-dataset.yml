@@ -114,7 +114,10 @@ jobs:
 
           if [ -z "$ZIP" ]; then
             echo "::error::No dataset zip was produced. See the error summary below and the uploaded build logs."
-            grep -hE '^[^:]+: ' build.log 2>/dev/null | sed -E "s/^[^:]*: //; s/'[^']*'/'...'/g" | sort | uniq -c | sort -rn | head -n 25
+            echo "--- error categories ---"
+            grep -hE '^[^:]+: ' build.log 2>/dev/null | sed -E "s/^[^:]*: //; s/'[^']*'/'...'/g; s/\"[^\"]*\"/\"...\"/g" | sort | uniq -c | sort -rn | head -n 25
+            echo "--- first 40 raw error lines ---"
+            grep -hE '^[^:]+: ' build.log 2>/dev/null | head -n 40
             exit 1
           fi
           echo "ZIP=$ZIP" >> "$GITHUB_ENV"
